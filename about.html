@@ -21,12 +21,6 @@
   <!-- ══════════════ TOP UTILITY BAR ══════════════ -->
   <div class="topbar">
     <div class="container topbar__inner">
-      <div class="topbar__left">
-        <svg class="topbar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M12 2 3 7v6c0 5 3.8 9.4 9 11 5.2-1.6 9-6 9-11V7l-9-5Z"/>
-        </svg>
-        <span class="topbar__text" data-i18n="topbar.org">SDGs Secretariat — Ministry of National Development Planning/Bappenas</span>
-      </div>
       <div class="topbar__right">
         <a href="#" class="topbar__link" data-i18n="topbar.press">Press Releases</a>
         <a href="#" class="topbar__link" data-i18n="topbar.careers">Careers</a>
@@ -43,13 +37,12 @@
     <nav class="container header__nav" aria-label="Main navigation">
       <div class="header__row">
         <a href="index.html" class="brand" aria-label="SDGs Indonesia — Home">
-          <span class="brand__logo">
-            <span class="brand__logo-dot"></span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <circle cx="12" cy="12" r="9"/>
-              <path d="M3.6 9h16.8M3.6 15h16.8M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3Z"/>
-            </svg>
-          </span>
+          <img
+            src="assets/Logo-SDGs-Knowledge-Hub-color-Indonesia-Standar.png"
+            alt=""
+            class="brand__logo-img"
+            aria-hidden="true"
+          />
           <span class="brand__text">
             <span class="brand__title">SDGs Indonesia</span>
             <span class="brand__sub">Knowledge Hub</span>
@@ -59,11 +52,11 @@
         <ul class="nav">
           <li><a class="nav__link" href="index.html" data-i18n="nav.home">Home</a></li>
           <li><a class="nav__link" href="about.html" aria-current="page" data-i18n="nav.about">About</a></li>
-          <li><a class="nav__link" href="index.html#tujuan" data-i18n="nav.goals">Goals</a></li>
-          <li><a class="nav__link" href="index.html#data" data-i18n="nav.data">Data &amp; Analytics</a></li>
-          <li><a class="nav__link" href="index.html#pengetahuan" data-i18n="nav.knowledge">Knowledge</a></li>
-          <li><a class="nav__link" href="index.html#berita" data-i18n="nav.news">News</a></li>
-          <li><a class="nav__link" href="index.html#komunitas" data-i18n="nav.community">Community</a></li>
+          <li><a class="nav__link" href="goals.html" data-i18n="nav.goals">Goals</a></li>
+          <li><a class="nav__link" href="data.html" data-i18n="nav.data">Data &amp; Analytics</a></li>
+          <li><a class="nav__link" href="knowledge.html" data-i18n="nav.knowledge">Knowledge</a></li>
+          <li><a class="nav__link" href="news.html" data-i18n="nav.news">News</a></li>
+          <li><a class="nav__link" href="community.html" data-i18n="nav.community">Community</a></li>
         </ul>
 
         <div class="header__actions">
@@ -104,7 +97,6 @@
       <div class="page-hero__grid-overlay" aria-hidden="true"></div>
       <div class="page-hero__glow" aria-hidden="true"></div>
 
-      <!-- NEW: decorative spinning color wheel -->
       <img
         src="assets/SDGs-Colour-Wheel-Universal-Standar.svg"
         alt=""
@@ -149,7 +141,7 @@
       </div>
     </section>
 
-    <!-- ══════════════ WHAT ARE THE SDGs ══════════════ -->
+        <!-- ══════════════ WHAT ARE THE SDGs ══════════════ -->
     <section class="section">
       <div class="container">
         <div class="section__head reveal">
@@ -157,7 +149,33 @@
           <h2 class="section__title" data-i18n="about.what.title">What are the Sustainable Development Goals?</h2>
         </div>
 
-                <!-- NEW: showcase of all 17 SDG icons -->
+        <div class="intro-grid">
+          <article class="intro-block reveal">
+            <span class="intro-block__num">01</span>
+            <h3 class="intro-block__title" data-i18n="about.what.card1.title">A shared blueprint</h3>
+            <p class="intro-block__desc" data-i18n="about.what.card1.desc">
+              The SDGs are 17 interconnected goals that balance the three dimensions of sustainable development: economic growth, social inclusion, and environmental protection.
+            </p>
+          </article>
+
+          <article class="intro-block reveal">
+            <span class="intro-block__num">02</span>
+            <h3 class="intro-block__title" data-i18n="about.what.card2.title">Universal by design</h3>
+            <p class="intro-block__desc" data-i18n="about.what.card2.desc">
+              Unlike their predecessors, the SDGs apply to every country — developed and developing alike — and call for action by all stakeholders: governments, business, civil society, and individuals.
+            </p>
+          </article>
+
+          <article class="intro-block reveal">
+            <span class="intro-block__num">03</span>
+            <h3 class="intro-block__title" data-i18n="about.what.card3.title">Leave no one behind</h3>
+            <p class="intro-block__desc" data-i18n="about.what.card3.desc">
+              The overarching principle is to reach the furthest behind first — eradicating poverty in all its forms and ensuring that progress benefits every person, everywhere.
+            </p>
+          </article>
+        </div>
+
+        <!-- Showcase of all 17 SDG icons -->
         <div class="all-goals-showcase reveal">
           <img
             src="assets/TPB-SDGs-17-Tujuan-Indonesia-Standar.svg"
@@ -608,13 +626,12 @@
 
         <div class="footer__brand-col">
           <a href="index.html" class="brand brand--footer">
-            <span class="brand__logo">
-              <span class="brand__logo-dot"></span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                <circle cx="12" cy="12" r="9"/>
-                <path d="M3.6 9h16.8M3.6 15h16.8M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3Z"/>
-              </svg>
-            </span>
+            <img
+              src="assets/Logo-SDGs-Knowledge-Hub-color-Indonesia-Standar.png"
+              alt=""
+              class="brand__logo-img"
+              aria-hidden="true"
+            />
             <span class="brand__text">
               <span class="brand__title">SDGs Indonesia</span>
               <span class="brand__sub">Knowledge Hub</span>
