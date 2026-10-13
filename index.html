@@ -1,0 +1,930 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0B1F3A" />
+  <title>SDGs Indonesia — Knowledge, Data & Action for Sustainable Development</title>
+  <meta name="description" content="An integrated platform for Indonesia's Sustainable Development Goals (SDGs): data, analytics, publications, community, and action toward the 2030 Agenda." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <a href="#main" class="skip-link" data-i18n="a11y.skip">Skip to main content</a>
+
+  <!-- ══════════════ TOP UTILITY BAR ══════════════ -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__right">
+        <a href="#" class="topbar__link" data-i18n="topbar.press">Press Releases</a>
+        <a href="#" class="topbar__link" data-i18n="topbar.careers">Careers</a>
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button class="lang-toggle__btn is-active" data-lang="en" aria-pressed="true">EN</button>
+          <button class="lang-toggle__btn" data-lang="id" aria-pressed="false">ID</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ HEADER / NAV ══════════════ -->
+  <header id="site-header" class="header">
+    <nav class="container header__nav" aria-label="Main navigation">
+      <div class="header__row">
+
+        <a href="#" class="brand" aria-label="SDGs Indonesia — Home">
+          <img
+            src="assets/Logo-SDGs-Knowledge-Hub-color-Indonesia-Standar.png"
+            alt=""
+            class="brand__logo-img"
+            aria-hidden="true"
+            />
+          <span class="brand__text">
+            <span class="brand__title">SDGs Indonesia</span>
+            <span class="brand__sub">Knowledge Hub</span>
+          </span>
+        </a>
+
+        <ul class="nav">
+          <li><a class="nav__link" href="#beranda" aria-current="page" data-i18n="nav.home">Home</a></li>
+          <li><a class="nav__link" href="#tentang" data-i18n="nav.about">About</a></li>
+          <li><a class="nav__link" href="#tujuan" data-i18n="nav.goals">Goals</a></li>
+          <li><a class="nav__link" href="#data" data-i18n="nav.data">Data &amp; Analytics</a></li>
+          <li><a class="nav__link" href="#pengetahuan" data-i18n="nav.knowledge">Knowledge</a></li>
+          <li><a class="nav__link" href="#berita" data-i18n="nav.news">News</a></li>
+          <li><a class="nav__link" href="#komunitas" data-i18n="nav.community">Community</a></li>
+        </ul>
+
+        <div class="header__actions">
+          <button id="openSearch" class="icon-btn icon-btn--ghost" data-i18n-aria="header.searchAria" aria-label="Search SDGs Indonesia">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+          </button>
+          <a href="#data" class="btn btn--primary btn--sm header__cta">
+            <span data-i18n="header.dashboard">View Dashboard</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <button id="openMenu" class="icon-btn icon-btn--ghost header__burger" data-i18n-aria="header.menuAria" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div id="mobileMenu" class="mobile-menu" hidden>
+      <ul class="mobile-menu__list">
+        <li><a class="mobile-menu__link" href="#beranda" data-i18n="nav.home">Home</a></li>
+        <li><a class="mobile-menu__link" href="#tentang" data-i18n="nav.about">About</a></li>
+        <li><a class="mobile-menu__link" href="#tujuan" data-i18n="nav.goals">Goals</a></li>
+        <li><a class="mobile-menu__link" href="#data" data-i18n="nav.data">Data &amp; Analytics</a></li>
+        <li><a class="mobile-menu__link" href="#pengetahuan" data-i18n="nav.knowledge">Knowledge</a></li>
+        <li><a class="mobile-menu__link" href="#berita" data-i18n="nav.news">News</a></li>
+        <li><a class="mobile-menu__link" href="#komunitas" data-i18n="nav.community">Community</a></li>
+        <li class="mobile-menu__cta-wrap">
+          <a href="#data" class="btn btn--primary mobile-menu__cta" data-i18n="header.dashboard">View Dashboard</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ══════════════ SEARCH OVERLAY ══════════════ -->
+  <div id="searchOverlay" class="search-overlay" hidden role="dialog" aria-modal="true" aria-label="Search">
+    <div class="search-overlay__backdrop" data-close-search></div>
+    <div class="search-overlay__panel-wrap">
+      <div class="search-overlay__panel">
+        <div class="search-overlay__input-row">
+          <svg viewBox="0 0 24 24" class="search-overlay__icon" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+          <input id="searchInput" type="search" class="search-overlay__input"
+                 data-i18n-placeholder="search.placeholder"
+                 placeholder="Search goals, indicators, publications, or news…" />
+          <kbd class="search-overlay__kbd">ESC</kbd>
+        </div>
+        <div class="search-overlay__body">
+          <p class="search-overlay__label" data-i18n="search.popular">Popular searches</p>
+          <div class="chip-row">
+            <button class="chip" data-i18n="search.chip1">Poverty</button>
+            <button class="chip" data-i18n="search.chip2">VNR 2024</button>
+            <button class="chip" data-i18n="search.chip3">SDGs Center</button>
+            <button class="chip" data-i18n="search.chip4">Perpres 111/2022</button>
+            <button class="chip" data-i18n="search.chip5">Provincial Data</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ══════════════ HERO ══════════════ -->
+    <section id="beranda" class="hero">
+      <div class="hero__grid-overlay" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__grid">
+
+          <div class="hero__copy fade-up">
+            <span class="badge badge--ghost">
+              <span class="badge__dot"></span>
+              <span data-i18n="hero.badge">2030 Agenda for Sustainable Development</span>
+            </span>
+
+            <h1 class="hero__title">
+              <span data-i18n="hero.title.part1">One platform to</span>
+              <span class="hero__title-gradient" data-i18n="hero.title.gradient">understand, monitor,</span>
+              <span data-i18n="hero.title.part3">and achieve Indonesia's SDGs.</span>
+            </h1>
+
+            <p class="hero__lead" data-i18n="hero.lead">
+              The knowledge, data, action, and network hub for the Sustainable Development Goals. Access national indicators, annual reports, publications, and join a community driving change.
+            </p>
+
+            <form id="heroSearch" class="hero__search" role="search" onsubmit="return false;">
+              <label for="heroSearchInput" class="sr-only" data-i18n="hero.search.label">Search data or SDG goals</label>
+              <div class="hero__search-box">
+                <svg viewBox="0 0 24 24" class="hero__search-icon" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+                <input id="heroSearchInput" type="search" class="hero__search-input"
+                       data-i18n-placeholder="hero.search.placeholder"
+                       placeholder="Search indicators, goals, regions, publications…" />
+                <button type="submit" class="btn btn--primary btn--sm" data-i18n="hero.search.button">Search</button>
+              </div>
+            </form>
+
+            <div class="hero__cta-row">
+              <a href="#data" class="btn btn--accent">
+                <span data-i18n="hero.cta.explore">Explore Data</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a href="#tujuan" class="btn btn--ghost-light" data-i18n="hero.cta.goals">17 Development Goals</a>
+            </div>
+          </div>
+
+          <div class="hero__card-wrap fade-up fade-up--delay-1">
+            <div class="hero__card-glow" aria-hidden="true"></div>
+
+            <div class="hero__card">
+              <div class="hero__card-head">
+                <div>
+                  <p class="hero__card-eyebrow" data-i18n="hero.card.eyebrow">Global SDGs Rank</p>
+                  <p class="hero__card-sub" data-i18n="hero.card.sub">Sustainable Development Report</p>
+                </div>
+                <span class="pill pill--success">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 15l6-6 6 6"/></svg>
+                  +3
+                </span>
+              </div>
+
+              <div class="hero__rank">
+                <span class="hero__rank-number" data-count="77">0</span>
+                <span class="hero__rank-label" data-i18n="hero.card.rankLabel">/ 167 countries</span>
+              </div>
+
+              <div class="hero__kpis">
+                <div class="hero__kpi">
+                  <p class="hero__kpi-value" data-count="244">0</p>
+                  <p class="hero__kpi-label" data-i18n="hero.card.kpi1">Indicators available</p>
+                </div>
+                <div class="hero__kpi">
+                  <p class="hero__kpi-value hero__kpi-value--green"><span data-count="62.7" data-decimals="1">0</span>%</p>
+                  <p class="hero__kpi-label" data-i18n="hero.card.kpi2">On track</p>
+                </div>
+                <div class="hero__kpi">
+                  <p class="hero__kpi-value"><span data-count="289">0</span></p>
+                  <p class="hero__kpi-label" data-i18n="hero.card.kpi3">Total indicators</p>
+                </div>
+              </div>
+
+              <div class="hero__progress-wrap">
+                <div class="hero__progress-head">
+                  <span data-i18n="hero.card.progressLabel">Progress toward 2030</span>
+                  <span class="hero__progress-value">62.7%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress__bar progress__bar--gradient" style="width:62.7%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-strip">
+        <div class="container stat-strip__grid">
+          <div class="stat-strip__item">
+            <p class="stat-strip__value" data-count="17">0</p>
+            <p class="stat-strip__label" data-i18n="stats.goals">Global Goals</p>
+          </div>
+          <div class="stat-strip__item">
+            <p class="stat-strip__value" data-count="169">0</p>
+            <p class="stat-strip__label" data-i18n="stats.targets">Targets</p>
+          </div>
+          <div class="stat-strip__item">
+            <p class="stat-strip__value" data-count="514">0</p>
+            <p class="stat-strip__label" data-i18n="stats.regencies">Regencies/Cities</p>
+          </div>
+          <div class="stat-strip__item">
+            <p class="stat-strip__value" data-count="38">0</p>
+            <p class="stat-strip__label" data-i18n="stats.provinces">Provinces</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ 5 PILLARS ══════════════ -->
+    <section id="tentang" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow" data-i18n="pillars.eyebrow">About SDGs</span>
+          <h2 class="section__title" data-i18n="pillars.title">Five Pillars of Sustainable Development</h2>
+          <p class="section__lead" data-i18n="pillars.lead">
+            The 2030 Agenda is built on balance between social, economic, and environmental dimensions — expressed through five interconnected pillars.
+          </p>
+        </div>
+
+        <div class="pillars">
+          <article class="pillar reveal" style="--pillar-color:#E5243B">
+            <div class="pillar__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 20v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 20v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="pillar__title" data-i18n="pillars.people.title">People</h3>
+            <p class="pillar__sub" data-i18n="pillars.people.sub">Human well-being</p>
+            <p class="pillar__desc" data-i18n="pillars.people.desc">End poverty and hunger, ensure healthy lives and quality education for all.</p>
+          </article>
+
+          <article class="pillar reveal" style="--pillar-color:#3F7E44">
+            <div class="pillar__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3Z"/></svg>
+            </div>
+            <h3 class="pillar__title" data-i18n="pillars.planet.title">Planet</h3>
+            <p class="pillar__sub" data-i18n="pillars.planet.sub">Environmental sustainability</p>
+            <p class="pillar__desc" data-i18n="pillars.planet.desc">Protect land and ocean ecosystems, climate action, and responsible consumption.</p>
+          </article>
+
+          <article class="pillar reveal" style="--pillar-color:#A21942">
+            <div class="pillar__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+            </div>
+            <h3 class="pillar__title" data-i18n="pillars.prosperity.title">Prosperity</h3>
+            <p class="pillar__sub" data-i18n="pillars.prosperity.sub">Inclusive growth</p>
+            <p class="pillar__desc" data-i18n="pillars.prosperity.desc">Inclusive economic growth, decent work, industry, innovation, and resilient infrastructure.</p>
+          </article>
+
+          <article class="pillar reveal" style="--pillar-color:#00689D">
+            <div class="pillar__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 3 7v6c0 5 3.8 9.4 9 11 5.2-1.6 9-6 9-11V7l-9-5Z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3 class="pillar__title" data-i18n="pillars.peace.title">Peace</h3>
+            <p class="pillar__sub" data-i18n="pillars.peace.sub">Just and inclusive societies</p>
+            <p class="pillar__desc" data-i18n="pillars.peace.desc">Peaceful, inclusive, and just societies with accountable institutions at all levels.</p>
+          </article>
+
+          <article class="pillar reveal" style="--pillar-color:#19486A">
+            <div class="pillar__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 20a4 4 0 0 1 0-8h2a4 4 0 0 1 0 8h-2Z"/><path d="M13 4a4 4 0 0 1 0 8h-2a4 4 0 0 1 0-8h2Z"/></svg>
+            </div>
+            <h3 class="pillar__title" data-i18n="pillars.partnership.title">Partnership</h3>
+            <p class="pillar__sub" data-i18n="pillars.partnership.sub">Global cooperation</p>
+            <p class="pillar__desc" data-i18n="pillars.partnership.desc">Revitalize global partnerships for inclusive and equitable sustainable development.</p>
+          </article>
+        </div>
+        <!-- Read More CTA -->
+        <div class="pillars-cta reveal">
+          <a href="about.html" class="btn btn--outline pillars-cta__btn">
+            <span data-i18n="pillars.cta.button">Read More About the SDGs</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <p class="pillars-cta__hint" data-i18n="pillars.cta.hint">
+            Discover the history, framework, governance, and Indonesia's national context.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ 17 GOALS (featured) ══════════════ -->
+    <section id="tujuan" class="section section--alt">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow" data-i18n="goals.eyebrow">2030 Agenda</span>
+          <h2 class="section__title" data-i18n="goals.title">17 Sustainable Development Goals</h2>
+          <p class="section__lead" data-i18n="goals.lead">
+            Featured national priority goals from the 17 global goals. Each goal has measurable targets and indicators monitored periodically.
+          </p>
+        </div>
+
+        <div id="goalsGrid" class="goals-grid goals-grid--featured"></div>
+
+        <div class="goals-cta reveal">
+          <div class="goals-cta__content">
+            <span class="goals-cta__badge" data-i18n="goals.cta.badge">17 Goals · 169 Targets · 289 Indicators</span>
+            <h3 class="goals-cta__title" data-i18n="goals.cta.title">Want to explore all goals?</h3>
+            <p class="goals-cta__sub" data-i18n="goals.cta.sub">
+              Access the complete list of targets, indicators, and annual progress for every Indonesian SDG.
+            </p>
+          </div>
+          <a href="goals.html" class="btn btn--accent goals-cta__btn">
+            <span data-i18n="goals.cta.button">View all targets &amp; indicators</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ DATA & ANALYTICS ══════════════ -->
+    <section id="data" class="section data-section">
+      <div class="data-section__grid-overlay" aria-hidden="true"></div>
+      <div class="data-section__glow" aria-hidden="true"></div>
+
+      <div class="container data-section__inner">
+        <div class="section__head reveal">
+          <span class="eyebrow eyebrow--accent" data-i18n="data.eyebrow">Data &amp; Analytics</span>
+          <h2 class="section__title section__title--light" data-i18n="data.title">Unified data for evidence-based policy</h2>
+          <p class="section__lead section__lead--light" data-i18n="data.lead">
+            Explore macro indicators, per-goal progress, and advanced analysis in one interactive dashboard.
+          </p>
+        </div>
+
+        <div class="kpi-grid">
+          <div class="kpi-card reveal">
+            <p class="kpi-card__label" data-i18n="data.kpi1.label">Poverty Rate</p>
+            <p class="kpi-card__value"><span data-count="8.57" data-decimals="2">0</span>%</p>
+            <div class="kpi-card__trend">
+              <span class="trend trend--down">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg>
+                -0.42
+              </span>
+              <span class="kpi-card__trend-label" data-i18n="data.trend.vsLastYear">vs last year</span>
+            </div>
+            <div class="progress progress--dim">
+              <div class="progress__bar" style="width:71%;background:#E5243B"></div>
+            </div>
+          </div>
+
+          <div class="kpi-card reveal">
+            <p class="kpi-card__label" data-i18n="data.kpi2.label">Economic Growth</p>
+            <p class="kpi-card__value"><span data-count="5.03" data-decimals="2">0</span>%</p>
+            <div class="kpi-card__trend">
+              <span class="trend trend--up">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 15l6-6 6 6"/></svg>
+                +0.12
+              </span>
+              <span class="kpi-card__trend-label" data-i18n="data.trend.vsLastYear">vs last year</span>
+            </div>
+            <div class="progress progress--dim">
+              <div class="progress__bar" style="width:78%;background:#A21942"></div>
+            </div>
+          </div>
+
+          <div class="kpi-card reveal">
+            <p class="kpi-card__label" data-i18n="data.kpi3.label">Human Capital Index</p>
+            <p class="kpi-card__value"><span data-count="0.54" data-decimals="2">0</span></p>
+            <div class="kpi-card__trend">
+              <span class="trend trend--up">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 15l6-6 6 6"/></svg>
+                +0.02
+              </span>
+              <span class="kpi-card__trend-label" data-i18n="data.trend.vsLastYear">vs last year</span>
+            </div>
+            <div class="progress progress--dim">
+              <div class="progress__bar" style="width:54%;background:#4C9F38"></div>
+            </div>
+          </div>
+
+          <div class="kpi-card reveal">
+            <p class="kpi-card__label" data-i18n="data.kpi4.label">Data Availability</p>
+            <p class="kpi-card__value"><span data-count="84.4" data-decimals="1">0</span>%</p>
+            <div class="kpi-card__trend">
+              <span class="kpi-card__trend-label" data-i18n="data.kpi4.sub">244 of 289 indicators</span>
+            </div>
+            <div class="progress progress--dim">
+              <div class="progress__bar" style="width:84.4%;background:#26BDE2"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-grid">
+          <div class="panel panel--glass chart-panel reveal">
+            <div class="chart-panel__head">
+              <div>
+                <h3 class="panel__title" data-i18n="data.chart.title">Priority Indicator Trends</h3>
+                <p class="panel__sub" data-i18n="data.chart.sub">Period 2019 – 2024</p>
+              </div>
+              <div class="chart-panel__legend">
+                <span><span class="legend-dot" style="background:#F4A024"></span><span data-i18n="data.chart.legend1">Poverty</span></span>
+                <span><span class="legend-dot" style="background:#56C02B"></span><span data-i18n="data.chart.legend2">Growth</span></span>
+              </div>
+            </div>
+
+            <div class="chart-panel__body">
+              <svg viewBox="0 0 600 220" class="chart" role="img" aria-label="Priority indicator trend chart 2019–2024">
+                <defs>
+                  <linearGradient id="gArea" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#F4A024" stop-opacity=".35"/>
+                    <stop offset="100%" stop-color="#F4A024" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="gLine" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#FFC259"/><stop offset="100%" stop-color="#F4A024"/>
+                  </linearGradient>
+                </defs>
+                <g class="chart__grid" stroke="rgba(255,255,255,.08)" stroke-width="1">
+                  <line x1="0" y1="40" x2="600" y2="40"/>
+                  <line x1="0" y1="90" x2="600" y2="90"/>
+                  <line x1="0" y1="140" x2="600" y2="140"/>
+                  <line x1="0" y1="190" x2="600" y2="190"/>
+                </g>
+                <path d="M0,60 C60,70 100,95 160,110 C220,125 260,150 320,155 C380,160 430,170 500,175 C540,178 570,180 600,182 L600,200 L0,200 Z" fill="url(#gArea)"/>
+                <path d="M0,60 C60,70 100,95 160,110 C220,125 260,150 320,155 C380,160 430,170 500,175 C540,178 570,180 600,182" fill="none" stroke="url(#gLine)" stroke-width="3" stroke-linecap="round"/>
+                <path d="M0,160 C60,150 100,130 160,125 C220,120 260,105 320,100 C380,95 430,90 500,80 C540,74 570,70 600,66" fill="none" stroke="#56C02B" stroke-width="2.5" stroke-dasharray="6 6" stroke-linecap="round"/>
+                <g fill="#F4A024">
+                  <circle cx="0" cy="60" r="3.5"/><circle cx="160" cy="110" r="3.5"/><circle cx="320" cy="155" r="3.5"/><circle cx="500" cy="175" r="3.5"/><circle cx="600" cy="182" r="3.5"/>
+                </g>
+                <g class="chart__axis" fill="rgba(214,226,242,.7)" font-size="11" text-anchor="middle">
+                  <text x="10" y="215">2019</text>
+                  <text x="160" y="215">2020</text>
+                  <text x="320" y="215">2021</text>
+                  <text x="460" y="215">2022</text>
+                  <text x="590" y="215">2024</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <div class="panel panel--glass panel--compact reveal">
+            <h3 class="panel__title" data-i18n="data.cluster.title">Progress by Cluster</h3>
+            <p class="panel__sub" data-i18n="data.cluster.sub">Percentage of indicators reaching target</p>
+
+            <div class="cluster-list">
+              <div class="cluster">
+                <div class="cluster__head"><span data-i18n="data.cluster.social">Social</span><span class="cluster__value">68%</span></div>
+                <div class="progress progress--dim"><div class="progress__bar" style="width:68%;background:#E5243B"></div></div>
+              </div>
+              <div class="cluster">
+                <div class="cluster__head"><span data-i18n="data.cluster.economic">Economic</span><span class="cluster__value">61%</span></div>
+                <div class="progress progress--dim"><div class="progress__bar" style="width:61%;background:#A21942"></div></div>
+              </div>
+              <div class="cluster">
+                <div class="cluster__head"><span data-i18n="data.cluster.environmental">Environmental</span><span class="cluster__value">57%</span></div>
+                <div class="progress progress--dim"><div class="progress__bar" style="width:57%;background:#3F7E44"></div></div>
+              </div>
+              <div class="cluster">
+                <div class="cluster__head"><span data-i18n="data.cluster.governance">Law &amp; Governance</span><span class="cluster__value">72%</span></div>
+                <div class="progress progress--dim"><div class="progress__bar" style="width:72%;background:#00689D"></div></div>
+              </div>
+            </div>
+
+            <a href="#" class="btn btn--accent btn--full">
+              <span data-i18n="data.cta">Open Full Dashboard</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ KNOWLEDGE HUB ══════════════ -->
+    <section id="pengetahuan" class="section">
+      <div class="container">
+        <div class="section__head-row reveal">
+          <div class="section__head section__head--flush">
+            <span class="eyebrow" data-i18n="hub.eyebrow">Knowledge Hub</span>
+            <h2 class="section__title" data-i18n="hub.title">Publications, Regulations &amp; Best Practices</h2>
+            <p class="section__lead" data-i18n="hub.lead">
+              A repository of official documents, annual reports, and best practices from government, the private sector, and communities.
+            </p>
+          </div>
+          <a href="#" class="link-arrow">
+            <span data-i18n="hub.link.all">View all publications</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="hub-grid">
+          <article class="feature-card reveal">
+            <div class="feature-card__cover">
+              <div class="feature-card__cover-grid" aria-hidden="true"></div>
+              <div class="feature-card__cover-content">
+                <span class="pill pill--accent" data-i18n="hub.featured.badge">Featured</span>
+                <h3 class="feature-card__title" data-i18n="hub.featured.title">Voluntary National Review (VNR) Indonesia 2024</h3>
+              </div>
+            </div>
+            <div class="feature-card__body">
+              <p class="feature-card__desc" data-i18n="hub.featured.desc">
+                Indonesia's Voluntary National Review, presenting progress, challenges, and lessons learned in implementing the 2030 Agenda, including during the post-pandemic recovery.
+              </p>
+              <div class="feature-card__meta">
+                <span class="meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                  <span data-i18n="hub.featured.date">July 2024</span>
+                </span>
+                <span class="meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg>
+                  <span data-i18n="hub.featured.size">PDF · 12 MB</span>
+                </span>
+                <a href="#" class="link-arrow link-arrow--inline">
+                  <span data-i18n="hub.featured.download">Download</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <aside class="hub-side">
+            <a href="#" class="mini-card reveal" style="--mini-color:#00689D">
+              <span class="mini-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg>
+              </span>
+              <div class="mini-card__body">
+                <p class="mini-card__eyebrow" data-i18n="hub.mini1.eyebrow">Regulation</p>
+                <h4 class="mini-card__title" data-i18n="hub.mini1.title">Presidential Regulation No. 111 of 2022</h4>
+                <p class="mini-card__desc" data-i18n="hub.mini1.desc">Implementation of the Sustainable Development Goals</p>
+              </div>
+            </a>
+
+            <a href="#" class="mini-card reveal" style="--mini-color:#C5192D">
+              <span class="mini-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+              </span>
+              <div class="mini-card__body">
+                <p class="mini-card__eyebrow" data-i18n="hub.mini2.eyebrow">Guideline</p>
+                <h4 class="mini-card__title" data-i18n="hub.mini2.title">Metadata for SDG Indicators, 2nd Edition</h4>
+                <p class="mini-card__desc" data-i18n="hub.mini2.desc">Operational definitions and calculation methodology</p>
+              </div>
+            </a>
+
+            <a href="#" class="mini-card reveal" style="--mini-color:#3F7E44">
+              <span class="mini-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 15 8l6 .9-4.5 4.3 1 6.3L12 16.5 6.5 19.5l1-6.3L3 8.9 9 8Z"/></svg>
+              </span>
+              <div class="mini-card__body">
+                <p class="mini-card__eyebrow" data-i18n="hub.mini3.eyebrow">Award</p>
+                <h4 class="mini-card__title" data-i18n="hub.mini3.title">Indonesia SDGs Action Awards 2024</h4>
+                <p class="mini-card__desc" data-i18n="hub.mini3.desc">Recognizing best practices from regions and communities</p>
+              </div>
+            </a>
+
+            <a href="#" class="cta-mini reveal">
+              <span class="cta-mini__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+              </span>
+              <div>
+                <p class="cta-mini__title" data-i18n="hub.cta.title">Best Practice Repository</p>
+                <p class="cta-mini__sub" data-i18n="hub.cta.sub">Submit &amp; explore local innovations</p>
+              </div>
+            </a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ NEWS & EVENTS ══════════════ -->
+    <section id="berita" class="section section--white">
+      <div class="container">
+        <div class="section__head-row reveal">
+          <div class="section__head section__head--flush">
+            <span class="eyebrow" data-i18n="news.eyebrow">Latest Updates</span>
+            <h2 class="section__title" data-i18n="news.title">News &amp; Events</h2>
+            <p class="section__lead" data-i18n="news.lead">
+              Follow the latest developments, activities, and discussion forums around Indonesia's SDGs.
+            </p>
+          </div>
+          <a href="#" class="link-arrow">
+            <span data-i18n="news.link.all">All news</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="news-grid">
+          <div class="news-list">
+            <article class="news-item reveal" style="--news-color:#3F7E44">
+              <div class="news-item__thumb">
+                <span class="pill pill--white">SDG 13</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3Z"/></svg>
+              </div>
+              <div class="news-item__body">
+                <p class="news-item__meta" data-i18n="news.item1.meta">12 October 2026 · 4 min read</p>
+                <h3 class="news-item__title" data-i18n="news.item1.title">Indonesia Strengthens Climate Action Commitment Toward Net Zero 2060</h3>
+                <p class="news-item__desc" data-i18n="news.item1.desc">Energy transition and climate adaptation strategies are reinforced through cross-sector partnerships and green financing.</p>
+              </div>
+            </article>
+
+            <article class="news-item reveal" style="--news-color:#C5192D">
+              <div class="news-item__thumb">
+                <span class="pill pill--white">SDG 4</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+              </div>
+              <div class="news-item__body">
+                <p class="news-item__meta" data-i18n="news.item2.meta">08 October 2026 · 3 min read</p>
+                <h3 class="news-item__title" data-i18n="news.item2.title">Expanding Quality Education Access in Remote Regions</h3>
+                <p class="news-item__desc" data-i18n="news.item2.desc">Affirmative programs and learning digitalization reach frontier, outermost, and disadvantaged areas.</p>
+              </div>
+            </article>
+
+            <article class="news-item reveal" style="--news-color:#A21942">
+              <div class="news-item__thumb">
+                <span class="pill pill--white">SDG 8</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+              </div>
+              <div class="news-item__body">
+                <p class="news-item__meta" data-i18n="news.item3.meta">03 October 2026 · 5 min read</p>
+                <h3 class="news-item__title" data-i18n="news.item3.title">MSMEs Level Up: Digitalization Drives Decent Work</h3>
+                <p class="news-item__desc" data-i18n="news.item3.desc">Empowering MSMEs through digital literacy and inclusive financing broadens job opportunities.</p>
+              </div>
+            </article>
+          </div>
+
+          <aside class="events-panel reveal">
+            <div class="events-panel__head">
+              <h3 class="events-panel__title" data-i18n="events.title">Upcoming Events</h3>
+              <span class="pill pill--live">
+                <span class="pill__dot"></span>
+                <span data-i18n="events.live">Live</span>
+              </span>
+            </div>
+
+            <div class="events-list">
+              <a href="#" class="event-card">
+                <div class="event-card__date" style="--event-color:#071527">
+                  <span class="event-card__day">18</span>
+                  <span class="event-card__month" data-i18n="events.month.oct">Oct</span>
+                </div>
+                <div class="event-card__body">
+                  <p class="event-card__eyebrow" data-i18n="events.e1.eyebrow">Webinar</p>
+                  <h4 class="event-card__title" data-i18n="events.e1.title">Regional SDGs Data Workshop</h4>
+                  <p class="event-card__meta" data-i18n="events.e1.meta">09.00 WIB · Online</p>
+                </div>
+              </a>
+
+              <a href="#" class="event-card">
+                <div class="event-card__date" style="--event-color:#F4A024">
+                  <span class="event-card__day">24</span>
+                  <span class="event-card__month" data-i18n="events.month.oct">Oct</span>
+                </div>
+                <div class="event-card__body">
+                  <p class="event-card__eyebrow" data-i18n="events.e2.eyebrow">Conference</p>
+                  <h4 class="event-card__title" data-i18n="events.e2.title">SDGs Annual Conference 2026</h4>
+                  <p class="event-card__meta" data-i18n="events.e2.meta">Jakarta Convention Center</p>
+                </div>
+              </a>
+
+              <a href="#" class="event-card">
+                <div class="event-card__date" style="--event-color:#56C02B">
+                  <span class="event-card__day">02</span>
+                  <span class="event-card__month" data-i18n="events.month.nov">Nov</span>
+                </div>
+                <div class="event-card__body">
+                  <p class="event-card__eyebrow" data-i18n="events.e3.eyebrow">Training</p>
+                  <h4 class="event-card__title" data-i18n="events.e3.title">Metadata &amp; Indicator Reporting</h4>
+                  <p class="event-card__meta" data-i18n="events.e3.meta">Bappenas · Hybrid</p>
+                </div>
+              </a>
+            </div>
+
+            <a href="#" class="btn btn--outline btn--full">
+              <span data-i18n="events.cta">View full calendar</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ COMMUNITY ══════════════ -->
+    <section id="komunitas" class="section section--alt">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow" data-i18n="community.eyebrow">Network &amp; Community</span>
+          <h2 class="section__title" data-i18n="community.title">Cross-sector collaboration for sustainable impact</h2>
+          <p class="section__lead" data-i18n="community.lead">
+            Connect with SDGs Centers at universities, expert teams, and development communities across Indonesia.
+          </p>
+        </div>
+
+        <div class="community-grid">
+          <article class="community-card reveal" style="--cc-color:#071527">
+            <div class="community-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+            </div>
+            <h3 class="community-card__title" data-i18n="community.card1.title">SDGs Center</h3>
+            <p class="community-card__desc" data-i18n="community.card1.desc">A network of university study centers driving research, community service, and SDGs advocacy.</p>
+            <p class="community-card__stat"><span data-count="54">0</span>+</p>
+            <p class="community-card__stat-label" data-i18n="community.card1.statLabel">Registered institutions</p>
+            <a href="#" class="link-arrow link-arrow--inline">
+              <span data-i18n="community.card1.link">Explore directory</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+          <article class="community-card reveal" style="--cc-color:#F4A024">
+            <div class="community-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 20v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 20v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="community-card__title" data-i18n="community.card2.title">Expert Team</h3>
+            <p class="community-card__desc" data-i18n="community.card2.desc">Experts from various disciplines providing policy recommendations and technical studies.</p>
+            <p class="community-card__stat"><span data-count="120">0</span>+</p>
+            <p class="community-card__stat-label" data-i18n="community.card2.statLabel">Verified experts</p>
+            <a href="#" class="link-arrow link-arrow--inline">
+              <span data-i18n="community.card2.link">View profiles</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+          <article class="community-card reveal" style="--cc-color:#19486A">
+            <div class="community-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 20a4 4 0 0 1 0-8h2a4 4 0 0 1 0 8h-2Z"/><path d="M13 4a4 4 0 0 1 0 8h-2a4 4 0 0 1 0-8h2Z"/></svg>
+            </div>
+            <h3 class="community-card__title" data-i18n="community.card3.title">Community Network</h3>
+            <p class="community-card__desc" data-i18n="community.card3.desc">Civil society organizations, youth, and volunteers driving grassroots action.</p>
+            <p class="community-card__stat"><span data-count="300">0</span>+</p>
+            <p class="community-card__stat-label" data-i18n="community.card3.statLabel">Partner organizations</p>
+            <a href="#" class="link-arrow link-arrow--inline">
+              <span data-i18n="community.card3.link">Join now</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ NEWSLETTER ══════════════ -->
+    <section class="section newsletter-section">
+      <div class="container">
+        <div class="newsletter reveal">
+          <div class="newsletter__grid-overlay" aria-hidden="true"></div>
+          <div class="newsletter__glow newsletter__glow--a" aria-hidden="true"></div>
+          <div class="newsletter__glow newsletter__glow--b" aria-hidden="true"></div>
+
+          <div class="newsletter__inner">
+            <div>
+              <h2 class="newsletter__title" data-i18n="newsletter.title">Stay connected with Indonesia's SDGs progress</h2>
+              <p class="newsletter__lead" data-i18n="newsletter.lead">Subscribe to the monthly bulletin: data summaries, latest publications, event agendas, and collaboration opportunities.</p>
+            </div>
+
+            <form onsubmit="return false;" class="newsletter__form">
+              <label for="newsletterEmail" class="sr-only" data-i18n="newsletter.emailLabel">Email address</label>
+              <div class="newsletter__row">
+                <input id="newsletterEmail" type="email" required class="newsletter__input"
+                       data-i18n-placeholder="newsletter.placeholder"
+                       placeholder="name@email.com" />
+                <button type="submit" class="btn btn--accent" data-i18n="newsletter.button">Subscribe</button>
+              </div>
+              <p class="newsletter__note" data-i18n="newsletter.note">We respect your privacy. Unsubscribe at any time.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__brand-col">
+          <a href="#" class="brand brand--footer">
+            <img
+                src="assets/Logo-SDGs-Knowledge-Hub-color-Indonesia-Standar.png"
+                alt=""
+                class="brand__logo-img"
+                aria-hidden="true"
+                />
+            <span class="brand__text">
+              <span class="brand__title">SDGs Indonesia</span>
+              <span class="brand__sub">Knowledge Hub</span>
+            </span>
+          </a>
+
+          <p class="footer__desc" data-i18n="footer.desc">
+            SDGs Secretariat — Ministry of National Development Planning / Bappenas.
+          </p>
+
+          <div class="socials">
+            <a href="#" class="social" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="social" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="6" width="19" height="12" rx="3"/><path d="m10 9 5 3-5 3V9Z" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="social" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3H21l-6.6 7.5L21.6 21h-6l-4.3-5.6L6.4 21H4.2l7-8-6.9-10h6.2l3.9 5.2L18.9 3Zm-1 16h1.2L8.1 4.9H6.8L17.9 19Z"/></svg>
+            </a>
+            <a href="#" class="social" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.1c.5-.9 1.8-1.9 3.6-1.9 3.9 0 4.6 2.5 4.6 5.8V21h-4v-5.4c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21h-4V9Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-i18n="footer.explore">Explore</h4>
+          <ul class="footer__list">
+            <li><a href="#tentang" data-i18n="footer.link.about">About SDGs</a></li>
+            <li><a href="#tujuan" data-i18n="footer.link.goals">17 Goals</a></li>
+            <li><a href="#data" data-i18n="footer.link.dashboard">Data Dashboard</a></li>
+            <li><a href="#" data-i18n="footer.link.indicators">Indicators &amp; Metadata</a></li>
+            <li><a href="#" data-i18n="footer.link.reports">Annual Reports</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-i18n="footer.resources">Resources</h4>
+          <ul class="footer__list">
+            <li><a href="#pengetahuan" data-i18n="footer.link.publications">Publications</a></li>
+            <li><a href="#" data-i18n="footer.link.regulations">Regulations</a></li>
+            <li><a href="#" data-i18n="footer.link.bestPractices">Best Practices</a></li>
+            <li><a href="#" data-i18n="footer.link.awards">Awards</a></li>
+            <li><a href="#" data-i18n="footer.link.video">Video Library</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-i18n="footer.contact">Contact</h4>
+          <ul class="footer__contact">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span data-i18n="footer.address">Jl. Taman Suropati No. 2,<br/>Central Jakarta 10310</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <a href="mailto:sdgs@bappenas.go.id">sdgs@bappenas.go.id</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+              <span>(021) 3193 6201</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p data-i18n="footer.copyright">© 2026 SDGs National Secretariat — Ministry of National Development Planning/Bappenas. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+          <a href="#" data-i18n="footer.terms">Terms &amp; Conditions</a>
+          <a href="#" data-i18n="footer.sitemap">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" data-i18n-aria="a11y.backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <!-- ══════════════ GOAL DETAIL MODAL ══════════════ -->
+  <div class="goal-modal" id="goalModal" hidden>
+    <div class="goal-modal__backdrop" data-close-goal></div>
+
+    <div class="goal-modal__panel" role="dialog" aria-modal="true" aria-labelledby="goalModalTitle" tabindex="-1">
+      <button class="goal-modal__close" data-close-goal data-i18n-aria="modal.close" aria-label="Close detail">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+
+      <header class="goal-modal__header" id="goalModalHeader">
+        <img
+            class="goal-modal__icon"
+            id="goalModalIcon"
+            src="assets/TPB-SDGs-Goal-01-Indonesia-Standar.svg"
+            alt=""
+            aria-hidden="true"
+        />
+        <div class="goal-modal__heading">
+            <p class="goal-modal__eyebrow" id="goalModalEyebrow">Goal 1 · Social</p>
+            <h2 class="goal-modal__title" id="goalModalTitle">No Poverty</h2>
+        </div>
+        </header>
+
+      <div class="goal-modal__body">
+        <p class="goal-modal__desc" id="goalModalDesc"></p>
+
+        <div class="goal-modal__section">
+          <h3 class="goal-modal__section-title">
+            <span class="goal-modal__section-dot" id="goalModalDotA"></span>
+            <span data-i18n="modal.targets">Key Targets</span>
+          </h3>
+          <ul class="goal-modal__list" id="goalModalTargets"></ul>
+        </div>
+
+        <div class="goal-modal__section">
+          <h3 class="goal-modal__section-title">
+            <span class="goal-modal__section-dot" id="goalModalDotB"></span>
+            <span data-i18n="modal.indicators">Key Indicators</span>
+          </h3>
+          <ul class="goal-modal__list goal-modal__list--indicators" id="goalModalIndicators"></ul>
+        </div>
+      </div>
+
+      <footer class="goal-modal__footer">
+        <a href="#" class="btn btn--primary btn--full" id="goalModalCTA">
+          <span data-i18n="modal.cta">View full SDG page</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0B1F3A" />
+  <title>About SDGs — SDGs Indonesia Knowledge Hub</title>
+  <meta name="description" content="Learn about the Sustainable Development Goals (SDGs): their history, the five pillars, Indonesia's national framework, governance structure, and key principles." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <a href="#main" class="skip-link" data-i18n="a11y.skip">Skip to main content</a>
+
+  <!-- ══════════════ TOP UTILITY BAR ══════════════ -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <svg class="topbar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 2 3 7v6c0 5 3.8 9.4 9 11 5.2-1.6 9-6 9-11V7l-9-5Z"/>
+        </svg>
+        <span class="topbar__text" data-i18n="topbar.org">SDGs Secretariat — Ministry of National Development Planning/Bappenas</span>
+      </div>
+      <div class="topbar__right">
+        <a href="#" class="topbar__link" data-i18n="topbar.press">Press Releases</a>
+        <a href="#" class="topbar__link" data-i18n="topbar.careers">Careers</a>
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button class="lang-toggle__btn is-active" data-lang="en" aria-pressed="true">EN</button>
+          <button class="lang-toggle__btn" data-lang="id" aria-pressed="false">ID</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ HEADER ══════════════ -->
+  <header id="site-header" class="header">
+    <nav class="container header__nav" aria-label="Main navigation">
+      <div class="header__row">
+        <a href="index.html" class="brand" aria-label="SDGs Indonesia — Home">
+          <span class="brand__logo">
+            <span class="brand__logo-dot"></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M3.6 9h16.8M3.6 15h16.8M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3Z"/>
+            </svg>
+          </span>
+          <span class="brand__text">
+            <span class="brand__title">SDGs Indonesia</span>
+            <span class="brand__sub">Knowledge Hub</span>
+          </span>
+        </a>
+
+        <ul class="nav">
+          <li><a class="nav__link" href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a class="nav__link" href="about.html" aria-current="page" data-i18n="nav.about">About</a></li>
+          <li><a class="nav__link" href="index.html#tujuan" data-i18n="nav.goals">Goals</a></li>
+          <li><a class="nav__link" href="index.html#data" data-i18n="nav.data">Data &amp; Analytics</a></li>
+          <li><a class="nav__link" href="index.html#pengetahuan" data-i18n="nav.knowledge">Knowledge</a></li>
+          <li><a class="nav__link" href="index.html#berita" data-i18n="nav.news">News</a></li>
+          <li><a class="nav__link" href="index.html#komunitas" data-i18n="nav.community">Community</a></li>
+        </ul>
+
+        <div class="header__actions">
+          <button id="openSearch" class="icon-btn icon-btn--ghost" data-i18n-aria="header.searchAria" aria-label="Search SDGs Indonesia">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+          </button>
+          <a href="index.html#data" class="btn btn--primary btn--sm header__cta">
+            <span data-i18n="header.dashboard">View Dashboard</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <button id="openMenu" class="icon-btn icon-btn--ghost header__burger" data-i18n-aria="header.menuAria" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div id="mobileMenu" class="mobile-menu" hidden>
+      <ul class="mobile-menu__list">
+        <li><a class="mobile-menu__link" href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a class="mobile-menu__link" href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a class="mobile-menu__link" href="index.html#tujuan" data-i18n="nav.goals">Goals</a></li>
+        <li><a class="mobile-menu__link" href="index.html#data" data-i18n="nav.data">Data &amp; Analytics</a></li>
+        <li><a class="mobile-menu__link" href="index.html#pengetahuan" data-i18n="nav.knowledge">Knowledge</a></li>
+        <li><a class="mobile-menu__link" href="index.html#berita" data-i18n="nav.news">News</a></li>
+        <li><a class="mobile-menu__link" href="index.html#komunitas" data-i18n="nav.community">Community</a></li>
+        <li class="mobile-menu__cta-wrap">
+          <a href="index.html#data" class="btn btn--primary mobile-menu__cta" data-i18n="header.dashboard">View Dashboard</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ══════════════ ABOUT HERO ══════════════ -->
+    <section class="page-hero">
+      <div class="page-hero__grid-overlay" aria-hidden="true"></div>
+      <div class="page-hero__glow" aria-hidden="true"></div>
+
+      <!-- NEW: decorative spinning color wheel -->
+      <img
+        src="assets/SDGs-Colour-Wheel-Universal-Standar.svg"
+        alt=""
+        aria-hidden="true"
+        class="page-hero__wheel"
+      />
+
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html" data-i18n="breadcrumb.home">Home</a>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+          <span data-i18n="breadcrumb.about">About SDGs</span>
+        </nav>
+
+        <span class="eyebrow eyebrow--accent" data-i18n="about.hero.eyebrow">About the SDGs</span>
+        <h1 class="page-hero__title">
+          <span data-i18n="about.hero.title1">The 2030 Agenda for</span>
+          <span class="page-hero__title-gradient" data-i18n="about.hero.title2">Sustainable Development</span>
+        </h1>
+        <p class="page-hero__lead" data-i18n="about.hero.lead">
+          A universal call to action to end poverty, protect the planet, and ensure that by 2030 all people enjoy peace and prosperity. Adopted by all 193 UN member states in 2015, the SDGs are the world's shared blueprint for a better future.
+        </p>
+
+        <div class="page-hero__stats">
+          <div class="page-hero__stat">
+            <p class="page-hero__stat-value">2015</p>
+            <p class="page-hero__stat-label" data-i18n="about.hero.stat1">Year adopted</p>
+          </div>
+          <div class="page-hero__stat">
+            <p class="page-hero__stat-value">193</p>
+            <p class="page-hero__stat-label" data-i18n="about.hero.stat2">UN member states</p>
+          </div>
+          <div class="page-hero__stat">
+            <p class="page-hero__stat-value">17</p>
+            <p class="page-hero__stat-label" data-i18n="about.hero.stat3">Goals</p>
+          </div>
+          <div class="page-hero__stat">
+            <p class="page-hero__stat-value">169</p>
+            <p class="page-hero__stat-label" data-i18n="about.hero.stat4">Targets</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ WHAT ARE THE SDGs ══════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow" data-i18n="about.what.eyebrow">Introduction</span>
+          <h2 class="section__title" data-i18n="about.what.title">What are the Sustainable Development Goals?</h2>
+        </div>
+
+                <!-- NEW: showcase of all 17 SDG icons -->
+        <div class="all-goals-showcase reveal">
+          <img
+            src="assets/TPB-SDGs-17-Tujuan-Indonesia-Standar.svg"
+            alt="17 Tujuan Pembangunan Berkelanjutan Indonesia"
+            class="all-goals-showcase__img"
+            loading="lazy"
+          />
+          <p class="all-goals-showcase__caption" data-i18n="about.showcase.caption">
+            The 17 Sustainable Development Goals — an integrated, indivisible set of global priorities for people and planet.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ HISTORY TIMELINE ══════════════ -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow" data-i18n="about.history.eyebrow">Journey</span>
+          <h2 class="section__title" data-i18n="about.history.title">From Rio to the 2030 Agenda</h2>
+          <p class="section__lead" data-i18n="about.history.lead">
+            The SDGs are the result of decades of global conversations on sustainable development — a journey that began long before 2015.
+          </p>
+        </div>
+
+        <ol class="timeline" role="list">
+          <li class="timeline__item reveal">
+            <div class="timeline__year">1992</div>
+            <div class="timeline__card">
+              <h3 class="timeline__title" data-i18n="about.history.e1.title">Earth Summit, Rio de Janeiro</h3>
+              <p class="timeline__desc" data-i18n="about.history.e1.desc">
+                The first global conference to link environment and development, producing Agenda 21 and setting the stage for future sustainable development frameworks.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__year">2000</div>
+            <div class="timeline__card">
+              <h3 class="timeline__title" data-i18n="about.history.e2.title">Millennium Development Goals (MDGs)</h3>
+              <p class="timeline__desc" data-i18n="about.history.e2.desc">
+                Eight goals focused on poverty, education, gender, health, and environment — targeting developing countries with a 2015 deadline.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__year">2012</div>
+            <div class="timeline__card">
+              <h3 class="timeline__title" data-i18n="about.history.e3.title">Rio+20 Conference</h3>
+              <p class="timeline__desc" data-i18n="about.history.e3.desc">
+                The UN Conference on Sustainable Development called for a new set of goals to succeed the MDGs — with a more universal and integrated approach.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal timeline__item--highlight">
+            <div class="timeline__year">2015</div>
+            <div class="timeline__card">
+              <h3 class="timeline__title" data-i18n="about.history.e4.title">2030 Agenda adopted</h3>
+              <p class="timeline__desc" data-i18n="about.history.e4.desc">
+                On 25 September 2015, all 193 UN member states adopted "Transforming Our World: The 2030 Agenda for Sustainable Development" — 17 goals, 169 targets.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__year">2017</div>
+            <div class="timeline__card">
+              <h3 class="timeline__title" data-i18n="about.history.e5.title">Indonesia's first SDGs regulation</h3>
+              <p class="timeline__desc" data-i18n="about.history.e5.desc">
+                Presidential Regulation No. 59 of 2017 established Indonesia's national framework for SDG implementation, coordination, and reporting.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal timeline__item--highlight">
+            <div class="timeline__year">2022</div>
+            <div class="timeline__card">
+              <h3 class="timeline__title" data-i18n="about.history.e6.title">Presidential Regulation No. 111 of 2022</h3>
+              <p class="timeline__desc" data-i18n="about.history.e6.desc">
+                An updated and strengthened regulation reinforcing the roles of ministries, sub-national governments, and multi-stakeholder platforms in achieving the SDGs.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ══════════════ 5 PILLARS (expanded) ══════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow" data-i18n="about.pillars.eyebrow">Framework</span>
+          <h2 class="section__title" data-i18n="about.pillars.title">The Five Pillars</h2>
+          <p class="section__lead" data-i18n="about.pillars.lead">
+            The 17 goals are organized under five transformative pillars — capturing the shared aspirations of people and planet, with justice and partnership holding it all together.
+          </p>
+        </div>
+
+        <div class="pillars-detailed">
+          <article class="pillar-detail reveal" style="--pd-color:#E5243B">
+            <div class="pillar-detail__side">
+              <span class="pillar-detail__num">01</span>
+              <span class="pillar-detail__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 20v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 20v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+            </div>
+            <div class="pillar-detail__body">
+              <h3 class="pillar-detail__title" data-i18n="pillars.people.title">People</h3>
+              <p class="pillar-detail__desc" data-i18n="about.pillars.people.desc">
+                End poverty and hunger in all forms, ensure that all human beings can fulfill their potential in dignity and equality, and in a healthy environment.
+              </p>
+              <div class="pillar-detail__tags">
+                <span class="sdg-chip" style="--sdg-color:#E5243B">SDG 1</span>
+                <span class="sdg-chip" style="--sdg-color:#DDA63A">SDG 2</span>
+                <span class="sdg-chip" style="--sdg-color:#4C9F38">SDG 3</span>
+                <span class="sdg-chip" style="--sdg-color:#C5192D">SDG 4</span>
+                <span class="sdg-chip" style="--sdg-color:#FF3A21">SDG 5</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="pillar-detail reveal" style="--pd-color:#3F7E44">
+            <div class="pillar-detail__side">
+              <span class="pillar-detail__num">02</span>
+              <span class="pillar-detail__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3Z"/></svg>
+              </span>
+            </div>
+            <div class="pillar-detail__body">
+              <h3 class="pillar-detail__title" data-i18n="pillars.planet.title">Planet</h3>
+              <p class="pillar-detail__desc" data-i18n="about.pillars.planet.desc">
+                Protect the planet from degradation — through sustainable consumption and production, sustainably managing natural resources, and taking urgent action on climate change.
+              </p>
+              <div class="pillar-detail__tags">
+                <span class="sdg-chip" style="--sdg-color:#26BDE2">SDG 6</span>
+                <span class="sdg-chip" style="--sdg-color:#FCC30B">SDG 7</span>
+                <span class="sdg-chip" style="--sdg-color:#FD9D24">SDG 11</span>
+                <span class="sdg-chip" style="--sdg-color:#3F7E44">SDG 13</span>
+                <span class="sdg-chip" style="--sdg-color:#0A97D9">SDG 14</span>
+                <span class="sdg-chip" style="--sdg-color:#56C02B">SDG 15</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="pillar-detail reveal" style="--pd-color:#A21942">
+            <div class="pillar-detail__side">
+              <span class="pillar-detail__num">03</span>
+              <span class="pillar-detail__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+              </span>
+            </div>
+            <div class="pillar-detail__body">
+              <h3 class="pillar-detail__title" data-i18n="pillars.prosperity.title">Prosperity</h3>
+              <p class="pillar-detail__desc" data-i18n="about.pillars.prosperity.desc">
+                Ensure that all human beings can enjoy prosperous and fulfilling lives, with economic, social, and technological progress occurring in harmony with nature.
+              </p>
+              <div class="pillar-detail__tags">
+                <span class="sdg-chip" style="--sdg-color:#A21942">SDG 8</span>
+                <span class="sdg-chip" style="--sdg-color:#FD6925">SDG 9</span>
+                <span class="sdg-chip" style="--sdg-color:#DD1367">SDG 10</span>
+                <span class="sdg-chip" style="--sdg-color:#BF8B2E">SDG 12</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="pillar-detail reveal" style="--pd-color:#00689D">
+            <div class="pillar-detail__side">
+              <span class="pillar-detail__num">04</span>
+              <span class="pillar-detail__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 3 7v6c0 5 3.8 9.4 9 11 5.2-1.6 9-6 9-11V7l-9-5Z"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+            </div>
+            <div class="pillar-detail__body">
+              <h3 class="pillar-detail__title" data-i18n="pillars.peace.title">Peace</h3>
+              <p class="pillar-detail__desc" data-i18n="about.pillars.peace.desc">
+                Foster peaceful, just, and inclusive societies that are free from fear and violence — because there can be no sustainable development without peace, and no peace without sustainable development.
+              </p>
+              <div class="pillar-detail__tags">
+                <span class="sdg-chip" style="--sdg-color:#00689D">SDG 16</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="pillar-detail reveal" style="--pd-color:#19486A">
+            <div class="pillar-detail__side">
+              <span class="pillar-detail__num">05</span>
+              <span class="pillar-detail__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M11 20a4 4 0 0 1 0-8h2a4 4 0 0 1 0 8h-2Z"/><path d="M13 4a4 4 0 0 1 0 8h-2a4 4 0 0 1 0-8h2Z"/></svg>
+              </span>
+            </div>
+            <div class="pillar-detail__body">
+              <h3 class="pillar-detail__title" data-i18n="pillars.partnership.title">Partnership</h3>
+              <p class="pillar-detail__desc" data-i18n="about.pillars.partnership.desc">
+                Mobilize the means required to implement the 2030 Agenda through a revitalized Global Partnership for Sustainable Development, based on a spirit of strengthened global solidarity.
+              </p>
+              <div class="pillar-detail__tags">
+                <span class="sdg-chip" style="--sdg-color:#19486A">SDG 17</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ SDGs IN INDONESIA ══════════════ -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow" data-i18n="about.indonesia.eyebrow">National Context</span>
+          <h2 class="section__title" data-i18n="about.indonesia.title">SDGs in Indonesia</h2>
+          <p class="section__lead" data-i18n="about.indonesia.lead">
+            Indonesia played an active role in shaping the 2030 Agenda and has been implementing the SDGs through an integrated, whole-of-government and whole-of-society approach since 2017.
+          </p>
+        </div>
+
+        <div class="indonesia-grid">
+          <article class="indonesia-card reveal">
+            <span class="indonesia-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg>
+            </span>
+            <h3 class="indonesia-card__title" data-i18n="about.indonesia.card1.title">Legal basis</h3>
+            <p class="indonesia-card__desc" data-i18n="about.indonesia.card1.desc">
+              Presidential Regulation No. 111 of 2022 governs SDG implementation, replacing the earlier Perpres 59/2017. It sets the roadmap, targets, and reporting mechanisms.
+            </p>
+          </article>
+
+          <article class="indonesia-card reveal">
+            <span class="indonesia-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M4 21V10l8-6 8 6v11M9 21v-6h6v6"/></svg>
+            </span>
+            <h3 class="indonesia-card__title" data-i18n="about.indonesia.card2.title">Institutional home</h3>
+            <p class="indonesia-card__desc" data-i18n="about.indonesia.card2.desc">
+              The National Secretariat for SDGs is hosted by the Ministry of National Development Planning (Bappenas), coordinating implementation across ministries and regions.
+            </p>
+          </article>
+
+          <article class="indonesia-card reveal">
+            <span class="indonesia-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M6 6v12M10 6v12M14 6v12M18 6v12M3 20h18"/></svg>
+            </span>
+            <h3 class="indonesia-card__title" data-i18n="about.indonesia.card3.title">Local implementation</h3>
+            <p class="indonesia-card__desc" data-i18n="about.indonesia.card3.desc">
+              All 38 provinces and 514 districts/cities have SDG Regional Action Plans, aligned with the National Action Plan and monitored through a dedicated regional reporting platform.
+            </p>
+          </article>
+
+          <article class="indonesia-card reveal">
+            <span class="indonesia-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+            </span>
+            <h3 class="indonesia-card__title" data-i18n="about.indonesia.card4.title">Academic network</h3>
+            <p class="indonesia-card__desc" data-i18n="about.indonesia.card4.desc">
+              Over 54 SDGs Centers at universities drive research, community service, and local advocacy — bridging academia, government, and society.
+            </p>
+          </article>
+        </div>
+
+        <!-- Funding sources -->
+        <div class="funding reveal">
+          <h3 class="funding__title" data-i18n="about.funding.title">Four sources of SDG financing</h3>
+          <p class="funding__lead" data-i18n="about.funding.lead">
+            Sustainable financing for the SDGs relies on mobilizing resources from multiple streams.
+          </p>
+
+          <div class="funding-grid">
+            <div class="funding-card">
+              <span class="funding-card__label">01</span>
+              <h4 class="funding-card__name" data-i18n="about.funding.f1">State Budget (APBN)</h4>
+              <p class="funding-card__desc" data-i18n="about.funding.f1d">Public financing through national budget allocations across ministries.</p>
+            </div>
+            <div class="funding-card">
+              <span class="funding-card__label">02</span>
+              <h4 class="funding-card__name" data-i18n="about.funding.f2">Regional Budget (APBD)</h4>
+              <p class="funding-card__desc" data-i18n="about.funding.f2d">Provincial and district/city budgets aligned with Regional Action Plans.</p>
+            </div>
+            <div class="funding-card">
+              <span class="funding-card__label">03</span>
+              <h4 class="funding-card__name" data-i18n="about.funding.f3">Philanthropy &amp; Business</h4>
+              <p class="funding-card__desc" data-i18n="about.funding.f3d">CSR programs, philanthropic foundations, and private sector contributions.</p>
+            </div>
+            <div class="funding-card">
+              <span class="funding-card__label">04</span>
+              <h4 class="funding-card__name" data-i18n="about.funding.f4">Community &amp; Non-Government</h4>
+              <p class="funding-card__desc" data-i18n="about.funding.f4d">Civil society, religious organizations, and community-based initiatives.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ GOVERNANCE STRUCTURE ══════════════ -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow" data-i18n="about.gov.eyebrow">Governance</span>
+          <h2 class="section__title" data-i18n="about.gov.title">How Indonesia coordinates the SDGs</h2>
+          <p class="section__lead" data-i18n="about.gov.lead">
+            A multi-level structure connects national leadership, cross-ministry coordination, technical working groups, and regional implementation.
+          </p>
+        </div>
+
+        <div class="gov-chart reveal">
+          <div class="gov-tier gov-tier--1">
+            <div class="gov-node" style="--gov-color:#071527">
+              <p class="gov-node__eyebrow" data-i18n="about.gov.t1.eyebrow">Highest authority</p>
+              <h3 class="gov-node__title" data-i18n="about.gov.t1.title">National Steering Committee</h3>
+              <p class="gov-node__desc" data-i18n="about.gov.t1.desc">Chaired by the President, providing strategic direction for SDG implementation.</p>
+            </div>
+          </div>
+
+          <div class="gov-connector" aria-hidden="true"></div>
+
+          <div class="gov-tier gov-tier--2">
+            <div class="gov-node" style="--gov-color:#1B3763">
+              <p class="gov-node__eyebrow" data-i18n="about.gov.t2.eyebrow">Coordination</p>
+              <h3 class="gov-node__title" data-i18n="about.gov.t2.title">National Coordinating Team</h3>
+              <p class="gov-node__desc" data-i18n="about.gov.t2.desc">Led by Bappenas, harmonizing policies and programs across ministries.</p>
+            </div>
+            <div class="gov-node" style="--gov-color:#1B3763">
+              <p class="gov-node__eyebrow" data-i18n="about.gov.t2b.eyebrow">Technical</p>
+              <h3 class="gov-node__title" data-i18n="about.gov.t2b.title">Working Groups</h3>
+              <p class="gov-node__desc" data-i18n="about.gov.t2b.desc">Thematic groups covering each pillar, targets, and indicators.</p>
+            </div>
+          </div>
+
+          <div class="gov-connector" aria-hidden="true"></div>
+
+          <div class="gov-tier gov-tier--3">
+            <div class="gov-node" style="--gov-color:#2A4C82">
+              <p class="gov-node__eyebrow" data-i18n="about.gov.t3.eyebrow">Secretariat</p>
+              <h3 class="gov-node__title" data-i18n="about.gov.t3.title">National SDGs Secretariat</h3>
+              <p class="gov-node__desc" data-i18n="about.gov.t3.desc">Day-to-day coordination, monitoring, reporting, and stakeholder engagement.</p>
+            </div>
+            <div class="gov-node" style="--gov-color:#2A4C82">
+              <p class="gov-node__eyebrow" data-i18n="about.gov.t3b.eyebrow">Data &amp; Reporting</p>
+              <h3 class="gov-node__title" data-i18n="about.gov.t3b.title">SDGs Data &amp; Metadata Team</h3>
+              <p class="gov-node__desc" data-i18n="about.gov.t3b.desc">Managed jointly with BPS to compile, verify, and publish indicators.</p>
+            </div>
+          </div>
+
+          <div class="gov-connector" aria-hidden="true"></div>
+
+          <div class="gov-tier gov-tier--4">
+            <div class="gov-node" style="--gov-color:#4C6FA8">
+              <p class="gov-node__eyebrow" data-i18n="about.gov.t4.eyebrow">Sub-national</p>
+              <h3 class="gov-node__title" data-i18n="about.gov.t4.title">Regional SDG Secretariats</h3>
+              <p class="gov-node__desc" data-i18n="about.gov.t4.desc">38 provinces and 514 districts/cities implementing Regional Action Plans.</p>
+            </div>
+            <div class="gov-node" style="--gov-color:#4C6FA8">
+              <p class="gov-node__eyebrow" data-i18n="about.gov.t4b.eyebrow">Multi-stakeholder</p>
+              <h3 class="gov-node__title" data-i18n="about.gov.t4b.title">SDGs Centers &amp; Philanthropy Platform</h3>
+              <p class="gov-node__desc" data-i18n="about.gov.t4b.desc">Universities, civil society, private sector, and philanthropic partners.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ KEY PRINCIPLES ══════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow" data-i18n="about.principles.eyebrow">Guiding Values</span>
+          <h2 class="section__title" data-i18n="about.principles.title">Key principles of the 2030 Agenda</h2>
+          <p class="section__lead" data-i18n="about.principles.lead">
+            Five principles shape how the SDGs are designed, implemented, and monitored — everywhere.
+          </p>
+        </div>
+
+        <div class="principles-grid">
+          <article class="principle reveal">
+            <span class="principle__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 20v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 20v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </span>
+            <h3 class="principle__title" data-i18n="about.principles.p1.title">Leave No One Behind</h3>
+            <p class="principle__desc" data-i18n="about.principles.p1.desc">Every person — regardless of identity, income, or geography — must benefit from development progress.</p>
+          </article>
+
+          <article class="principle reveal">
+            <span class="principle__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3Z"/></svg>
+            </span>
+            <h3 class="principle__title" data-i18n="about.principles.p2.title">Universality</h3>
+            <p class="principle__desc" data-i18n="about.principles.p2.desc">The goals apply to every country — developed and developing — with differentiated responsibilities and capacities.</p>
+          </article>
+
+          <article class="principle reveal">
+            <span class="principle__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v6h-6"/></svg>
+            </span>
+            <h3 class="principle__title" data-i18n="about.principles.p3.title">Integration</h3>
+            <p class="principle__desc" data-i18n="about.principles.p3.desc">Economic, social, and environmental dimensions must advance together — not trade off against each other.</p>
+          </article>
+
+          <article class="principle reveal">
+            <span class="principle__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 20a4 4 0 0 1 0-8h2a4 4 0 0 1 0 8h-2Z"/><path d="M13 4a4 4 0 0 1 0 8h-2a4 4 0 0 1 0-8h2Z"/></svg>
+            </span>
+            <h3 class="principle__title" data-i18n="about.principles.p4.title">Partnership</h3>
+            <p class="principle__desc" data-i18n="about.principles.p4.desc">Real transformation depends on collaboration — governments, businesses, civil society, academia, and communities.</p>
+          </article>
+
+          <article class="principle reveal">
+            <span class="principle__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+            </span>
+            <h3 class="principle__title" data-i18n="about.principles.p5.title">Accountability</h3>
+            <p class="principle__desc" data-i18n="about.principles.p5.desc">Transparent monitoring, open data, and periodic reporting — nationally and globally — keep the agenda on track.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ CTA ══════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="about-cta reveal">
+          <div class="about-cta__glow" aria-hidden="true"></div>
+          <div class="about-cta__inner">
+            <div class="about-cta__copy">
+              <h2 class="about-cta__title" data-i18n="about.cta.title">Ready to explore the goals?</h2>
+              <p class="about-cta__lead" data-i18n="about.cta.lead">
+                Dive into the details of each goal, or track Indonesia's national progress through interactive data dashboards.
+              </p>
+            </div>
+            <div class="about-cta__actions">
+              <a href="index.html#tujuan" class="btn btn--accent">
+                <span data-i18n="about.cta.button1">Explore 17 Goals</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a href="index.html#data" class="btn btn--ghost-light">
+                <span data-i18n="about.cta.button2">View Dashboard</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__brand-col">
+          <a href="index.html" class="brand brand--footer">
+            <span class="brand__logo">
+              <span class="brand__logo-dot"></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M3.6 9h16.8M3.6 15h16.8M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3Z"/>
+              </svg>
+            </span>
+            <span class="brand__text">
+              <span class="brand__title">SDGs Indonesia</span>
+              <span class="brand__sub">Knowledge Hub</span>
+            </span>
+          </a>
+
+          <p class="footer__desc" data-i18n="footer.desc">
+            SDGs Secretariat — Ministry of National Development Planning / Bappenas.
+          </p>
+
+          <div class="socials">
+            <a href="#" class="social" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="social" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="6" width="19" height="12" rx="3"/><path d="m10 9 5 3-5 3V9Z" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="social" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3H21l-6.6 7.5L21.6 21h-6l-4.3-5.6L6.4 21H4.2l7-8-6.9-10h6.2l3.9 5.2L18.9 3Zm-1 16h1.2L8.1 4.9H6.8L17.9 19Z"/></svg>
+            </a>
+            <a href="#" class="social" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.1c.5-.9 1.8-1.9 3.6-1.9 3.9 0 4.6 2.5 4.6 5.8V21h-4v-5.4c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21h-4V9Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-i18n="footer.explore">Explore</h4>
+          <ul class="footer__list">
+            <li><a href="about.html" data-i18n="footer.link.about">About SDGs</a></li>
+            <li><a href="index.html#tujuan" data-i18n="footer.link.goals">17 Goals</a></li>
+            <li><a href="index.html#data" data-i18n="footer.link.dashboard">Data Dashboard</a></li>
+            <li><a href="#" data-i18n="footer.link.indicators">Indicators &amp; Metadata</a></li>
+            <li><a href="#" data-i18n="footer.link.reports">Annual Reports</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-i18n="footer.resources">Resources</h4>
+          <ul class="footer__list">
+            <li><a href="index.html#pengetahuan" data-i18n="footer.link.publications">Publications</a></li>
+            <li><a href="#" data-i18n="footer.link.regulations">Regulations</a></li>
+            <li><a href="#" data-i18n="footer.link.bestPractices">Best Practices</a></li>
+            <li><a href="#" data-i18n="footer.link.awards">Awards</a></li>
+            <li><a href="#" data-i18n="footer.link.video">Video Library</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-i18n="footer.contact">Contact</h4>
+          <ul class="footer__contact">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span data-i18n="footer.address">Jl. Taman Suropati No. 2,<br/>Central Jakarta 10310</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <a href="mailto:sdgs@bappenas.go.id">sdgs@bappenas.go.id</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+              <span>(021) 3193 6201</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p data-i18n="footer.copyright">© 2026 SDGs National Secretariat — Ministry of National Development Planning/Bappenas. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+          <a href="#" data-i18n="footer.terms">Terms &amp; Conditions</a>
+          <a href="#" data-i18n="footer.sitemap">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" data-i18n-aria="a11y.backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
