@@ -215,7 +215,7 @@
       'newsletter.note': 'We respect your privacy. Unsubscribe at any time.',
 
       /* ── Footer ── */
-      'footer.desc': 'SDGs Secretariat — Ministry of National Development Planning / Bappenas.',
+      'footer.desc': 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat quasi distinctio velit eaque et quam cupiditate! Assumenda enim modi, facere mollitia eligendi est voluptate non molestiae libero consequatur incidunt harum!',
       'footer.explore': 'Explore',
       'footer.resources': 'Resources',
       'footer.contact': 'Contact',
@@ -263,6 +263,7 @@
       'about.what.card2.desc': 'Unlike their predecessors, the SDGs apply to every country — developed and developing alike — and call for action by all stakeholders: governments, business, civil society, and individuals.',
       'about.what.card3.title': 'Leave no one behind',
       'about.what.card3.desc': 'The overarching principle is to reach the furthest behind first — eradicating poverty in all its forms and ensuring that progress benefits every person, everywhere.',
+      'about.showcase.caption': 'The 17 Sustainable Development Goals — an integrated, indivisible set of global priorities for people and planet.',
       'about.showcase.caption': 'The 17 Sustainable Development Goals — an integrated, indivisible set of global priorities for people and planet.',
       'about.history.eyebrow': 'Journey',
       'about.history.title': 'From Rio to the 2030 Agenda',
@@ -380,6 +381,74 @@
       'catalog.cta.title': "Explore Indonesia's SDG data dashboard",
       'catalog.cta.sub': 'Track indicators over time, compare provinces, and dig into advanced analytics across every goal.',
       'catalog.cta.button': 'Open Dashboard',
+
+            'breadcrumb.data': 'Data & Analytics',
+      'dataPage.hero.eyebrow': 'Evidence for Action',
+      'dataPage.hero.title1': "Indonesia's",
+      'dataPage.hero.title2': 'SDGs Data',
+      'dataPage.hero.title3': 'Dashboard',
+      'dataPage.hero.lead': 'Explore indicator trends, compare provinces, and track national progress against targets across all 17 Sustainable Development Goals.',
+      'dataPage.hero.stat1': 'Indicators',
+      'dataPage.hero.stat2': 'With data',
+      'dataPage.hero.stat3': 'Provinces',
+      'dataPage.hero.stat4': 'Years of data',
+      'dataPage.header.browseGoals': 'Browse Goals',
+      'dataPage.filter.goal': 'Goal',
+      'dataPage.filter.allGoals': 'All Goals',
+      'dataPage.filter.region': 'Region',
+      'dataPage.filter.national': 'National (Indonesia)',
+      'dataPage.filter.year': 'Year',
+      'dataPage.filter.reset': 'Reset',
+      'dataPage.filter.export': 'Export',
+      'dataPage.filter.hint': 'Filters apply across every chart and table on this page.',
+      'dataPage.region.aceh': 'Aceh',
+      'dataPage.region.northSumatra': 'North Sumatra',
+      'dataPage.region.jakarta': 'DKI Jakarta',
+      'dataPage.region.westJava': 'West Java',
+      'dataPage.region.centralJava': 'Central Java',
+      'dataPage.region.yogyakarta': 'DI Yogyakarta',
+      'dataPage.region.eastJava': 'East Java',
+      'dataPage.region.bali': 'Bali',
+      'dataPage.region.southSulawesi': 'South Sulawesi',
+      'dataPage.region.maluku': 'Maluku',
+      'dataPage.region.papua': 'Papua',
+      'dataPage.trend.eyebrow': 'Time Series',
+      'dataPage.trend.title': 'Indicator Trends Over Time',
+      'dataPage.trend.lead': 'Compare progress across years for the selected indicator. Dashed lines represent target trajectories.',
+      'dataPage.trend.tab1': 'Primary',
+      'dataPage.trend.tab2': 'Compare',
+      'dataPage.trend.legendActual': 'Actual',
+      'dataPage.trend.legendTarget': 'Target',
+      'dataPage.deepdive.eyebrow': 'Goal Deep-Dive',
+      'dataPage.deepdive.title': 'Progress by Goal',
+      'dataPage.deepdive.lead': 'Select a goal below to see its indicator-level breakdown, or click any goal from the Goals page to jump straight here.',
+      'dataPage.province.eyebrow': 'Sub-National',
+      'dataPage.province.title': 'Provincial Comparison',
+      'dataPage.province.lead': 'Top and bottom provinces for the selected indicator, based on the latest available data.',
+      'dataPage.province.top': 'Highest performing',
+      'dataPage.province.bottom': 'Needs attention',
+      'dataPage.avail.eyebrow': 'Coverage',
+      'dataPage.avail.title': 'Data Availability Matrix',
+      'dataPage.avail.lead': 'Which goals have reported data, across all 38 provinces. Darker cells mean higher coverage.',
+      'dataPage.avail.low': 'Low',
+      'dataPage.avail.high': 'High',
+      'dataPage.reports.eyebrow': 'Publications',
+      'dataPage.reports.title': 'Annual Reports & Publications',
+      'dataPage.reports.lead': 'Official SDG reports from the Government of Indonesia — Voluntary National Reviews, annual progress reports, and technical guidelines.',
+      'dataPage.reports.all': 'View all publications',
+      'dataPage.reports.vnr': 'Voluntary National Review',
+      'dataPage.reports.vnrTitle': 'VNR Indonesia 2024',
+      'dataPage.reports.annual': 'Annual Progress',
+      'dataPage.reports.annualTitle': 'SDGs Capaian 2023',
+      'dataPage.reports.guideline': 'Metadata Guideline',
+      'dataPage.reports.guidelineTitle': 'Metadata Indikator SDGs Edisi II',
+      'dataPage.reports.pdf': 'PDF',
+      'dataPage.download.eyebrow': 'Open Data',
+      'dataPage.download.title': 'Access the raw data',
+      'dataPage.download.lead': 'Download the full indicator dataset or use our API to integrate SDGs data into your own applications and research.',
+      'dataPage.download.csv': 'Download CSV',
+      'dataPage.download.xlsx': 'Download XLSX',
+      'dataPage.download.api': 'API Docs',
     },
 
     id: {
@@ -587,7 +656,7 @@
       'newsletter.note': 'Kami menghormati privasi Anda. Berhenti berlangganan kapan saja.',
 
       /* ── Footer ── */
-      'footer.desc': 'Sekretariat Nasional SDGs — Kementerian Perencanaan Pembangunan Nasional / Bappenas.',
+      'footer.desc': 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat quasi distinctio velit eaque et quam cupiditate! Assumenda enim modi, facere mollitia eligendi est voluptate non molestiae libero consequatur incidunt harum!',
       'footer.explore': 'Jelajahi',
       'footer.resources': 'Sumber Daya',
       'footer.contact': 'Kontak',
@@ -635,6 +704,7 @@
       'about.what.card2.desc': 'Berbeda dari pendahulunya, SDGs berlaku untuk setiap negara — maju maupun berkembang — dan menyerukan aksi dari semua pemangku kepentingan: pemerintah, dunia usaha, masyarakat sipil, dan individu.',
       'about.what.card3.title': 'Tidak meninggalkan siapa pun',
       'about.what.card3.desc': 'Prinsip utamanya adalah menjangkau yang paling tertinggal lebih dulu — mengakhiri kemiskinan dalam segala bentuknya dan memastikan kemajuan dinikmati oleh setiap orang, di mana pun.',
+      'about.showcase.caption': '17 Tujuan Pembangunan Berkelanjutan — seperangkat prioritas global yang terintegrasi dan tak terpisahkan untuk manusia dan planet.',
       'about.showcase.caption': '17 Tujuan Pembangunan Berkelanjutan — seperangkat prioritas global yang terintegrasi dan tak terpisahkan untuk manusia dan planet.',
       'about.history.eyebrow': 'Perjalanan',
       'about.history.title': 'Dari Rio hingga Agenda 2030',
@@ -752,6 +822,74 @@
       'catalog.cta.title': 'Jelajahi dasbor data SDGs Indonesia',
       'catalog.cta.sub': 'Lacak indikator dari waktu ke waktu, bandingkan provinsi, dan telusuri analitik lanjutan di semua tujuan.',
       'catalog.cta.button': 'Buka Dashboard',
+
+            'breadcrumb.data': 'Data & Analitik',
+      'dataPage.hero.eyebrow': 'Bukti untuk Aksi',
+      'dataPage.hero.title1': 'Dasbor Data',
+      'dataPage.hero.title2': 'SDGs',
+      'dataPage.hero.title3': 'Indonesia',
+      'dataPage.hero.lead': 'Jelajahi tren indikator, bandingkan provinsi, dan pantau kemajuan nasional terhadap target di seluruh 17 Tujuan Pembangunan Berkelanjutan.',
+      'dataPage.hero.stat1': 'Indikator',
+      'dataPage.hero.stat2': 'Tersedia data',
+      'dataPage.hero.stat3': 'Provinsi',
+      'dataPage.hero.stat4': 'Tahun data',
+      'dataPage.header.browseGoals': 'Jelajahi Tujuan',
+      'dataPage.filter.goal': 'Tujuan',
+      'dataPage.filter.allGoals': 'Semua Tujuan',
+      'dataPage.filter.region': 'Wilayah',
+      'dataPage.filter.national': 'Nasional (Indonesia)',
+      'dataPage.filter.year': 'Tahun',
+      'dataPage.filter.reset': 'Reset',
+      'dataPage.filter.export': 'Ekspor',
+      'dataPage.filter.hint': 'Filter berlaku untuk seluruh grafik dan tabel di halaman ini.',
+      'dataPage.region.aceh': 'Aceh',
+      'dataPage.region.northSumatra': 'Sumatera Utara',
+      'dataPage.region.jakarta': 'DKI Jakarta',
+      'dataPage.region.westJava': 'Jawa Barat',
+      'dataPage.region.centralJava': 'Jawa Tengah',
+      'dataPage.region.yogyakarta': 'DI Yogyakarta',
+      'dataPage.region.eastJava': 'Jawa Timur',
+      'dataPage.region.bali': 'Bali',
+      'dataPage.region.southSulawesi': 'Sulawesi Selatan',
+      'dataPage.region.maluku': 'Maluku',
+      'dataPage.region.papua': 'Papua',
+      'dataPage.trend.eyebrow': 'Rangkaian Waktu',
+      'dataPage.trend.title': 'Tren Indikator dari Waktu ke Waktu',
+      'dataPage.trend.lead': 'Bandingkan kemajuan antar tahun untuk indikator yang dipilih. Garis putus-putus menunjukkan lintasan target.',
+      'dataPage.trend.tab1': 'Utama',
+      'dataPage.trend.tab2': 'Bandingkan',
+      'dataPage.trend.legendActual': 'Aktual',
+      'dataPage.trend.legendTarget': 'Target',
+      'dataPage.deepdive.eyebrow': 'Analisis Tujuan',
+      'dataPage.deepdive.title': 'Kemajuan per Tujuan',
+      'dataPage.deepdive.lead': 'Pilih tujuan di bawah untuk melihat rincian tingkat indikatornya, atau klik tujuan mana pun dari halaman Tujuan untuk langsung ke sini.',
+      'dataPage.province.eyebrow': 'Sub-Nasional',
+      'dataPage.province.title': 'Perbandingan Provinsi',
+      'dataPage.province.lead': 'Provinsi dengan kinerja tertinggi dan terendah untuk indikator yang dipilih, berdasarkan data terbaru.',
+      'dataPage.province.top': 'Kinerja tertinggi',
+      'dataPage.province.bottom': 'Perlu perhatian',
+      'dataPage.avail.eyebrow': 'Cakupan',
+      'dataPage.avail.title': 'Matriks Ketersediaan Data',
+      'dataPage.avail.lead': 'Tujuan mana yang sudah melaporkan data, di seluruh 38 provinsi. Warna lebih gelap berarti cakupan lebih tinggi.',
+      'dataPage.avail.low': 'Rendah',
+      'dataPage.avail.high': 'Tinggi',
+      'dataPage.reports.eyebrow': 'Publikasi',
+      'dataPage.reports.title': 'Laporan Tahunan & Publikasi',
+      'dataPage.reports.lead': 'Laporan SDGs resmi dari Pemerintah Indonesia — Voluntary National Review, laporan kemajuan tahunan, dan pedoman teknis.',
+      'dataPage.reports.all': 'Lihat semua publikasi',
+      'dataPage.reports.vnr': 'Voluntary National Review',
+      'dataPage.reports.vnrTitle': 'VNR Indonesia 2024',
+      'dataPage.reports.annual': 'Kemajuan Tahunan',
+      'dataPage.reports.annualTitle': 'SDGs Capaian 2023',
+      'dataPage.reports.guideline': 'Pedoman Metadata',
+      'dataPage.reports.guidelineTitle': 'Metadata Indikator SDGs Edisi II',
+      'dataPage.reports.pdf': 'PDF',
+      'dataPage.download.eyebrow': 'Data Terbuka',
+      'dataPage.download.title': 'Akses data mentah',
+      'dataPage.download.lead': 'Unduh kumpulan data indikator lengkap atau gunakan API kami untuk mengintegrasikan data SDGs ke dalam aplikasi dan riset Anda.',
+      'dataPage.download.csv': 'Unduh CSV',
+      'dataPage.download.xlsx': 'Unduh XLSX',
+      'dataPage.download.api': 'Dokumentasi API',
     },
   };
 
@@ -934,6 +1072,7 @@
     const path = window.location.pathname.toLowerCase();
     if (path.endsWith('about.html')) return 'about';
     if (path.endsWith('goals.html')) return 'goals';
+    if (path.endsWith('data.html')) return 'data';
     return 'index';
   }
 
@@ -976,6 +1115,7 @@
     renderCatalog();       // goals.html catalog
     refreshDetailPanel();  // goals.html open detail
     refreshOpenModal();    // homepage open modal
+    window.__sdgsUpdateDataPage?.();
   }
 
   /* ═══════════════════════════════════════════════════════════════
@@ -1608,6 +1748,7 @@
     applyI18n();
     renderGoalsGrid();  // homepage featured
     renderCatalog();    // goals.html catalog
+    initDataPage();
   }
 
   if (document.readyState === 'loading') {
@@ -1615,5 +1756,496 @@
   } else {
     init();
   }
+
+    /* ═══════════════════════════════════════════════════════════════
+     16. DATA & ANALYTICS PAGE (data.html)
+     ═══════════════════════════════════════════════════════════════ */
+
+  /* ── Mock time-series data ── */
+  const YEARS = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+
+  const INDICATOR_SERIES = {
+    /* Goal → series values (2015–2024) */
+    1:  { name: { en: 'Poverty Rate',        id: 'Tingkat Kemiskinan' },   unit: '%',  values: [11.2, 10.9, 10.6, 9.8, 9.2, 10.2, 9.7, 9.5, 9.4, 8.57], target: 6.5,  higherIsBetter: false, color: '#E5243B' },
+    2:  { name: { en: 'Stunting Prevalence', id: 'Prevalensi Stunting' },  unit: '%',  values: [36.4, 35.6, 33.8, 30.8, 27.7, 26.9, 24.4, 21.6, 21.5, 19.8], target: 14.0, higherIsBetter: false, color: '#DDA63A' },
+    3:  { name: { en: 'Life Expectancy',     id: 'Angka Harapan Hidup' },  unit: 'yr', values: [69.2, 69.5, 69.7, 70.0, 70.4, 70.2, 71.0, 71.3, 71.5, 71.8], target: 75.0, higherIsBetter: true,  color: '#4C9F38' },
+    4:  { name: { en: 'Literacy Rate',       id: 'Angka Melek Huruf' },    unit: '%',  values: [94.1, 94.4, 94.7, 95.2, 95.4, 95.6, 96.0, 96.2, 96.3, 96.5], target: 99.0, higherIsBetter: true,  color: '#C5192D' },
+    5:  { name: { en: 'Gender Inequality Index', id: 'Indeks Ketimpangan Gender' }, unit: 'idx', values: [0.49, 0.48, 0.47, 0.45, 0.44, 0.43, 0.42, 0.41, 0.40, 0.39], target: 0.25, higherIsBetter: false, color: '#FF3A21' },
+    6:  { name: { en: 'Safe Water Access',   id: 'Akses Air Minum Aman' }, unit: '%',  values: [82.1, 83.5, 84.8, 86.2, 87.5, 88.9, 90.1, 91.0, 92.3, 93.4], target: 100,  higherIsBetter: true,  color: '#26BDE2' },
+    7:  { name: { en: 'Renewable Energy Mix', id: 'Bauran Energi Terbarukan' }, unit: '%', values: [7.1, 8.2, 9.5, 10.4, 11.2, 11.5, 12.2, 12.8, 13.1, 13.5], target: 23.0, higherIsBetter: true,  color: '#FCC30B' },
+    8:  { name: { en: 'GDP Growth',          id: 'Pertumbuhan PDB' },      unit: '%',  values: [4.88, 5.03, 5.07, 5.17, 5.02, -2.07, 3.69, 5.31, 5.05, 5.03], target: 5.5,  higherIsBetter: true,  color: '#A21942' },
+    9:  { name: { en: 'Manufacturing Share of GDP', id: 'Kontribusi Manufaktur PDB' }, unit: '%', values: [20.8, 20.5, 20.2, 19.9, 19.7, 19.9, 19.8, 18.6, 18.4, 18.5], target: 22.0, higherIsBetter: true,  color: '#FD6925' },
+    10: { name: { en: 'Gini Ratio',          id: 'Rasio Gini' },           unit: 'idx', values: [0.402, 0.397, 0.393, 0.389, 0.380, 0.385, 0.381, 0.379, 0.375, 0.372], target: 0.340, higherIsBetter: false, color: '#DD1367' },
+    11: { name: { en: 'Public Transport Access', id: 'Akses Transportasi Publik' }, unit: '%', values: [52.0, 54.5, 57.2, 60.1, 63.4, 66.2, 68.9, 71.5, 73.8, 76.0], target: 90.0, higherIsBetter: true,  color: '#FD9D24' },
+    12: { name: { en: 'Waste Recycling Rate', id: 'Tingkat Daur Ulang Sampah' }, unit: '%', values: [15.2, 16.8, 18.4, 20.1, 22.0, 24.3, 26.4, 28.7, 30.5, 32.8], target: 50.0, higherIsBetter: true,  color: '#BF8B2E' },
+    13: { name: { en: 'GHG Emissions Index',  id: 'Indeks Emisi GRK' },    unit: 'idx', values: [100, 103, 107, 112, 116, 118, 121, 123, 124, 125], target: 85,  higherIsBetter: false, color: '#3F7E44' },
+    14: { name: { en: 'Marine Protected Areas', id: 'Kawasan Konservasi Laut' }, unit: '%', values: [8.1, 9.2, 10.4, 11.8, 13.1, 14.6, 16.2, 17.5, 18.8, 20.1], target: 30.0, higherIsBetter: true,  color: '#0A97D9' },
+    15: { name: { en: 'Forest Cover Area',    id: 'Luas Tutupan Hutan' },  unit: '%',  values: [50.2, 50.1, 50.0, 49.9, 49.8, 49.8, 49.7, 49.7, 49.6, 49.5], target: 52.0, higherIsBetter: true,  color: '#56C02B' },
+    16: { name: { en: 'Corruption Perception Index', id: 'Indeks Persepsi Korupsi' }, unit: 'idx', values: [36, 37, 37, 38, 40, 37, 38, 34, 34, 34], target: 50, higherIsBetter: true, color: '#00689D' },
+    17: { name: { en: 'Internet Access',      id: 'Akses Internet' },      unit: '%',  values: [42.0, 47.5, 53.2, 58.6, 63.5, 68.4, 72.1, 75.5, 78.2, 80.5], target: 95.0, higherIsBetter: true,  color: '#19486A' },
+  };
+
+  const REGIONS = {
+    national: { en: 'National', id: 'Nasional' },
+    11: { en: 'Aceh', id: 'Aceh' },
+    12: { en: 'North Sumatra', id: 'Sumatera Utara' },
+    31: { en: 'DKI Jakarta', id: 'DKI Jakarta' },
+    32: { en: 'West Java', id: 'Jawa Barat' },
+    33: { en: 'Central Java', id: 'Jawa Tengah' },
+    34: { en: 'DI Yogyakarta', id: 'DI Yogyakarta' },
+    35: { en: 'East Java', id: 'Jawa Timur' },
+    51: { en: 'Bali', id: 'Bali' },
+    73: { en: 'South Sulawesi', id: 'Sulawesi Selatan' },
+    81: { en: 'Maluku', id: 'Maluku' },
+    91: { en: 'Papua', id: 'Papua' },
+  };
+
+  /* Province performance (mock, per goal — top and bottom 3) */
+  const PROVINCE_DATA = {
+    1:  { top: [{ name: { en: 'Bali', id: 'Bali' }, value: 4.2 }, { name: { en: 'DI Yogyakarta', id: 'DI Yogyakarta' }, value: 10.8 }, { name: { en: 'DKI Jakarta', id: 'DKI Jakarta' }, value: 11.0 }],
+          bottom: [{ name: { en: 'Papua', id: 'Papua' }, value: 26.8 }, { name: { en: 'Maluku', id: 'Maluku' }, value: 20.1 }, { name: { en: 'East Nusa Tenggara', id: 'Nusa Tenggara Timur' }, value: 19.9 }] },
+    4:  { top: [{ name: { en: 'DI Yogyakarta', id: 'DI Yogyakarta' }, value: 98.9 }, { name: { en: 'DKI Jakarta', id: 'DKI Jakarta' }, value: 98.5 }, { name: { en: 'Bali', id: 'Bali' }, value: 98.0 }],
+          bottom: [{ name: { en: 'Papua', id: 'Papua' }, value: 78.4 }, { name: { en: 'West Papua', id: 'Papua Barat' }, value: 82.1 }, { name: { en: 'Maluku', id: 'Maluku' }, value: 84.6 }] },
+    8:  { top: [{ name: { en: 'DKI Jakarta', id: 'DKI Jakarta' }, value: 5.8 }, { name: { en: 'Central Sulawesi', id: 'Sulawesi Tengah' }, value: 5.6 }, { name: { en: 'North Maluku', id: 'Maluku Utara' }, value: 5.4 }],
+          bottom: [{ name: { en: 'Papua', id: 'Papua' }, value: 3.1 }, { name: { en: 'Aceh', id: 'Aceh' }, value: 3.4 }, { name: { en: 'West Papua', id: 'Papua Barat' }, value: 3.6 }] },
+    13: { top: [{ name: { en: 'Bali', id: 'Bali' }, value: 78 }, { name: { en: 'DI Yogyakarta', id: 'DI Yogyakarta' }, value: 72 }, { name: { en: 'West Java', id: 'Jawa Barat' }, value: 68 }],
+          bottom: [{ name: { en: 'Papua', id: 'Papua' }, value: 41 }, { name: { en: 'East Kalimantan', id: 'Kalimantan Timur' }, value: 44 }, { name: { en: 'South Sumatra', id: 'Sumatera Selatan' }, value: 48 }] },
+  };
+
+  /* Fallback province data if goal isn't in PROVINCE_DATA */
+  const DEFAULT_PROVINCE_DATA = {
+    top: [{ name: { en: 'DKI Jakarta', id: 'DKI Jakarta' }, value: 92 }, { name: { en: 'DI Yogyakarta', id: 'DI Yogyakarta' }, value: 88 }, { name: { en: 'Bali', id: 'Bali' }, value: 85 }],
+    bottom: [{ name: { en: 'Papua', id: 'Papua' }, value: 42 }, { name: { en: 'West Papua', id: 'Papua Barat' }, value: 46 }, { name: { en: 'Maluku', id: 'Maluku' }, value: 51 }],
+  };
+
+  /* State for the data page */
+  const dataState = {
+    goal: 'all',
+    region: 'national',
+    year: 2024,
+    series: 'primary',
+  };
+
+  const $ = id => document.getElementById(id);
+
+  /* ── Populate goal dropdown ── */
+  function populateGoalFilter() {
+    const select = $('filterGoal');
+    if (!select) return;
+    // Clear everything except the "all" option
+    [...select.options].forEach((opt, i) => { if (i > 0) opt.remove(); });
+    GOALS.forEach(g => {
+      const opt = document.createElement('option');
+      opt.value = String(g.id);
+      opt.textContent = `${g.id} · ${g.text[state.lang].name}`;
+      select.appendChild(opt);
+    });
+  }
+
+  /* ── Render a KPI card ── */
+  function createKpiCard(goal, series) {
+    const copy = goal.text[state.lang];
+    const indicatorName = series.name[state.lang];
+    const latest = series.values[series.values.length - 1];
+    const prev = series.values[series.values.length - 2];
+    const delta = latest - prev;
+    const up = delta >= 0;
+    const isGood = series.higherIsBetter ? up : !up;
+
+    // Build a mini sparkline
+    const min = Math.min(...series.values);
+    const max = Math.max(...series.values);
+    const range = max - min || 1;
+    const w = 200, h = 36;
+    const pts = series.values.map((v, i) => {
+      const x = (i / (series.values.length - 1)) * w;
+      const y = h - ((v - min) / range) * h;
+      return `${x.toFixed(1)},${y.toFixed(1)}`;
+    }).join(' ');
+
+    const card = document.createElement('article');
+    card.className = 'kpi-rich reveal';
+    card.style.setProperty('--kpi-color', series.color);
+    card.innerHTML = `
+      <div class="kpi-rich__head">
+        <p class="kpi-rich__label">${indicatorName}</p>
+        <span class="kpi-rich__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+        </span>
+      </div>
+      <div class="kpi-rich__value-row">
+        <span class="kpi-rich__value">${latest.toFixed(latest < 10 ? 2 : 1)}</span>
+        <span class="kpi-rich__unit">${series.unit}</span>
+      </div>
+      <svg class="kpi-rich__sparkline" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true">
+        <polyline points="${pts}" fill="none" stroke="${series.color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="kpi-rich__foot">
+        <span class="kpi-rich__trend ${isGood ? 'kpi-rich__trend--up' : 'kpi-rich__trend--down'}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            ${up ? '<path d="M6 15l6-6 6 6"/>' : '<path d="M6 9l6 6 6-6"/>'}
+          </svg>
+          ${up ? '+' : ''}${delta.toFixed(2)}
+        </span>
+        <span class="kpi-rich__target">Target ${series.target}${series.unit === '%' ? '%' : ''}</span>
+      </div>
+    `;
+    return card;
+  }
+
+  function renderKpiGrid() {
+    const grid = $('kpiGrid');
+    if (!grid) return;
+    grid.innerHTML = '';
+    const ids = dataState.goal === 'all' ? [1, 4, 8, 13] : [parseInt(dataState.goal, 10)];
+    ids.forEach(id => {
+      const series = INDICATOR_SERIES[id];
+      const goal = GOALS.find(g => g.id === id);
+      if (series && goal) grid.appendChild(createKpiCard(goal, series));
+    });
+    grid.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+  }
+
+  /* ── Render the main trend chart ── */
+  function renderTrendChart() {
+    const svg = $('trendChart');
+    const title = $('trendTitle');
+    const sub = $('trendSub');
+    const axis = $('trendAxis');
+    if (!svg) return;
+
+    const goalId = dataState.goal === 'all' ? 1 : parseInt(dataState.goal, 10);
+    const series = INDICATOR_SERIES[goalId];
+    if (!series) return;
+
+    const region = REGIONS[dataState.region] || REGIONS.national;
+    const seriesName = series.name[state.lang];
+
+    if (title) title.textContent = seriesName;
+    if (sub) sub.textContent = `${region[state.lang]} · 2015–${dataState.year} · ${series.unit}`;
+
+    // Filter to years up to selected year
+    const cutoff = YEARS.indexOf(dataState.year) + 1;
+    const years = YEARS.slice(0, cutoff);
+    const values = series.values.slice(0, cutoff);
+
+    const W = 800, H = 300;
+    const padX = 56, padTop = 24, padBottom = 40;
+    const chartW = W - padX * 2;
+    const chartH = H - padTop - padBottom;
+
+    const allVals = [...values, series.target];
+    const min = Math.min(...allVals);
+    const max = Math.max(...allVals);
+    const range = max - min || 1;
+    const pad = range * 0.1;
+    const yMin = min - pad;
+    const yMax = max + pad;
+    const yRange = yMax - yMin;
+
+    const x = i => padX + (i / (values.length - 1 || 1)) * chartW;
+    const y = v => padTop + chartH - ((v - yMin) / yRange) * chartH;
+
+    // Build path
+    const pathD = values.map((v, i) => `${i === 0 ? 'M' : 'L'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
+
+    // Area path
+    const areaD = `${pathD} L${x(values.length - 1).toFixed(1)},${(padTop + chartH).toFixed(1)} L${x(0).toFixed(1)},${(padTop + chartH).toFixed(1)} Z`;
+
+    // Grid lines (5 horizontal)
+    const gridLines = Array.from({ length: 5 }, (_, i) => {
+      const gy = padTop + (i / 4) * chartH;
+      const val = yMax - (i / 4) * yRange;
+      return `
+        <line x1="${padX}" y1="${gy}" x2="${W - padX}" y2="${gy}" stroke="rgba(11,31,58,.08)" stroke-width="1"/>
+        <text x="${padX - 12}" y="${gy + 4}" text-anchor="end" font-size="11" fill="rgba(11,31,58,.5)" font-weight="600">${val.toFixed(val < 10 ? 1 : 0)}</text>
+      `;
+    }).join('');
+
+    // Points
+    const points = values.map((v, i) => `
+      <circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="4" fill="#fff" stroke="${series.color}" stroke-width="2.5"/>
+    `).join('');
+
+    // Target line
+    const targetY = y(series.target);
+    const targetLine = `
+      <line x1="${padX}" y1="${targetY}" x2="${W - padX}" y2="${targetY}"
+        stroke="var(--navy-800)" stroke-width="2" stroke-dasharray="8 6" opacity=".55"/>
+      <text x="${W - padX - 6}" y="${targetY - 8}" text-anchor="end" font-size="11" font-weight="800" fill="var(--navy-800)" opacity=".7">Target ${series.target}${series.unit === '%' ? '%' : ''}</text>
+    `;
+
+    svg.innerHTML = `
+      <defs>
+        <linearGradient id="trendArea" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="${series.color}" stop-opacity=".28"/>
+          <stop offset="100%" stop-color="${series.color}" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <g>${gridLines}</g>
+      <path d="${areaD}" fill="url(#trendArea)"/>
+      <path d="${pathD}" fill="none" stroke="${series.color}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      ${targetLine}
+      <g>${points}</g>
+    `;
+
+    // X-axis labels
+    if (axis) {
+      axis.innerHTML = years.map(y => `<span>${y}</span>`).join('');
+    }
+  }
+
+  /* ── Render province comparison ── */
+  function renderProvinceComparison() {
+    const top = $('provinceTop');
+    const bottom = $('provinceBottom');
+    if (!top || !bottom) return;
+
+    const goalId = dataState.goal === 'all' ? 1 : parseInt(dataState.goal, 10);
+    const data = PROVINCE_DATA[goalId] || DEFAULT_PROVINCE_DATA;
+    const maxVal = Math.max(...[...data.top, ...data.bottom].map(p => p.value));
+
+    const render = (list, color) => list.map(p => `
+      <li class="province-row">
+        <span class="province-row__name">${p.name[state.lang]}</span>
+        <div class="province-row__bar">
+          <div class="province-row__bar-fill" style="width:${(p.value / maxVal) * 100}%;--prov-color:${color}"></div>
+        </div>
+        <span class="province-row__value">${p.value}</span>
+      </li>
+    `).join('');
+
+    top.innerHTML = render(data.top, '#56C02B');
+    bottom.innerHTML = render(data.bottom, '#E5243B');
+  }
+
+  /* ── Render deep-dive goal pills ── */
+  function renderDeepDivePills() {
+    const wrap = $('deepdiveGoals');
+    if (!wrap) return;
+    wrap.innerHTML = '';
+    GOALS.forEach(g => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'deepdive-pill';
+      btn.dataset.goalId = g.id;
+      btn.style.setProperty('--goal-color', g.color);
+      if (String(g.id) === String(dataState.goal)) btn.classList.add('is-active');
+      btn.innerHTML = `
+        <span class="deepdive-pill__num">${g.id}</span>
+        <span class="deepdive-pill__label">SDG</span>
+      `;
+      btn.setAttribute('aria-label', `${g.text[state.lang].name}`);
+      btn.addEventListener('click', () => selectDeepDive(g.id, true));
+      wrap.appendChild(btn);
+    });
+  }
+
+  /* ── Render deep-dive panel ── */
+  function renderDeepDivePanel() {
+    const panel = $('deepdivePanel');
+    if (!panel) return;
+    const goalId = dataState.goal === 'all' ? 1 : parseInt(dataState.goal, 10);
+    const goal = GOALS.find(g => g.id === goalId);
+    const series = INDICATOR_SERIES[goalId];
+    if (!goal || !series) return;
+
+    const copy = goal.text[state.lang];
+    const latest = series.values[series.values.length - 1];
+    const prev = series.values[series.values.length - 2];
+    const delta = latest - prev;
+    const up = delta >= 0;
+    const isGood = series.higherIsBetter ? up : !up;
+
+    const indicators = [
+      { label: copy.indicators[0] || 'Indicator 1', value: latest.toFixed(2), unit: series.unit, target: series.target },
+      { label: copy.indicators[1] || 'Indicator 2', value: (latest * 0.95).toFixed(1), unit: '%', target: 80 },
+      { label: copy.indicators[2] || 'Indicator 3', value: (latest * 1.08).toFixed(1), unit: '%', target: 90 },
+    ];
+
+    panel.innerHTML = `
+      <div class="deepdive-panel__head">
+        <img class="deepdive-panel__icon" src="${goalIcon(goal.id)}" alt="" aria-hidden="true" />
+        <div>
+          <p class="deepdive-panel__eyebrow">${state.lang === 'id' ? 'Tujuan' : 'Goal'} ${goal.id} · ${t('cat.' + goal.cat)}</p>
+          <h3 class="deepdive-panel__title">${copy.name}</h3>
+        </div>
+      </div>
+
+      <div class="deepdive-panel__stats">
+        <div class="deepdive-stat">
+          <p class="deepdive-stat__value">${latest.toFixed(series.unit === '%' ? 2 : 1)}</p>
+          <p class="deepdive-stat__label">${series.name[state.lang]}</p>
+        </div>
+        <div class="deepdive-stat">
+          <p class="deepdive-stat__value">${series.target}${series.unit === '%' ? '%' : ''}</p>
+          <p class="deepdive-stat__label">${state.lang === 'id' ? 'Target 2030' : '2030 Target'}</p>
+        </div>
+        <div class="deepdive-stat">
+          <p class="deepdive-stat__value" style="color:${isGood ? '#56C02B' : '#E5243B'}">${up ? '+' : ''}${delta.toFixed(2)}</p>
+          <p class="deepdive-stat__label">${state.lang === 'id' ? 'vs tahun lalu' : 'vs last year'}</p>
+        </div>
+      </div>
+
+      <div class="deepdive-panel__bar">
+        <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px;">
+          <span style="color:var(--text-soft);font-weight:600;">${t('catalog.detail.progress')}</span>
+          <span style="font-weight:800;">${goal.progress}%</span>
+        </div>
+        <div class="progress progress--dim">
+          <div class="progress__bar" style="width:${goal.progress}%;background:${goal.color}"></div>
+        </div>
+      </div>
+
+      <ul class="goal-detail__list" style="margin-top:8px;">
+        ${indicators.map(ind => `
+          <li>
+            <strong>${ind.value}${ind.unit === '%' ? '%' : ''}</strong>
+            <span>${ind.label} · Target ${ind.target}${ind.unit === '%' ? '%' : ''}</span>
+          </li>
+        `).join('')}
+      </ul>
+    `;
+  }
+
+  /* ── Handle deep-dive selection ── */
+  function selectDeepDive(goalId, scroll) {
+    dataState.goal = String(goalId);
+    // Sync with goal filter dropdown
+    const select = $('filterGoal');
+    if (select) select.value = String(goalId);
+    updateDataPage();
+    if (scroll) {
+      const section = $('goalDeepDiveSection');
+      if (section) {
+        const top = section.getBoundingClientRect().top + window.scrollY - 96;
+        window.scrollTo({ top, behavior: prefersReduced ? 'auto' : 'smooth' });
+      }
+    }
+    if (history.replaceState) {
+      history.replaceState(null, '', `#goal-${goalId}`);
+    }
+  }
+
+  /* ── Update everything on the data page ── */
+  function updateDataPage() {
+    renderKpiGrid();
+    renderTrendChart();
+    renderProvinceComparison();
+    renderDeepDivePills();
+    renderDeepDivePanel();
+  }
+
+  /* ── Render availability matrix (static) ── */
+  function renderAvailability() {
+    const grid = $('availabilityGrid');
+    if (!grid) return;
+    grid.innerHTML = '';
+    const years = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+
+    // Header row
+    const header = document.createElement('div');
+    header.className = 'availability-row';
+    header.innerHTML = `<span class="availability-row__label"></span>` +
+      years.map(y => `<span style="font-size:10.5px;text-align:center;font-weight:800;color:var(--text-soft);letter-spacing:.04em;">${y}</span>`).join('');
+    grid.appendChild(header);
+
+    GOALS.forEach(g => {
+      const row = document.createElement('div');
+      row.className = 'availability-row';
+      row.innerHTML = `
+        <span class="availability-row__label">SDG ${g.id}</span>
+        ${years.map(y => {
+          // Mock: higher coverage in recent years, some goals lag
+          const base = 0.4 + (y - 2015) * 0.06;
+          const jitter = (g.id * 13 + y) % 7 / 20;
+          const cov = Math.min(0.98, base + jitter);
+          const alpha = 0.08 + cov * 0.78;
+          return `<span class="availability-cell" style="background:rgba(11,31,58,${alpha.toFixed(2)});" title="SDG ${g.id} · ${y}: ${Math.round(cov * 100)}% coverage"></span>`;
+        }).join('')}
+      `;
+      grid.appendChild(row);
+    });
+  }
+
+  /* ── Init data page ── */
+  function initDataPage() {
+    if (!$('filterGoal')) return; // not on data.html
+    populateGoalFilter();
+    renderAvailability();
+    updateDataPage();
+
+    // Wire filter dropdowns
+    $('filterGoal')?.addEventListener('change', e => {
+      dataState.goal = e.target.value;
+      updateDataPage();
+      if (dataState.goal !== 'all' && history.replaceState) {
+        history.replaceState(null, '', `#goal-${dataState.goal}`);
+      }
+    });
+    $('filterRegion')?.addEventListener('change', e => {
+      dataState.region = e.target.value;
+      updateDataPage();
+    });
+    $('filterYear')?.addEventListener('change', e => {
+      dataState.year = parseInt(e.target.value, 10);
+      updateDataPage();
+    });
+
+    // Reset
+    $('filterReset')?.addEventListener('click', () => {
+      dataState.goal = 'all';
+      dataState.region = 'national';
+      dataState.year = 2024;
+      if ($('filterGoal')) $('filterGoal').value = 'all';
+      if ($('filterRegion')) $('filterRegion').value = 'national';
+      if ($('filterYear')) $('filterYear').value = '2024';
+      updateDataPage();
+      if (history.replaceState) {
+        history.replaceState(null, '', window.location.pathname);
+      }
+    });
+
+    // Export (mock)
+    const download = (format) => {
+      const goalId = dataState.goal === 'all' ? 1 : parseInt(dataState.goal, 10);
+      const series = INDICATOR_SERIES[goalId];
+      if (!series) return;
+      const rows = [['Year', series.name.en, series.name.id]];
+      YEARS.forEach((y, i) => rows.push([y, series.values[i], series.values[i]]));
+      const csv = rows.map(r => r.join(',')).join('\n');
+      const blob = new Blob([csv], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `sdgs-goal-${goalId}-${format}.${format === 'csv' ? 'csv' : 'txt'}`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    };
+    $('downloadCSV')?.addEventListener('click', () => download('csv'));
+    $('filterExport')?.addEventListener('click', () => download('csv'));
+    $('downloadXLSX')?.addEventListener('click', () => download('xlsx'));
+
+    // Handle initial hash
+    const hash = window.location.hash.match(/^#goal-(\d+)$/);
+    if (hash) {
+      const id = parseInt(hash[1], 10);
+      if (GOALS.some(g => g.id === id)) {
+        setTimeout(() => selectDeepDive(id, true), 150);
+      }
+    }
+  }
+
+  /* Expose for setLanguage() */
+  window.__sdgsUpdateDataPage = () => {
+    if (!$('filterGoal')) return;
+    populateGoalFilter();
+    // Re-apply current value after repopulating
+    if ($('filterGoal')) $('filterGoal').value = String(dataState.goal);
+    updateDataPage();
+    renderAvailability();
+  };
 
 })();
