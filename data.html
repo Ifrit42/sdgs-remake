@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0B1F3A" />
+  <title>Data &amp; Analytics — SDGs Indonesia Knowledge Hub</title>
+  <meta name="description" content="Interactive SDGs data dashboard for Indonesia: track indicators over time, compare provinces, and explore goal-level progress across all 17 Sustainable Development Goals." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <a href="#main" class="skip-link" data-i18n="a11y.skip">Skip to main content</a>
+
+  <!-- ══════════════ TOP UTILITY BAR ══════════════ -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__right">
+        <a href="#" class="topbar__link" data-i18n="topbar.press">Press Releases</a>
+        <a href="#" class="topbar__link" data-i18n="topbar.careers">Careers</a>
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button class="lang-toggle__btn is-active" data-lang="en" aria-pressed="true">EN</button>
+          <button class="lang-toggle__btn" data-lang="id" aria-pressed="false">ID</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ HEADER ══════════════ -->
+  <header id="site-header" class="header">
+    <nav class="container header__nav" aria-label="Main navigation">
+      <div class="header__row">
+        <a href="index.html" class="brand" aria-label="SDGs Indonesia — Home">
+          <img
+            src="assets/Logo-SDGs-Knowledge-Hub-color-Indonesia-Standar.png"
+            alt=""
+            class="brand__logo-img"
+            aria-hidden="true"
+          />
+          <span class="brand__text">
+            <span class="brand__title">SDGs Indonesia</span>
+            <span class="brand__sub">Knowledge Hub</span>
+          </span>
+        </a>
+
+        <ul class="nav">
+          <li><a class="nav__link" href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a class="nav__link" href="about.html" aria-current="page" data-i18n="nav.about">About</a></li>
+          <li><a class="nav__link" href="goals.html" data-i18n="nav.goals">Goals</a></li>
+          <li><a class="nav__link" href="data.html" data-i18n="nav.data">Data &amp; Analytics</a></li>
+          <li><a class="nav__link" href="knowledge.html" data-i18n="nav.knowledge">Knowledge</a></li>
+          <li><a class="nav__link" href="news.html" data-i18n="nav.news">News</a></li>
+          <li><a class="nav__link" href="community.html" data-i18n="nav.community">Community</a></li>
+        </ul>
+
+        <div class="header__actions">
+          <button id="openSearch" class="icon-btn icon-btn--ghost" data-i18n-aria="header.searchAria" aria-label="Search SDGs Indonesia">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+          </button>
+          <a href="goals.html" class="btn btn--primary btn--sm header__cta">
+            <span data-i18n="data.header.browseGoals">Browse Goals</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <button id="openMenu" class="icon-btn icon-btn--ghost header__burger" data-i18n-aria="header.menuAria" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div id="mobileMenu" class="mobile-menu" hidden>
+      <ul class="mobile-menu__list">
+        <li><a class="mobile-menu__link" href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a class="mobile-menu__link" href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a class="mobile-menu__link" href="goals.html" data-i18n="nav.goals">Goals</a></li>
+        <li><a class="mobile-menu__link" href="data.html" data-i18n="nav.data">Data &amp; Analytics</a></li>
+        <li><a class="mobile-menu__link" href="index.html#pengetahuan" data-i18n="nav.knowledge">Knowledge</a></li>
+        <li><a class="mobile-menu__link" href="index.html#berita" data-i18n="nav.news">News</a></li>
+        <li><a class="mobile-menu__link" href="index.html#komunitas" data-i18n="nav.community">Community</a></li>
+        <li class="mobile-menu__cta-wrap">
+          <a href="goals.html" class="btn btn--primary mobile-menu__cta" data-i18n="data.header.browseGoals">Browse Goals</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ══════════════ SEARCH OVERLAY ══════════════ -->
+  <div id="searchOverlay" class="search-overlay" hidden role="dialog" aria-modal="true" aria-label="Search">
+    <div class="search-overlay__backdrop" data-close-search></div>
+    <div class="search-overlay__panel-wrap">
+      <div class="search-overlay__panel">
+        <div class="search-overlay__input-row">
+          <svg viewBox="0 0 24 24" class="search-overlay__icon" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+          <input id="searchInput" type="search" class="search-overlay__input"
+                 data-i18n-placeholder="search.placeholder"
+                 placeholder="Search goals, indicators, publications, or news…" />
+          <kbd class="search-overlay__kbd">ESC</kbd>
+        </div>
+        <div class="search-overlay__body">
+          <p class="search-overlay__label" data-i18n="search.popular">Popular searches</p>
+          <div class="chip-row">
+            <button class="chip" data-i18n="search.chip1">Poverty</button>
+            <button class="chip" data-i18n="search.chip2">VNR 2024</button>
+            <button class="chip" data-i18n="search.chip3">SDGs Center</button>
+            <button class="chip" data-i18n="search.chip4">Perpres 111/2022</button>
+            <button class="chip" data-i18n="search.chip5">Provincial Data</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ══════════════ PAGE HERO ══════════════ -->
+    <section class="page-hero">
+      <div class="page-hero__grid-overlay" aria-hidden="true"></div>
+      <div class="page-hero__glow" aria-hidden="true"></div>
+
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html" data-i18n="breadcrumb.home">Home</a>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+          <span data-i18n="breadcrumb.data">Data &amp; Analytics</span>
+        </nav>
+
+        <span class="eyebrow eyebrow--accent" data-i18n="dataPage.hero.eyebrow">Evidence for Action</span>
+        <h1 class="page-hero__title">
+          <span data-i18n="dataPage.hero.title1">Indonesia's</span>
+          <span class="page-hero__title-gradient" data-i18n="dataPage.hero.title2">SDGs Data</span>
+          <span data-i18n="dataPage.hero.title3">Dashboard</span>
+        </h1>
+        <p class="page-hero__lead" data-i18n="dataPage.hero.lead">
+          Explore indicator trends, compare provinces, and track national progress against targets across all 17 Sustainable Development Goals.
+        </p>
+
+        <div class="page-hero__stats">
+          <div class="page-hero__stat">
+            <p class="page-hero__stat-value" data-count="289">0</p>
+            <p class="page-hero__stat-label" data-i18n="dataPage.hero.stat1">Indicators</p>
+          </div>
+          <div class="page-hero__stat">
+            <p class="page-hero__stat-value" data-count="244">0</p>
+            <p class="page-hero__stat-label" data-i18n="dataPage.hero.stat2">With data</p>
+          </div>
+          <div class="page-hero__stat">
+            <p class="page-hero__stat-value" data-count="38">0</p>
+            <p class="page-hero__stat-label" data-i18n="dataPage.hero.stat3">Provinces</p>
+          </div>
+          <div class="page-hero__stat">
+            <p class="page-hero__stat-value" data-count="10">0</p>
+            <p class="page-hero__stat-label" data-i18n="dataPage.hero.stat4">Years of data</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ FILTER TOOLBAR ══════════════ -->
+    <section class="data-toolbar-section">
+      <div class="container">
+        <div class="data-toolbar reveal">
+          <div class="data-toolbar__field">
+            <label for="filterGoal" class="data-toolbar__label" data-i18n="dataPage.filter.goal">Goal</label>
+            <div class="data-toolbar__select-wrap">
+              <select id="filterGoal" class="data-toolbar__select">
+                <option value="all" data-i18n="dataPage.filter.allGoals">All Goals</option>
+              </select>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+
+          <div class="data-toolbar__field">
+            <label for="filterRegion" class="data-toolbar__label" data-i18n="dataPage.filter.region">Region</label>
+            <div class="data-toolbar__select-wrap">
+              <select id="filterRegion" class="data-toolbar__select">
+                <option value="national" data-i18n="dataPage.filter.national">National (Indonesia)</option>
+                <option value="11" data-i18n="dataPage.region.aceh">Aceh</option>
+                <option value="12" data-i18n="dataPage.region.northSumatra">North Sumatra</option>
+                <option value="31" data-i18n="dataPage.region.jakarta">DKI Jakarta</option>
+                <option value="32" data-i18n="dataPage.region.westJava">West Java</option>
+                <option value="33" data-i18n="dataPage.region.centralJava">Central Java</option>
+                <option value="34" data-i18n="dataPage.region.yogyakarta">DI Yogyakarta</option>
+                <option value="35" data-i18n="dataPage.region.eastJava">East Java</option>
+                <option value="51" data-i18n="dataPage.region.bali">Bali</option>
+                <option value="73" data-i18n="dataPage.region.southSulawesi">South Sulawesi</option>
+                <option value="81" data-i18n="dataPage.region.maluku">Maluku</option>
+                <option value="91" data-i18n="dataPage.region.papua">Papua</option>
+              </select>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+
+          <div class="data-toolbar__field">
+            <label for="filterYear" class="data-toolbar__label" data-i18n="dataPage.filter.year">Year</label>
+            <div class="data-toolbar__select-wrap">
+              <select id="filterYear" class="data-toolbar__select">
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+              </select>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+
+          <div class="data-toolbar__actions">
+            <button id="filterReset" class="btn btn--outline btn--sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5"/></svg>
+              <span data-i18n="dataPage.filter.reset">Reset</span>
+            </button>
+            <button id="filterExport" class="btn btn--primary btn--sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3v12M6 11l6 6 6-6M4 21h16"/></svg>
+              <span data-i18n="dataPage.filter.export">Export</span>
+            </button>
+          </div>
+        </div>
+
+        <p class="data-toolbar__hint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+          <span data-i18n="dataPage.filter.hint">Filters apply across every chart and table on this page.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════ KPI STRIP ══════════════ -->
+    <section class="section section--white data-kpi-section">
+      <div class="container">
+        <div class="kpi-grid--rich" id="kpiGrid">
+          <!-- Cards injected by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ MAIN CHART ══════════════ -->
+    <section class="section data-chart-section">
+      <div class="container">
+        <div class="section__head-row reveal">
+          <div class="section__head section__head--flush">
+            <span class="eyebrow" data-i18n="dataPage.trend.eyebrow">Time Series</span>
+            <h2 class="section__title" data-i18n="dataPage.trend.title">Indicator Trends Over Time</h2>
+            <p class="section__lead" data-i18n="dataPage.trend.lead">
+              Compare progress across years for the selected indicator. Dashed lines represent target trajectories.
+            </p>
+          </div>
+
+          <div class="chart-tabs" role="tablist" aria-label="Chart view">
+            <button class="chart-tab is-active" data-series="primary" role="tab" aria-selected="true" data-i18n="dataPage.trend.tab1">Primary</button>
+            <button class="chart-tab" data-series="all" role="tab" aria-selected="false" data-i18n="dataPage.trend.tab2">Compare</button>
+          </div>
+        </div>
+
+        <div class="panel data-chart-panel reveal">
+          <div class="data-chart-panel__head">
+            <div>
+              <h3 class="panel__title" id="trendTitle">Poverty Rate</h3>
+              <p class="panel__sub" id="trendSub">National · 2015–2024 · Percent of population</p>
+            </div>
+            <div class="chart-legend" id="trendLegend">
+              <span><span class="legend-dot" style="background:#E5243B"></span><span data-i18n="dataPage.trend.legendActual">Actual</span></span>
+              <span><span class="legend-dot legend-dot--dashed" style="background:#0B1F3A"></span><span data-i18n="dataPage.trend.legendTarget">Target</span></span>
+            </div>
+          </div>
+
+          <div class="data-chart-panel__body">
+            <svg id="trendChart" viewBox="0 0 800 300" class="data-chart" role="img" aria-label="Indicator trend chart">
+              <!-- Injected by script.js -->
+            </svg>
+
+            <div class="chart-axis-x" id="trendAxis">
+              <!-- Injected -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ GOAL DEEP-DIVE ══════════════ -->
+    <section class="section section--alt" id="goalDeepDiveSection">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow" data-i18n="dataPage.deepdive.eyebrow">Goal Deep-Dive</span>
+          <h2 class="section__title" data-i18n="dataPage.deepdive.title">Progress by Goal</h2>
+          <p class="section__lead" data-i18n="dataPage.deepdive.lead">
+            Select a goal below to see its indicator-level breakdown, or click any goal from the Goals page to jump straight here.
+          </p>
+        </div>
+
+        <div class="deepdive-grid reveal">
+          <div class="deepdive-goals" id="deepdiveGoals">
+            <!-- Goal pills injected by script.js -->
+          </div>
+
+          <div class="deepdive-panel" id="deepdivePanel">
+            <!-- Panel content injected -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ PROVINCIAL COMPARISON ══════════════ -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="section__head-row reveal">
+          <div class="section__head section__head--flush">
+            <span class="eyebrow" data-i18n="dataPage.province.eyebrow">Sub-National</span>
+            <h2 class="section__title" data-i18n="dataPage.province.title">Provincial Comparison</h2>
+            <p class="section__lead" data-i18n="dataPage.province.lead">
+              Top and bottom provinces for the selected indicator, based on the latest available data.
+            </p>
+          </div>
+        </div>
+
+        <div class="province-grid">
+          <div class="panel province-panel reveal">
+            <h3 class="panel__title">
+              <span class="province-panel__dot" style="background:#56C02B"></span>
+              <span data-i18n="dataPage.province.top">Highest performing</span>
+            </h3>
+            <ul class="province-list" id="provinceTop"></ul>
+          </div>
+
+          <div class="panel province-panel reveal">
+            <h3 class="panel__title">
+              <span class="province-panel__dot" style="background:#E5243B"></span>
+              <span data-i18n="dataPage.province.bottom">Needs attention</span>
+            </h3>
+            <ul class="province-list" id="provinceBottom"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ DATA AVAILABILITY ══════════════ -->
+    <section class="section data-availability-section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow" data-i18n="dataPage.avail.eyebrow">Coverage</span>
+          <h2 class="section__title" data-i18n="dataPage.avail.title">Data Availability Matrix</h2>
+          <p class="section__lead" data-i18n="dataPage.avail.lead">
+            Which goals have reported data, across all 38 provinces. Darker cells mean higher coverage.
+          </p>
+        </div>
+
+        <div class="availability-wrap reveal">
+          <div class="availability-legend">
+            <span data-i18n="dataPage.avail.low">Low</span>
+            <div class="availability-scale" aria-hidden="true">
+              <span style="background:rgba(11,31,58,.08)"></span>
+              <span style="background:rgba(11,31,58,.22)"></span>
+              <span style="background:rgba(11,31,58,.4)"></span>
+              <span style="background:rgba(11,31,58,.6)"></span>
+              <span style="background:rgba(11,31,58,.85)"></span>
+            </div>
+            <span data-i18n="dataPage.avail.high">High</span>
+          </div>
+
+          <div class="availability-grid" id="availabilityGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ ANNUAL REPORTS ══════════════ -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="section__head-row reveal">
+          <div class="section__head section__head--flush">
+            <span class="eyebrow" data-i18n="dataPage.reports.eyebrow">Publications</span>
+            <h2 class="section__title" data-i18n="dataPage.reports.title">Annual Reports &amp; Publications</h2>
+            <p class="section__lead" data-i18n="dataPage.reports.lead">
+              Official SDG reports from the Government of Indonesia — Voluntary National Reviews, annual progress reports, and technical guidelines.
+            </p>
+          </div>
+          <a href="index.html#pengetahuan" class="link-arrow">
+            <span data-i18n="dataPage.reports.all">View all publications</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="reports-grid reveal">
+          <a href="#" class="report-card">
+            <div class="report-card__cover" style="--report-color:#071527">
+              <span class="report-card__badge">2024</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg>
+            </div>
+            <div class="report-card__body">
+              <p class="report-card__type" data-i18n="dataPage.reports.vnr">Voluntary National Review</p>
+              <h3 class="report-card__title" data-i18n="dataPage.reports.vnrTitle">VNR Indonesia 2024</h3>
+              <p class="report-card__meta">
+                <span data-i18n="dataPage.reports.pdf">PDF</span>
+                <span>·</span>
+                <span>12 MB</span>
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="report-card">
+            <div class="report-card__cover" style="--report-color:#1B3763">
+              <span class="report-card__badge">2023</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+            </div>
+            <div class="report-card__body">
+              <p class="report-card__type" data-i18n="dataPage.reports.annual">Annual Progress</p>
+              <h3 class="report-card__title" data-i18n="dataPage.reports.annualTitle">SDGs Capaian 2023</h3>
+              <p class="report-card__meta">
+                <span data-i18n="dataPage.reports.pdf">PDF</span>
+                <span>·</span>
+                <span>8 MB</span>
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="report-card">
+            <div class="report-card__cover" style="--report-color:#2A4C82">
+              <span class="report-card__badge">2022</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+            </div>
+            <div class="report-card__body">
+              <p class="report-card__type" data-i18n="dataPage.reports.guideline">Metadata Guideline</p>
+              <h3 class="report-card__title" data-i18n="dataPage.reports.guidelineTitle">Metadata Indikator SDGs Edisi II</h3>
+              <p class="report-card__meta">
+                <span data-i18n="dataPage.reports.pdf">PDF</span>
+                <span>·</span>
+                <span>6 MB</span>
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ DOWNLOAD / API ══════════════ -->
+    <section class="section data-download-section">
+      <div class="container">
+        <div class="download-panel reveal">
+          <div class="download-panel__grid-overlay" aria-hidden="true"></div>
+          <div class="download-panel__glow" aria-hidden="true"></div>
+
+          <div class="download-panel__inner">
+            <div class="download-panel__copy">
+              <span class="eyebrow eyebrow--accent" data-i18n="dataPage.download.eyebrow">Open Data</span>
+              <h2 class="download-panel__title" data-i18n="dataPage.download.title">Access the raw data</h2>
+              <p class="download-panel__lead" data-i18n="dataPage.download.lead">
+                Download the full indicator dataset or use our API to integrate SDGs data into your own applications and research.
+              </p>
+            </div>
+
+            <div class="download-panel__actions">
+              <button id="downloadCSV" class="btn btn--accent">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3v12M6 11l6 6 6-6M4 21h16"/></svg>
+                <span data-i18n="dataPage.download.csv">Download CSV</span>
+              </button>
+              <button id="downloadXLSX" class="btn btn--ghost-light">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3v12M6 11l6 6 6-6M4 21h16"/></svg>
+                <span data-i18n="dataPage.download.xlsx">Download XLSX</span>
+              </button>
+              <a href="#" class="btn btn--ghost-light">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+                <span data-i18n="dataPage.download.api">API Docs</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__brand-col">
+          <a href="index.html" class="brand brand--footer">
+            <img
+              src="assets/Logo-SDGs-Knowledge-Hub-color-Indonesia-Standar.png"
+              alt=""
+              class="brand__logo-img"
+              aria-hidden="true"
+            />
+            <span class="brand__text">
+              <span class="brand__title">SDGs Indonesia</span>
+              <span class="brand__sub">Knowledge Hub</span>
+            </span>
+          </a>
+
+          <p class="footer__desc" data-i18n="footer.desc">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat quasi distinctio velit eaque et quam cupiditate! Assumenda enim modi, facere mollitia eligendi est voluptate non molestiae libero consequatur incidunt harum!
+          </p>
+
+          <div class="socials">
+            <a href="#" class="social" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="social" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="6" width="19" height="12" rx="3"/><path d="m10 9 5 3-5 3V9Z" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="social" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3H21l-6.6 7.5L21.6 21h-6l-4.3-5.6L6.4 21H4.2l7-8-6.9-10h6.2l3.9 5.2L18.9 3Zm-1 16h1.2L8.1 4.9H6.8L17.9 19Z"/></svg>
+            </a>
+            <a href="#" class="social" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.1c.5-.9 1.8-1.9 3.6-1.9 3.9 0 4.6 2.5 4.6 5.8V21h-4v-5.4c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21h-4V9Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-i18n="footer.explore">Explore</h4>
+          <ul class="footer__list">
+            <li><a href="about.html" data-i18n="footer.link.about">About SDGs</a></li>
+            <li><a href="goals.html" data-i18n="footer.link.goals">17 Goals</a></li>
+            <li><a href="data.html" data-i18n="footer.link.dashboard">Data Dashboard</a></li>
+            <li><a href="#" data-i18n="footer.link.indicators">Indicators &amp; Metadata</a></li>
+            <li><a href="#" data-i18n="footer.link.reports">Annual Reports</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-i18n="footer.resources">Resources</h4>
+          <ul class="footer__list">
+            <li><a href="index.html#pengetahuan" data-i18n="footer.link.publications">Publications</a></li>
+            <li><a href="#" data-i18n="footer.link.regulations">Regulations</a></li>
+            <li><a href="#" data-i18n="footer.link.bestPractices">Best Practices</a></li>
+            <li><a href="#" data-i18n="footer.link.awards">Awards</a></li>
+            <li><a href="#" data-i18n="footer.link.video">Video Library</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-i18n="footer.contact">Contact</h4>
+          <ul class="footer__contact">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span data-i18n="footer.address">Jl. Taman Suropati No. 2,<br/>Central Jakarta 10310</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <a href="mailto:sdgs@bappenas.go.id">sdgs@bappenas.go.id</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+              <span>(021) 3193 6201</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__legal">
+          <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+          <a href="#" data-i18n="footer.terms">Terms &amp; Conditions</a>
+          <a href="#" data-i18n="footer.sitemap">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" data-i18n-aria="a11y.backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
