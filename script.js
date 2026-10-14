@@ -12,16 +12,17 @@
   const I18N = {
     en: {
       /* ── Meta ── */
-      'meta.title.index': 'SDGs Indonesia — Knowledge, Data & Action for Sustainable Development',
-      'meta.title.about': 'About SDGs — SDGs Indonesia Knowledge Hub',
-      'meta.title.goals': 'Sustainable Development Goals — SDGs Indonesia Knowledge Hub',
+      'meta.title.index': 'SDGs UNMAS — Sustainable Development Goals Center',
+      'meta.title.about': 'SDGs UNMAS - About SDGs',
+      'meta.title.goals': 'SDGs UNMAS - Goals',
+      'meta.title.data': 'SDGs UNMAS - Data & Analytics',
 
       /* ── A11y ── */
       'a11y.skip': 'Skip to main content',
       'a11y.backToTop': 'Back to top',
 
       /* ── Top bar ── */
-      'topbar.org': 'SDGs Secretariat — Ministry of National Development Planning/Bappenas',
+      'topbar.org': 'SDGs Center — Universitas Mahasaraswati Denpasar',
       'topbar.press': 'Press Releases',
       'topbar.careers': 'Careers',
 
@@ -215,7 +216,9 @@
       'newsletter.note': 'We respect your privacy. Unsubscribe at any time.',
 
       /* ── Footer ── */
-      'footer.desc': 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat quasi distinctio velit eaque et quam cupiditate! Assumenda enim modi, facere mollitia eligendi est voluptate non molestiae libero consequatur incidunt harum!',
+      'footer.desc': 'SDGs Center — Universitas Mahasaraswati (UNMAS) Denpasar.',
+      'footer.address': 'Jl. Kamboja No. 11A,<br/>Denpasar, Bali 80233',
+      'footer.copyright': '© 2026 SDGs Center UNMAS — Universitas Mahasaraswati Denpasar. All rights reserved.',
       'footer.explore': 'Explore',
       'footer.resources': 'Resources',
       'footer.contact': 'Contact',
@@ -453,16 +456,17 @@
 
     id: {
       /* ── Meta ── */
-      'meta.title.index': 'SDGs Indonesia — Pengetahuan, Data & Aksi untuk Pembangunan Berkelanjutan',
-      'meta.title.about': 'Tentang SDGs — SDGs Indonesia Knowledge Hub',
-      'meta.title.goals': 'Tujuan Pembangunan Berkelanjutan — SDGs Indonesia Knowledge Hub',
+      'meta.title.index': 'SDGs UNMAS — Pusat Tujuan Pembangunan Berkelanjutan',
+      'meta.title.about': 'SDGs UNMAS - Tentang SDGs',
+      'meta.title.goals': 'SDGs UNMAS - Tujuan',
+      'meta.title.data': 'SDGs UNMAS - Data & Analitik',
 
       /* ── A11y ── */
       'a11y.skip': 'Lompat ke konten utama',
       'a11y.backToTop': 'Kembali ke atas',
 
       /* ── Top bar ── */
-      'topbar.org': 'Sekretariat Nasional SDGs — Kementerian PPN/Bappenas',
+      'topbar.org': 'SDGs Center — Universitas Mahasaraswati Denpasar',
       'topbar.press': 'Siaran Pers',
       'topbar.careers': 'Karir',
 
@@ -656,7 +660,9 @@
       'newsletter.note': 'Kami menghormati privasi Anda. Berhenti berlangganan kapan saja.',
 
       /* ── Footer ── */
-      'footer.desc': 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat quasi distinctio velit eaque et quam cupiditate! Assumenda enim modi, facere mollitia eligendi est voluptate non molestiae libero consequatur incidunt harum!',
+      'footer.desc': 'SDGs Center — Universitas Mahasaraswati (UNMAS) Denpasar.',
+      'footer.address': 'Jl. Kamboja No. 11A,<br/>Denpasar, Bali 80233',
+      'footer.copyright': '© 2026 SDGs Center UNMAS — Universitas Mahasaraswati Denpasar. Hak cipta dilindungi.',
       'footer.explore': 'Jelajahi',
       'footer.resources': 'Sumber Daya',
       'footer.contact': 'Kontak',
