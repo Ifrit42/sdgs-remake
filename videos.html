@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#041A0F" />
+  <title>Video Library — SDGs UNMAS</title>
+  <meta name="description" content="Video library from SDGs UNMAS — webinars, tutorials, event recordings, and campaign highlights on the Sustainable Development Goals." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <a href="#main" class="skip-link" data-i18n="a11y.skip">Skip to main content</a>
+
+  <!-- ══════════════ TOP UTILITY BAR ══════════════ -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__right">
+        <a href="#" class="topbar__link" data-i18n="topbar.press">Press Releases</a>
+        <a href="#" class="topbar__link" data-i18n="topbar.careers">Careers</a>
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button class="lang-toggle__btn is-active" data-lang="en" aria-pressed="true">EN</button>
+          <button class="lang-toggle__btn" data-lang="id" aria-pressed="false">ID</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ HEADER ══════════════ -->
+  <header id="site-header" class="header">
+    <nav class="container header__nav" aria-label="Main navigation">
+      <div class="header__row">
+        <a href="index.html" class="brand" aria-label="SDGs UNMAS — Home">
+          <img src="assets/unmas-logo.png" alt="" class="brand__logo-img" aria-hidden="true" />
+          <span class="brand__text">
+            <span class="brand__title">SDGs UNMAS</span>
+            <span class="brand__sub">SDGs Center</span>
+          </span>
+        </a>
+
+        <ul class="nav">
+          <li><a class="nav__link" href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a class="nav__link" href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a class="nav__link" href="goals.html" data-i18n="nav.goals">Goals</a></li>
+          <li><a class="nav__link" href="data.html" data-i18n="nav.data">Data &amp; Analytics</a></li>
+          <li><a class="nav__link" href="knowledge.html"data-i18n="nav.knowledge">Knowledge</a></li>
+          <li><a class="nav__link" href="news.html" data-i18n="nav.news">News</a></li>
+          <li><a class="nav__link" href="community.html" data-i18n="nav.community">Community</a></li>
+          <li><a class="nav__link" href="videos.html" aria-current="page" data-i18n="nav.videos">Videos</a></li>
+        </ul>
+
+        <div class="header__actions">
+          <button id="openSearch" class="icon-btn icon-btn--ghost" data-i18n-aria="header.searchAria" aria-label="Search SDGs UNMAS">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+          </button>
+          <button id="openMenu" class="icon-btn icon-btn--ghost header__burger" data-i18n-aria="header.menuAria" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div id="mobileMenu" class="mobile-menu" hidden>
+      <ul class="mobile-menu__list">
+        <li><a class="mobile-menu__link" href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a class="mobile-menu__link" href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a class="mobile-menu__link" href="goals.html" data-i18n="nav.goals">Goals</a></li>
+        <li><a class="mobile-menu__link" href="data.html" data-i18n="nav.data">Data &amp; Analytics</a></li>
+        <li><a class="mobile-menu__link" href="knowledge.html" data-i18n="nav.knowledge">Knowledge</a></li>
+        <li><a class="mobile-menu__link" href="videos.html" data-i18n="nav.videos">Video Library</a></li>
+        <li><a class="mobile-menu__link" href="news.html" data-i18n="nav.news">News</a></li>
+        <li><a class="mobile-menu__link" href="community.html" data-i18n="nav.community">Community</a></li>
+        <li><a class="mobile-menu__link" href="videos.html" data-i18n="footer.link.video">Video Library</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ══════════════ SEARCH OVERLAY ══════════════ -->
+  <div id="searchOverlay" class="search-overlay" hidden role="dialog" aria-modal="true" aria-label="Search">
+    <div class="search-overlay__backdrop" data-close-search></div>
+    <div class="search-overlay__panel-wrap">
+      <div class="search-overlay__panel">
+        <div class="search-overlay__input-row">
+          <svg viewBox="0 0 24 24" class="search-overlay__icon" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+          <input id="searchInput" type="search" class="search-overlay__input"
+                 data-i18n-placeholder="search.placeholder"
+                 placeholder="Search goals, indicators, publications, or news…" />
+          <kbd class="search-overlay__kbd">ESC</kbd>
+        </div>
+        <div class="search-overlay__body">
+          <p class="search-overlay__label" data-i18n="search.popular">Popular searches</p>
+          <div class="chip-row">
+            <button class="chip" data-i18n="search.chip1">Poverty</button>
+            <button class="chip" data-i18n="search.chip2">VNR 2024</button>
+            <button class="chip" data-i18n="search.chip3">SDGs Center</button>
+            <button class="chip" data-i18n="search.chip4">Perpres 111/2022</button>
+            <button class="chip" data-i18n="search.chip5">Provincial Data</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ══════════════ PAGE HERO ══════════════ -->
+    <section class="page-hero">
+      <div class="page-hero__grid-overlay" aria-hidden="true"></div>
+      <div class="page-hero__glow" aria-hidden="true"></div>
+
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html" data-i18n="breadcrumb.home">Home</a>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+          <a href="knowledge.html" data-i18n="breadcrumb.knowledge">Knowledge Hub</a>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+          <span data-i18n="breadcrumb.videos">Video Library</span>
+        </nav>
+
+        <span class="eyebrow eyebrow--accent" data-i18n="videosPage.hero.eyebrow">Watch &amp; Learn</span>
+        <h1 class="page-hero__title">
+          <span data-i18n="videosPage.hero.title1">The SDGs</span>
+          <span class="page-hero__title-gradient" data-i18n="videosPage.hero.title2">Video Library</span>
+        </h1>
+        <p class="page-hero__lead" data-i18n="videosPage.hero.lead">
+          Recorded webinars, training sessions, event highlights, and campaign videos — a growing visual archive of SDGs work at UNMAS and across Indonesia.
+        </p>
+
+        <div class="page-hero__stats">
+          <div class="page-hero__stat">
+            <p class="page-hero__stat-value" data-count="14">0</p>
+            <p class="page-hero__stat-label" data-i18n="videosPage.hero.stat1">Videos</p>
+          </div>
+          <div class="page-hero__stat">
+            <p class="page-hero__stat-value" data-count="4">0</p>
+            <p class="page-hero__stat-label" data-i18n="videosPage.hero.stat2">Categories</p>
+          </div>
+          <div class="page-hero__stat">
+            <p class="page-hero__stat-value" data-count="2">0</p>
+            <p class="page-hero__stat-label" data-i18n="videosPage.hero.stat3">Languages</p>
+          </div>
+          <div class="page-hero__stat">
+            <p class="page-hero__stat-value" data-count="2026">0</p>
+            <p class="page-hero__stat-label" data-i18n="videosPage.hero.stat4">Latest year</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ CATALOG ══════════════ -->
+    <section class="section">
+      <div class="container">
+
+        <!-- Toolbar -->
+        <div class="catalog-toolbar reveal">
+          <div class="catalog-search">
+            <svg viewBox="0 0 24 24" class="catalog-search__icon" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/>
+            </svg>
+            <input id="videosSearch" type="search"
+                   class="catalog-search__input"
+                   data-i18n-placeholder="videosPage.search.placeholder"
+                   placeholder="Search by title, topic, or keyword…"
+                   aria-label="Search videos" />
+          </div>
+
+          <div class="catalog-filters" role="tablist" aria-label="Filter by category">
+            <button class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">
+              <span data-i18n="videosPage.filter.all">All</span>
+            </button>
+            <button class="filter-btn" data-filter="webinar" role="tab" aria-selected="false">
+              <span data-i18n="videosPage.filter.webinar">Webinars</span>
+            </button>
+            <button class="filter-btn" data-filter="tutorial" role="tab" aria-selected="false">
+              <span data-i18n="videosPage.filter.tutorial">Tutorials</span>
+            </button>
+            <button class="filter-btn" data-filter="event" role="tab" aria-selected="false">
+              <span data-i18n="videosPage.filter.event">Events</span>
+            </button>
+            <button class="filter-btn" data-filter="campaign" role="tab" aria-selected="false">
+              <span data-i18n="videosPage.filter.campaign">Campaigns</span>
+            </button>
+          </div>
+
+          <p class="catalog-count" aria-live="polite">
+            <span id="videosCount">14</span>
+            <span data-i18n="videosPage.count.of">of</span>
+            <span>14</span>
+            <span data-i18n="videosPage.count.items">videos</span>
+          </p>
+        </div>
+
+        <!-- Grid -->
+        <div id="videosGrid" class="videos-page-grid" role="list"></div>
+
+        <!-- Empty state -->
+        <div id="videosEmpty" class="catalog-empty" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/>
+          </svg>
+          <p class="catalog-empty__title" data-i18n="videosPage.empty.title">No videos match your search</p>
+          <p class="catalog-empty__desc" data-i18n="videosPage.empty.desc">Try a different keyword or reset the filters.</p>
+          <button class="btn btn--outline btn--sm" id="videosReset" data-i18n="videosPage.empty.reset">Reset filters</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════ YOUTUBE CTA ══════════════ -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="goals-cta reveal">
+          <div class="goals-cta__content">
+            <span class="goals-cta__badge" data-i18n="videosPage.cta.badge">More on YouTube</span>
+            <h3 class="goals-cta__title" data-i18n="videosPage.cta.title">Subscribe to our channel</h3>
+            <p class="goals-cta__sub" data-i18n="videosPage.cta.sub">
+              Get notified when new webinars, tutorials, and event recordings are published.
+            </p>
+          </div>
+          <a href="https://www.youtube.com/@SDGsIndonesia" target="_blank" rel="noopener" class="btn btn--accent goals-cta__btn">
+            <span data-i18n="videosPage.cta.button">Visit channel</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__brand-col">
+          <a href="index.html" class="brand brand--footer" aria-label="SDGs UNMAS — Home">
+            <img src="assets/unmas-logo.png" alt="" class="brand__logo-img" aria-hidden="true" />
+            <span class="brand__text">
+              <span class="brand__title">SDGs UNMAS</span>
+              <span class="brand__sub">SDGs Center</span>
+            </span>
+          </a>
+
+          <p class="footer__desc" data-i18n="footer.desc">
+            SDGs Center — Universitas Mahasaraswati (UNMAS) Denpasar.
+          </p>
+
+          <div class="socials">
+            <a href="#" class="social" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="social" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="6" width="19" height="12" rx="3"/><path d="m10 9 5 3-5 3V9Z" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="social" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3H21l-6.6 7.5L21.6 21h-6l-4.3-5.6L6.4 21H4.2l7-8-6.9-10h6.2l3.9 5.2L18.9 3Zm-1 16h1.2L8.1 4.9H6.8L17.9 19Z"/></svg>
+            </a>
+            <a href="#" class="social" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.1c.5-.9 1.8-1.9 3.6-1.9 3.9 0 4.6 2.5 4.6 5.8V21h-4v-5.4c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21h-4V9Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-i18n="footer.explore">Explore</h4>
+          <ul class="footer__list">
+            <li><a href="about.html" data-i18n="footer.link.about">About SDGs</a></li>
+            <li><a href="goals.html" data-i18n="footer.link.goals">17 Goals</a></li>
+            <li><a href="data.html" data-i18n="footer.link.dashboard">Data Dashboard</a></li>
+            <li><a href="#" data-i18n="footer.link.indicators">Indicators &amp; Metadata</a></li>
+            <li><a href="knowledge.html" data-i18n="footer.link.reports">Annual Reports</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-i18n="footer.resources">Resources</h4>
+          <ul class="footer__list">
+            <li><a href="knowledge.html" data-i18n="footer.link.publications">Publications</a></li>
+            <li><a href="knowledge.html" data-i18n="footer.link.regulations">Regulations</a></li>
+            <li><a href="knowledge.html" data-i18n="footer.link.bestPractices">Best Practices</a></li>
+            <li><a href="knowledge.html" data-i18n="footer.link.awards">Awards</a></li>
+            <li><a href="videos.html" data-i18n="footer.link.video">Video Library</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading" data-i18n="footer.contact">Contact</h4>
+          <ul class="footer__contact">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span data-i18n="footer.address">Jl. Kamboja No. 11A,<br/>Denpasar, Bali 80233</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <a href="mailto:sdgs@unmas.ac.id">sdgs@unmas.ac.id</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+              <span>(0361) 227 019</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__legal">
+          <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+          <a href="#" data-i18n="footer.terms">Terms &amp; Conditions</a>
+          <a href="#" data-i18n="footer.sitemap">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" data-i18n-aria="a11y.backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <!-- ══════════════ VIDEO DETAIL MODAL ══════════════ -->
+  <div class="video-modal" id="videoModal" hidden>
+    <div class="video-modal__backdrop" data-close-video></div>
+
+    <div class="video-modal__panel" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle" tabindex="-1">
+      <button class="video-modal__close" data-close-video aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+
+      <!-- Fake video player frame -->
+      <div class="video-modal__player" id="videoModalPlayer">
+        <svg viewBox="0 0 24 24" class="video-modal__play" fill="currentColor" aria-hidden="true">
+          <circle cx="12" cy="12" r="11" opacity=".25"/>
+          <path d="M10 8.5v7l6-3.5-6-3.5Z"/>
+        </svg>
+        <span class="video-modal__duration" id="videoModalDuration">12:34</span>
+      </div>
+
+      <header class="video-modal__header" id="videoModalHeader">
+        <span class="video-modal__type" id="videoModalType">Webinar</span>
+        <h2 class="video-modal__title" id="videoModalTitle">Loading…</h2>
+      </header>
+
+      <div class="video-modal__body">
+        <p class="video-modal__desc" id="videoModalDesc"></p>
+        <dl class="video-modal__meta" id="videoModalMeta"></dl>
+      </div>
+
+      <footer class="video-modal__footer">
+        <button class="btn btn--outline btn--full" data-close-video data-i18n="videosPage.modal.close">Close</button>
+        <a href="#" class="btn btn--primary btn--full" id="videoModalWatch" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="6" width="19" height="12" rx="3"/><path d="m10 9 5 3-5 3V9Z" fill="currentColor" stroke="none"/></svg>
+          <span data-i18n="videosPage.modal.watch">Watch on YouTube</span>
+        </a>
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
