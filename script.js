@@ -566,6 +566,46 @@
       'communityPage.cta.title': 'Become a partner',
       'communityPage.cta.sub': "Whether you're a university, civil society organization, private sector, or individual expert — there's a place for you in the SDGs network.",
       'communityPage.cta.button': 'Get in touch',
+
+      'meta.title.videos': 'Video Library — SDGs UNMAS',
+      'nav.videos': 'Videos',
+      'breadcrumb.videos': 'Video Library',
+      'videosPage.hero.eyebrow': 'Watch & Learn',
+      'videosPage.hero.title1': 'The SDGs',
+      'videosPage.hero.title2': 'Video Library',
+      'videosPage.hero.lead': 'Recorded webinars, training sessions, event highlights, and campaign videos — a growing visual archive of SDGs work at UNMAS and across Indonesia.',
+      'videosPage.hero.stat1': 'Videos',
+      'videosPage.hero.stat2': 'Categories',
+      'videosPage.hero.stat3': 'Languages',
+      'videosPage.hero.stat4': 'Latest year',
+      'videosPage.search.placeholder': 'Search by title, topic, or keyword…',
+      'videosPage.filter.all': 'All',
+      'videosPage.filter.webinar': 'Webinars',
+      'videosPage.filter.tutorial': 'Tutorials',
+      'videosPage.filter.event': 'Events',
+      'videosPage.filter.campaign': 'Campaigns',
+      'videosPage.count.of': 'of',
+      'videosPage.count.items': 'videos',
+      'videosPage.type.webinar': 'Webinar',
+      'videosPage.type.tutorial': 'Tutorial',
+      'videosPage.type.event': 'Event',
+      'videosPage.type.campaign': 'Campaign',
+      'videosPage.empty.title': 'No videos match your search',
+      'videosPage.empty.desc': 'Try a different keyword or reset the filters.',
+      'videosPage.empty.reset': 'Reset filters',
+      'videosPage.modal.close': 'Close',
+      'videosPage.modal.watch': 'Watch on YouTube',
+      'videosPage.modal.date': 'Published',
+      'videosPage.modal.speaker': 'Speaker',
+      'videosPage.modal.duration': 'Duration',
+      'videosPage.modal.category': 'Category',
+      'videosPage.cta.badge': 'More on YouTube',
+      'videosPage.cta.title': 'Subscribe to our channel',
+      'videosPage.cta.sub': 'Get notified when new webinars, tutorials, and event recordings are published.',
+      'videosPage.cta.button': 'Visit channel',
+      'hub.mini4.eyebrow': 'Videos',
+      'hub.mini4.title': 'Video Library',
+      'hub.mini4.desc': 'Webinars, tutorials, and event recordings',
     },
 
     id: {
@@ -1124,6 +1164,46 @@
       'communityPage.cta.title': 'Menjadi mitra',
       'communityPage.cta.sub': 'Baik Anda universitas, organisasi masyarakat sipil, sektor swasta, atau pakar individu — ada tempat untuk Anda di jejaring SDGs.',
       'communityPage.cta.button': 'Hubungi kami',
+
+      'meta.title.videos': 'Perpustakaan Video — SDGs UNMAS',
+      'nav.videos': 'Video',
+      'breadcrumb.videos': 'Perpustakaan Video',
+      'videosPage.hero.eyebrow': 'Tonton & Pelajari',
+      'videosPage.hero.title1': 'Perpustakaan',
+      'videosPage.hero.title2': 'Video SDGs',
+      'videosPage.hero.lead': 'Webinar rekaman, sesi pelatihan, sorotan acara, dan video kampanye — arsip visual karya SDGs di UNMAS dan seluruh Indonesia.',
+      'videosPage.hero.stat1': 'Video',
+      'videosPage.hero.stat2': 'Kategori',
+      'videosPage.hero.stat3': 'Bahasa',
+      'videosPage.hero.stat4': 'Tahun terbaru',
+      'videosPage.search.placeholder': 'Cari berdasarkan judul, topik, atau kata kunci…',
+      'videosPage.filter.all': 'Semua',
+      'videosPage.filter.webinar': 'Webinar',
+      'videosPage.filter.tutorial': 'Tutorial',
+      'videosPage.filter.event': 'Acara',
+      'videosPage.filter.campaign': 'Kampanye',
+      'videosPage.count.of': 'dari',
+      'videosPage.count.items': 'video',
+      'videosPage.type.webinar': 'Webinar',
+      'videosPage.type.tutorial': 'Tutorial',
+      'videosPage.type.event': 'Acara',
+      'videosPage.type.campaign': 'Kampanye',
+      'videosPage.empty.title': 'Tidak ada video yang cocok',
+      'videosPage.empty.desc': 'Coba kata kunci lain atau reset filter.',
+      'videosPage.empty.reset': 'Reset filter',
+      'videosPage.modal.close': 'Tutup',
+      'videosPage.modal.watch': 'Tonton di YouTube',
+      'videosPage.modal.date': 'Dipublikasikan',
+      'videosPage.modal.speaker': 'Pembicara',
+      'videosPage.modal.duration': 'Durasi',
+      'videosPage.modal.category': 'Kategori',
+      'videosPage.cta.badge': 'Lebih banyak di YouTube',
+      'videosPage.cta.title': 'Berlangganan saluran kami',
+      'videosPage.cta.sub': 'Dapatkan notifikasi saat webinar, tutorial, dan rekaman acara baru dipublikasikan.',
+      'videosPage.cta.button': 'Kunjungi saluran',
+      'hub.mini4.eyebrow': 'Video',
+      'hub.mini4.title': 'Perpustakaan Video',
+      'hub.mini4.desc': 'Webinar, tutorial, dan rekaman acara',
     },
   };
 
@@ -1302,12 +1382,15 @@
     return `assets/TPB-SDGs-Goal-${String(id).padStart(2, '0')}-Indonesia-Standar.svg`;
   }
 
-  function currentPage() {
+    function currentPage() {
     const path = window.location.pathname.toLowerCase();
     if (path.endsWith('about.html'))     return 'about';
     if (path.endsWith('goals.html'))     return 'goals';
     if (path.endsWith('data.html'))      return 'data';
     if (path.endsWith('knowledge.html')) return 'knowledge';
+    if (path.endsWith('news.html'))      return 'news';
+    if (path.endsWith('community.html')) return 'community';
+    if (path.endsWith('videos.html'))    return 'videos';
     return 'index';
   }
 
@@ -1354,6 +1437,7 @@
     window.__sdgsRenderKnowledge?.();
     window.__sdgsRenderNews?.();
     window.__sdgsRenderCommunity?.();
+    window.__sdgsRenderVideos?.();
   }
 
   /* ═══════════════════════════════════════════════════════════════
@@ -3527,6 +3611,337 @@
   /* Expose for setLanguage() */
   window.__sdgsRenderNews = renderNews;
 
+    /* ═══════════════════════════════════════════════════════════════
+     16d. VIDEO LIBRARY PAGE (videos.html)
+     ═══════════════════════════════════════════════════════════════ */
+  const VIDEO_CATEGORIES = {
+    webinar:  { color: '#1F7A48' },
+    tutorial: { color: '#C9A227' },
+    event:    { color: '#3F9463' },
+    campaign: { color: '#0C4325' },
+  };
+
+  const VIDEOS = [
+    /* ── Webinars ── */
+    { id: 'webinar-data-2026', category: 'webinar', date: '2026-10-18', duration: '1:24:12', goal: 17,
+      text: {
+        en: { title: 'Regional SDGs Data Workshop — Full Session',
+              desc: 'Hands-on workshop on indicator reporting, metadata, and open data platforms for provincial and district SDG teams.',
+              speaker: 'SDGs Data Team' },
+        id: { title: 'Lokakarya Data SDGs Daerah — Sesi Lengkap',
+              desc: 'Lokakarya praktis tentang pelaporan indikator, metadata, dan platform data terbuka untuk tim SDGs provinsi dan kabupaten.',
+              speaker: 'Tim Data SDGs' } } },
+
+    { id: 'webinar-climate-2060', category: 'webinar', date: '2026-09-22', duration: '58:34', goal: 13,
+      text: {
+        en: { title: 'Indonesia\'s Path to Net Zero 2060',
+              desc: 'Panel discussion on energy transition, forest conservation, and community-driven climate adaptation.',
+              speaker: 'SDGs UNMAS Communications' },
+        id: { title: 'Jalan Indonesia Menuju Net Zero 2060',
+              desc: 'Diskusi panel tentang transisi energi, konservasi hutan, dan adaptasi iklim berbasis masyarakat.',
+              speaker: 'Komunikasi SDGs UNMAS' } } },
+
+    { id: 'webinar-gender', category: 'webinar', date: '2026-08-15', duration: '1:12:48', goal: 5,
+      text: {
+        en: { title: 'Gender Equality in Traditional Institutions',
+              desc: 'Research webinar on women\'s participation in Balinese customary structures and rural economies.',
+              speaker: 'Dr. Made Sri Utami' },
+        id: { title: 'Kesetaraan Gender di Institusi Tradisional',
+              desc: 'Webinar riset tentang partisipasi perempuan dalam struktur adat Bali dan ekonomi pedesaan.',
+              speaker: 'Dr. Made Sri Utami' } } },
+
+    { id: 'webinar-marine', category: 'webinar', date: '2026-07-10', duration: '1:04:18', goal: 14,
+      text: {
+        en: { title: 'Coral Reef Restoration in Bali',
+              desc: 'Reviewing two decades of coral restoration research and lessons for scaling marine conservation.',
+              speaker: 'Prof. Dr. Ni Made Ayu Lestari' },
+        id: { title: 'Restorasi Terumbu Karang di Bali',
+              desc: 'Meninjau dua dekade riset restorasi karang dan pembelajaran untuk memperluas konservasi laut.',
+              speaker: 'Prof. Dr. Ni Made Ayu Lestari' } } },
+
+    /* ── Tutorials ── */
+    { id: 'tutorial-metadata', category: 'tutorial', date: '2026-09-05', duration: '22:47', goal: 17,
+      text: {
+        en: { title: 'How to Report SDG Indicators — Step by Step',
+              desc: 'A guided walkthrough of the national SDG reporting platform for local government focal points.',
+              speaker: 'SDGs Data Team' },
+        id: { title: 'Cara Melaporkan Indikator SDGs — Langkah demi Langkah',
+              desc: 'Panduan langkah demi langkah platform pelaporan SDGs nasional untuk focal point pemerintah daerah.',
+              speaker: 'Tim Data SDGs' } } },
+
+    { id: 'tutorial-waste-bank', category: 'tutorial', date: '2026-08-20', duration: '18:12', goal: 12,
+      text: {
+        en: { title: 'Setting Up a Village Waste Bank',
+              desc: 'Practical guidance on establishing a community waste bank — from governance to recycling partners.',
+              speaker: 'I Made Adi Purnama' },
+        id: { title: 'Mendirikan Bank Sampah Desa',
+              desc: 'Panduan praktis mendirikan bank sampah komunitas — dari tata kelola hingga mitra daur ulang.',
+              speaker: 'I Made Adi Purnama' } } },
+
+    { id: 'tutorial-sdg-local', category: 'tutorial', date: '2026-06-12', duration: '26:55', goal: 17,
+      text: {
+        en: { title: 'Localizing the SDGs — A Starter Guide',
+              desc: 'How to align local development plans with the SDGs and produce a Regional Action Plan.',
+              speaker: 'SDGs UNMAS Research Team' },
+        id: { title: 'Lokalisasi SDGs — Panduan Pemula',
+              desc: 'Cara menyelaraskan rencana pembangunan daerah dengan SDGs dan menyusun Rencana Aksi Daerah.',
+              speaker: 'Tim Riset SDGs UNMAS' } } },
+
+    { id: 'tutorial-youth-advocacy', category: 'tutorial', date: '2026-05-15', duration: '15:30', goal: 4,
+      text: {
+        en: { title: 'Youth SDG Advocacy Toolkit',
+              desc: 'Campaign strategy, storytelling, and community organizing for student SDG ambassadors.',
+              speaker: 'SDGs UNMAS Youth Network' },
+        id: { title: 'Perangkat Advokasi SDGs Pemuda',
+              desc: 'Strategi kampanye, storytelling, dan pengorganisasian komunitas untuk duta SDGs mahasiswa.',
+              speaker: 'Jejaring Pemuda SDGs UNMAS' } } },
+
+    /* ── Events ── */
+    { id: 'event-annual-conf-2026', category: 'event', date: '2026-10-24', duration: '2:41:08', goal: 17,
+      text: {
+        en: { title: 'SDGs Annual Conference 2026 — Opening Plenary',
+              desc: 'Full recording of the opening plenary with keynote addresses and the state of SDG progress in Indonesia.',
+              speaker: 'SDGs Secretariat' },
+        id: { title: 'SDGs Annual Conference 2026 — Pleno Pembukaan',
+              desc: 'Rekaman lengkap pleno pembukaan dengan pidato kunci dan status kemajuan SDGs di Indonesia.',
+              speaker: 'Sekretariat SDGs' } } },
+
+    { id: 'event-tourism-summit', category: 'event', date: '2026-09-12', duration: '1:58:44', goal: 12,
+      text: {
+        en: { title: 'Sustainable Tourism Village Summit — Highlights',
+              desc: 'Highlights from the two-day summit connecting village leaders, tourism operators, and researchers.',
+              speaker: 'SDGs UNMAS & Dinas Pariwisata' },
+        id: { title: 'KTT Desa Wisata Berkelanjutan — Sorotan',
+              desc: 'Sorotan dari KTT dua hari yang menghubungkan pemimpin desa, operator pariwisata, dan peneliti.',
+              speaker: 'SDGs UNMAS & Dinas Pariwisata' } } },
+
+    { id: 'event-awards-2024', category: 'event', date: '2026-03-05', duration: '1:34:20', goal: 17,
+      text: {
+        en: { title: 'Indonesia SDGs Action Awards 2024 — Ceremony',
+              desc: 'Full recording of the 2024 awards ceremony honoring local governments, universities, and communities.',
+              speaker: 'SDGs Secretariat' },
+        id: { title: 'Indonesia SDGs Action Awards 2024 — Upacara',
+              desc: 'Rekaman lengkap upacara penghargaan 2024 yang menghormati pemerintah daerah, universitas, dan komunitas.',
+              speaker: 'Sekretariat SDGs' } } },
+
+    /* ── Campaigns ── */
+    { id: 'campaign-coastal', category: 'campaign', date: '2026-08-08', duration: '3:24', goal: 14,
+      text: {
+        en: { title: 'Coastal Cleanup Collective — Short Film',
+              desc: 'A three-minute story of the monthly coastal cleanup movement in South Bali.',
+              speaker: 'SDGs UNMAS Field Team' },
+        id: { title: 'Kolektif Bersih Pantai — Film Pendek',
+              desc: 'Kisah tiga menit tentang gerakan pembersihan pantai bulanan di Bali Selatan.',
+              speaker: 'Tim Lapangan SDGs UNMAS' } } },
+
+    { id: 'campaign-youth-voices', category: 'campaign', date: '2026-06-20', duration: '6:18', goal: 4,
+      text: {
+        en: { title: 'Youth Voices on the SDGs',
+              desc: 'Students from across Bali share what the Sustainable Development Goals mean to them.',
+              speaker: 'SDGs UNMAS Youth Network' },
+        id: { title: 'Suara Pemuda tentang SDGs',
+              desc: 'Mahasiswa dari seluruh Bali berbagi apa arti Tujuan Pembangunan Berkelanjutan bagi mereka.',
+              speaker: 'Jejaring Pemuda SDGs UNMAS' } } },
+
+    { id: 'campaign-waste-movement', category: 'campaign', date: '2026-04-22', duration: '5:02', goal: 12,
+      text: {
+        en: { title: 'The Waste Bank Movement in Bali',
+              desc: 'Documentary short on how village waste banks became a community economic engine.',
+              speaker: 'SDGs UNMAS Field Team' },
+        id: { title: 'Gerakan Bank Sampah di Bali',
+              desc: 'Dokumenter pendek tentang bagaimana bank sampah desa menjadi mesin ekonomi komunitas.',
+              speaker: 'Tim Lapangan SDGs UNMAS' } } },
+  ];
+
+  const videosGrid   = document.getElementById('videosGrid');
+  const videosEmpty  = document.getElementById('videosEmpty');
+  const videosCount  = document.getElementById('videosCount');
+  const videosSearch = document.getElementById('videosSearch');
+  const videosReset  = document.getElementById('videosReset');
+
+  const videoModal         = document.getElementById('videoModal');
+  const videoModalPanel    = videoModal?.querySelector('.video-modal__panel');
+  const videoModalPlayer   = document.getElementById('videoModalPlayer');
+  const videoModalDuration = document.getElementById('videoModalDuration');
+  const videoModalType     = document.getElementById('videoModalType');
+  const videoModalTitle    = document.getElementById('videoModalTitle');
+  const videoModalDesc     = document.getElementById('videoModalDesc');
+  const videoModalMeta     = document.getElementById('videoModalMeta');
+  const videoModalWatch    = document.getElementById('videoModalWatch');
+
+  const videosState = { filter: 'all', query: '' };
+  let videosLastFocused = null;
+
+  function formatVideoDate(iso) {
+    const [y, m, d] = iso.split('-').map(Number);
+    const date = new Date(y, m - 1, d);
+    const locale = state.lang === 'id' ? 'id-ID' : 'en-US';
+    return date.toLocaleDateString(locale, { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+
+  function createVideoCard(video) {
+    const cat = VIDEO_CATEGORIES[video.category];
+    const copy = video.text[state.lang];
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'video-card reveal';
+    btn.dataset.category = video.category;
+    btn.dataset.videoId = video.id;
+    btn.style.setProperty('--v-color', cat.color);
+    btn.setAttribute('aria-label', `${copy.title} — ${video.duration}`);
+
+    btn.innerHTML = `
+      <div class="video-card__thumb">
+        <span class="video-card__badge">${t('videosPage.type.' + video.category)}</span>
+        <svg class="video-card__play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <circle cx="12" cy="12" r="11" opacity=".3"/>
+          <path d="M10 8.5v7l6-3.5-6-3.5Z"/>
+        </svg>
+        <span class="video-card__duration">${video.duration}</span>
+      </div>
+      <div class="video-card__body">
+        <h3 class="video-card__title">${copy.title}</h3>
+        <p class="video-card__desc">${copy.desc}</p>
+        <div class="video-card__foot">
+          <span>${formatVideoDate(video.date)}</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+      </div>
+    `;
+
+    btn.addEventListener('click', () => openVideoModal(video.id));
+    return btn;
+  }
+
+  function renderVideos() {
+    if (!videosGrid) return;
+    videosGrid.innerHTML = '';
+    [...VIDEOS]
+      .sort((a, b) => b.date.localeCompare(a.date))
+      .forEach(v => videosGrid.appendChild(createVideoCard(v)));
+    videosGrid.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+    applyVideosFilter();
+  }
+
+  function applyVideosFilter() {
+    if (!videosGrid) return;
+
+    const q = videosState.query.trim().toLowerCase();
+    const cat = videosState.filter;
+    let visible = 0;
+
+    videosGrid.querySelectorAll('.video-card').forEach(card => {
+      const video = VIDEOS.find(v => v.id === card.dataset.videoId);
+      if (!video) return;
+      const copy = video.text[state.lang];
+      const matchesCat = cat === 'all' || video.category === cat;
+      const haystack = `${copy.title} ${copy.desc} ${copy.speaker} ${video.date}`.toLowerCase();
+      const matchesQuery = !q || haystack.includes(q);
+      const show = matchesCat && matchesQuery;
+      card.hidden = !show;
+      if (show) visible++;
+    });
+
+    if (videosCount) videosCount.textContent = visible;
+    if (videosEmpty) videosEmpty.hidden = visible > 0;
+    if (videosGrid) videosGrid.style.display = visible > 0 ? '' : 'none';
+  }
+
+  function openVideoModal(videoId) {
+    const video = VIDEOS.find(v => v.id === videoId);
+    if (!video || !videoModal) return;
+
+    const cat = VIDEO_CATEGORIES[video.category];
+    const copy = video.text[state.lang];
+
+    videoModalPanel.style.setProperty('--v-color', cat.color);
+    videoModalPlayer.style.setProperty('--v-color', cat.color);
+    videoModalDuration.textContent = video.duration;
+    videoModalType.textContent = t('videosPage.type.' + video.category);
+    videoModalTitle.textContent = copy.title;
+    videoModalDesc.textContent = copy.desc;
+
+    videoModalMeta.innerHTML = `
+      <div><dt>${t('videosPage.modal.date')}</dt><dd>${formatVideoDate(video.date)}</dd></div>
+      <div><dt>${t('videosPage.modal.speaker')}</dt><dd>${copy.speaker}</dd></div>
+      <div><dt>${t('videosPage.modal.duration')}</dt><dd>${video.duration}</dd></div>
+      <div><dt>${t('videosPage.modal.category')}</dt><dd>${t('videosPage.type.' + video.category)}</dd></div>
+    `;
+
+    // Point to a placeholder YouTube search until real video IDs are provided
+    const query = encodeURIComponent(copy.title);
+    videoModalWatch.href = `https://www.youtube.com/results?search_query=SDGs+UNMAS+${query}`;
+
+    videosLastFocused = document.activeElement;
+    videoModal.hidden = false;
+    document.body.classList.add('has-modal');
+    setTimeout(() => videoModalPanel?.focus?.(), 30);
+  }
+
+  function closeVideoModal() {
+    if (!videoModal || videoModal.hidden) return;
+    videoModal.hidden = true;
+    document.body.classList.remove('has-modal');
+    videosLastFocused?.focus?.();
+  }
+
+  videoModal?.querySelectorAll('[data-close-video]').forEach(el => {
+    el.addEventListener('click', closeVideoModal);
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && videoModal && !videoModal.hidden) {
+      closeVideoModal();
+      return;
+    }
+    if (e.key !== 'Tab' || !videoModal || videoModal.hidden) return;
+    const focusables = videoModal.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    if (!focusables.length) return;
+    const first = focusables[0];
+    const last  = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+
+  if (videosGrid) {
+    document.querySelectorAll('.catalog-toolbar .filter-btn').forEach(btn => {
+      const f = btn.dataset.filter;
+      if (!['all', 'webinar', 'tutorial', 'event', 'campaign'].includes(f)) return;
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.catalog-toolbar .filter-btn').forEach(b => {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected', 'true');
+        videosState.filter = f;
+        applyVideosFilter();
+      });
+    });
+
+    videosSearch?.addEventListener('input', e => {
+      videosState.query = e.target.value;
+      applyVideosFilter();
+    });
+
+    videosReset?.addEventListener('click', () => {
+      videosState.filter = 'all';
+      videosState.query = '';
+      if (videosSearch) videosSearch.value = '';
+      document.querySelectorAll('.catalog-toolbar .filter-btn').forEach(b => {
+        const active = b.dataset.filter === 'all';
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-selected', String(active));
+      });
+      applyVideosFilter();
+    });
+  }
+
+  /* Expose for setLanguage() */
+  window.__sdgsRenderVideos = renderVideos;
+
   /* ═══════════════════════════════════════════════════════════════
      17. INIT  (must run LAST — after everything is defined)
      ═══════════════════════════════════════════════════════════════ */
@@ -3538,6 +3953,7 @@
     renderKnowledge();      // knowledge.html
     renderNews();           // news.html
     renderCommunity();      // community.html
+    renderVideos();         // videos.html
   }
 
   if (document.readyState === 'loading') {
@@ -3546,5 +3962,4 @@
     init();
   }
 
-   
 })();
