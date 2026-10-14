@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════
-   SDGs Indonesia Knowledge Hub 2.0 — script.js
-   Works on index.html, about.html, and goals.html
+   SDGs UNMAS — script.js
+   Works on: index.html · about.html · goals.html · data.html · knowledge.html
    Language: English (default) · Indonesian (toggle)
    ═══════════════════════════════════════════════════════════════ */
 (() => {
@@ -13,9 +13,10 @@
     en: {
       /* ── Meta ── */
       'meta.title.index': 'SDGs UNMAS — Sustainable Development Goals Center',
-      'meta.title.about': 'SDGs UNMAS - About SDGs',
-      'meta.title.goals': 'SDGs UNMAS - Goals',
-      'meta.title.data': 'SDGs UNMAS - Data & Analytics',
+      'meta.title.about': 'SDGs UNMAS — About SDGs',
+      'meta.title.goals': 'SDGs UNMAS — Goals',
+      'meta.title.data': 'SDGs UNMAS — Data & Analytics',
+      'meta.title.knowledge': 'SDGs UNMAS — Knowledge Hub',
 
       /* ── A11y ── */
       'a11y.skip': 'Skip to main content',
@@ -36,7 +37,7 @@
       'nav.community': 'Community',
 
       /* ── Header ── */
-      'header.searchAria': 'Search SDGs Indonesia',
+      'header.searchAria': 'Search SDGs UNMAS',
       'header.dashboard': 'View Dashboard',
       'header.menuAria': 'Open menu',
 
@@ -114,7 +115,7 @@
       'cat.economic': 'Economic',
       'cat.environmental': 'Environmental',
 
-      /* ── Data section ── */
+      /* ── Data section (homepage) ── */
       'data.eyebrow': 'Data & Analytics',
       'data.title': 'Unified data for evidence-based policy',
       'data.lead': 'Explore macro indicators, per-goal progress, and advanced analysis in one interactive dashboard.',
@@ -136,7 +137,7 @@
       'data.cluster.governance': 'Law & Governance',
       'data.cta': 'Open Full Dashboard',
 
-      /* ── Knowledge hub ── */
+      /* ── Knowledge hub (homepage section) ── */
       'hub.eyebrow': 'Knowledge Hub',
       'hub.title': 'Publications, Regulations & Best Practices',
       'hub.lead': 'A repository of official documents, annual reports, and best practices from government, the private sector, and communities.',
@@ -159,7 +160,7 @@
       'hub.cta.title': 'Best Practice Repository',
       'hub.cta.sub': 'Submit & explore local innovations',
 
-      /* ── News & events ── */
+      /* ── News & events (homepage section) ── */
       'news.eyebrow': 'Latest Updates',
       'news.title': 'News & Events',
       'news.lead': "Follow the latest developments, activities, and discussion forums around Indonesia's SDGs.",
@@ -217,8 +218,6 @@
 
       /* ── Footer ── */
       'footer.desc': 'SDGs Center — Universitas Mahasaraswati (UNMAS) Denpasar.',
-      'footer.address': 'Jl. Kamboja No. 11A,<br/>Denpasar, Bali 80233',
-      'footer.copyright': '© 2026 SDGs Center UNMAS — Universitas Mahasaraswati Denpasar. All rights reserved.',
       'footer.explore': 'Explore',
       'footer.resources': 'Resources',
       'footer.contact': 'Contact',
@@ -232,13 +231,13 @@
       'footer.link.bestPractices': 'Best Practices',
       'footer.link.awards': 'Awards',
       'footer.link.video': 'Video Library',
-      'footer.address': 'Jl. Taman Suropati No. 2,<br/>Central Jakarta 10310',
-      'footer.copyright': '© 2026 SDGs National Secretariat — Ministry of National Development Planning/Bappenas. All rights reserved.',
+      'footer.address': 'Jl. Kamboja No. 11A,<br/>Denpasar, Bali 80233',
+      'footer.copyright': '© 2026 SDGs Center UNMAS — Universitas Mahasaraswati Denpasar. All rights reserved.',
       'footer.privacy': 'Privacy Policy',
       'footer.terms': 'Terms & Conditions',
       'footer.sitemap': 'Sitemap',
 
-      /* ── Modal ── */
+      /* ── Modal (homepage goals) ── */
       'modal.close': 'Close detail',
       'modal.targets': 'Key Targets',
       'modal.indicators': 'Key Indicators',
@@ -248,6 +247,8 @@
       'breadcrumb.home': 'Home',
       'breadcrumb.about': 'About SDGs',
       'breadcrumb.goals': 'Goals',
+      'breadcrumb.data': 'Data & Analytics',
+      'breadcrumb.knowledge': 'Knowledge Hub',
 
       /* ── About page ── */
       'about.hero.eyebrow': 'About the SDGs',
@@ -266,7 +267,6 @@
       'about.what.card2.desc': 'Unlike their predecessors, the SDGs apply to every country — developed and developing alike — and call for action by all stakeholders: governments, business, civil society, and individuals.',
       'about.what.card3.title': 'Leave no one behind',
       'about.what.card3.desc': 'The overarching principle is to reach the furthest behind first — eradicating poverty in all its forms and ensuring that progress benefits every person, everywhere.',
-      'about.showcase.caption': 'The 17 Sustainable Development Goals — an integrated, indivisible set of global priorities for people and planet.',
       'about.showcase.caption': 'The 17 Sustainable Development Goals — an integrated, indivisible set of global priorities for people and planet.',
       'about.history.eyebrow': 'Journey',
       'about.history.title': 'From Rio to the 2030 Agenda',
@@ -359,7 +359,7 @@
       'catalog.hero.title1': 'All',
       'catalog.hero.title2': '17 Sustainable',
       'catalog.hero.title3': 'Development Goals',
-      'catalog.hero.lead': "Browse every goal, explore its targets and indicators, and track Indonesia's national progress. Click any goal below to open the detail panel.",
+      'catalog.hero.lead': "Browse every goal, explore its targets and indicators, and follow national progress toward the 2030 Agenda. Click any goal below to open the detail panel.",
       'catalog.hero.stat1': 'Goals',
       'catalog.hero.stat2': 'Targets',
       'catalog.hero.stat3': 'Indicators',
@@ -385,7 +385,7 @@
       'catalog.cta.sub': 'Track indicators over time, compare provinces, and dig into advanced analytics across every goal.',
       'catalog.cta.button': 'Open Dashboard',
 
-            'breadcrumb.data': 'Data & Analytics',
+      /* ── Data page ── */
       'dataPage.hero.eyebrow': 'Evidence for Action',
       'dataPage.hero.title1': "Indonesia's",
       'dataPage.hero.title2': 'SDGs Data',
@@ -452,14 +452,129 @@
       'dataPage.download.csv': 'Download CSV',
       'dataPage.download.xlsx': 'Download XLSX',
       'dataPage.download.api': 'API Docs',
+
+      /* ── Knowledge page ── */
+      'knowledge.hero.eyebrow': 'Library & Resources',
+      'knowledge.hero.title1': 'The SDGs',
+      'knowledge.hero.title2': 'Knowledge Hub',
+      'knowledge.hero.lead': 'Official publications, legal frameworks, awards, and replicable best practices — a curated reference library for researchers, policymakers, and practitioners.',
+      'knowledge.hero.stat1': 'Documents',
+      'knowledge.hero.stat2': 'Categories',
+      'knowledge.hero.stat3': 'Years archived',
+      'knowledge.hero.stat4': 'Latest update',
+      'knowledge.search.placeholder': 'Search by title, year, or publisher…',
+      'knowledge.filter.all': 'All',
+      'knowledge.filter.publication': 'Publications',
+      'knowledge.filter.regulation': 'Regulations',
+      'knowledge.filter.award': 'Awards',
+      'knowledge.filter.bestPractice': 'Best Practices',
+      'knowledge.count.of': 'of',
+      'knowledge.count.items': 'items',
+      'knowledge.type.publication': 'Publication',
+      'knowledge.type.regulation': 'Regulation',
+      'knowledge.type.award': 'Award',
+      'knowledge.type.bestPractice': 'Best Practice',
+      'knowledge.empty.title': 'No items match your search',
+      'knowledge.empty.desc': 'Try a different keyword or reset the filters.',
+      'knowledge.empty.reset': 'Reset filters',
+      'knowledge.modal.close': 'Close',
+      'knowledge.modal.download': 'Download',
+      'knowledge.modal.year': 'Year',
+      'knowledge.modal.publisher': 'Publisher',
+      'knowledge.modal.format': 'Format',
+      'knowledge.modal.size': 'Size',
+      'knowledge.modal.pages': 'pages',
+      'knowledge.cta.badge': 'Contribute',
+      'knowledge.cta.title': 'Have a best practice to share?',
+      'knowledge.cta.sub': 'Submit your SDG initiative — from community projects to institutional programs — and help build a shared repository of solutions.',
+      'knowledge.cta.button': 'Submit a practice',
+
+            'meta.title.news': 'News & Events — SDGs UNMAS',
+      'breadcrumb.news': 'News & Events',
+      'newsPage.hero.eyebrow': 'Latest Updates',
+      'newsPage.hero.title1': 'News,',
+      'newsPage.hero.title2': 'Events',
+      'newsPage.hero.title3': '& Announcements',
+      'newsPage.hero.lead': 'Follow the latest developments, upcoming activities, and discussion forums around the Sustainable Development Goals at UNMAS and across Indonesia.',
+      'newsPage.hero.stat1': 'Articles',
+      'newsPage.hero.stat2': 'Events',
+      'newsPage.hero.stat3': 'Announcements',
+      'newsPage.hero.stat4': 'Latest year',
+      'newsPage.search.placeholder': 'Search by title, date, or keyword…',
+      'newsPage.filter.all': 'All',
+      'newsPage.filter.article': 'Articles',
+      'newsPage.filter.event': 'Events',
+      'newsPage.filter.announcement': 'Announcements',
+      'newsPage.count.of': 'of',
+      'newsPage.count.items': 'items',
+      'newsPage.type.article': 'Article',
+      'newsPage.type.event': 'Event',
+      'newsPage.type.announcement': 'Announcement',
+      'newsPage.empty.title': 'No items match your search',
+      'newsPage.empty.desc': 'Try a different keyword or reset the filters.',
+      'newsPage.empty.reset': 'Reset filters',
+      'newsPage.modal.close': 'Close',
+      'newsPage.modal.readMore': 'Read full',
+      'newsPage.modal.date': 'Date',
+      'newsPage.modal.time': 'Time',
+      'newsPage.modal.venue': 'Venue',
+      'newsPage.modal.author': 'Author',
+      'newsPage.modal.sdg': 'Related SDG',
+      'newsPage.cta.badge': 'Stay in the loop',
+      'newsPage.cta.title': 'Never miss an update',
+      'newsPage.cta.sub': 'Subscribe to our monthly bulletin for data summaries, event invitations, and the latest SDGs news from Bali and beyond.',
+      'newsPage.cta.button': 'Subscribe',
+
+            'meta.title.community': 'Community — SDGs UNMAS',
+      'breadcrumb.community': 'Community',
+      'communityPage.hero.eyebrow': 'Network & Community',
+      'communityPage.hero.title1': 'The SDGs',
+      'communityPage.hero.title2': 'Community',
+      'communityPage.hero.title3': 'Network',
+      'communityPage.hero.lead': 'A cross-sector network of university SDGs Centers, expert teams, partner organizations, and recurring community activities — all working toward the 2030 Agenda.',
+      'communityPage.hero.stat1': 'SDGs Centers',
+      'communityPage.hero.stat2': 'Experts',
+      'communityPage.hero.stat3': 'Partners',
+      'communityPage.hero.stat4': 'Recurring activities',
+      'communityPage.search.placeholder': 'Search by name, expertise, or region…',
+      'communityPage.filter.all': 'All',
+      'communityPage.filter.center': 'Centers',
+      'communityPage.filter.expert': 'Experts',
+      'communityPage.filter.partner': 'Partners',
+      'communityPage.filter.agenda': 'Agenda',
+      'communityPage.count.of': 'of',
+      'communityPage.count.items': 'items',
+      'communityPage.type.center': 'SDGs Center',
+      'communityPage.type.expert': 'Expert',
+      'communityPage.type.partner': 'Partner',
+      'communityPage.type.agenda': 'Agenda',
+      'communityPage.empty.title': 'No items match your search',
+      'communityPage.empty.desc': 'Try a different keyword or reset the filters.',
+      'communityPage.empty.reset': 'Reset filters',
+      'communityPage.modal.close': 'Close',
+      'communityPage.modal.contact': 'Contact',
+      'communityPage.modal.region': 'Region',
+      'communityPage.modal.coordinator': 'Coordinator',
+      'communityPage.modal.founded': 'Founded',
+      'communityPage.modal.expertise': 'Expertise',
+      'communityPage.modal.email': 'Email',
+      'communityPage.modal.members': 'Members',
+      'communityPage.modal.since': 'Active since',
+      'communityPage.modal.schedule': 'Schedule',
+      'communityPage.modal.location': 'Location',
+      'communityPage.cta.badge': 'Join the network',
+      'communityPage.cta.title': 'Become a partner',
+      'communityPage.cta.sub': "Whether you're a university, civil society organization, private sector, or individual expert — there's a place for you in the SDGs network.",
+      'communityPage.cta.button': 'Get in touch',
     },
 
     id: {
       /* ── Meta ── */
       'meta.title.index': 'SDGs UNMAS — Pusat Tujuan Pembangunan Berkelanjutan',
-      'meta.title.about': 'SDGs UNMAS - Tentang SDGs',
-      'meta.title.goals': 'SDGs UNMAS - Tujuan',
-      'meta.title.data': 'SDGs UNMAS - Data & Analitik',
+      'meta.title.about': 'SDGs UNMAS — Tentang SDGs',
+      'meta.title.goals': 'SDGs UNMAS — Tujuan',
+      'meta.title.data': 'SDGs UNMAS — Data & Analitik',
+      'meta.title.knowledge': 'SDGs UNMAS — Knowledge Hub',
 
       /* ── A11y ── */
       'a11y.skip': 'Lompat ke konten utama',
@@ -480,7 +595,7 @@
       'nav.community': 'Komunitas',
 
       /* ── Header ── */
-      'header.searchAria': 'Cari di SDGs Indonesia',
+      'header.searchAria': 'Cari di SDGs UNMAS',
       'header.dashboard': 'Lihat Dashboard',
       'header.menuAria': 'Buka menu',
 
@@ -558,7 +673,7 @@
       'cat.economic': 'Ekonomi',
       'cat.environmental': 'Lingkungan',
 
-      /* ── Data section ── */
+      /* ── Data section (homepage) ── */
       'data.eyebrow': 'Data & Analitik',
       'data.title': 'Data terpadu untuk kebijakan berbasis bukti',
       'data.lead': 'Jelajahi indikator makro, capaian per tujuan, dan analisis lanjutan dalam satu dasbor interaktif.',
@@ -580,7 +695,7 @@
       'data.cluster.governance': 'Hukum & Tata Kelola',
       'data.cta': 'Buka Dashboard Lengkap',
 
-      /* ── Knowledge hub ── */
+      /* ── Knowledge hub (homepage section) ── */
       'hub.eyebrow': 'Knowledge Hub',
       'hub.title': 'Publikasi, Regulasi & Praktik Baik',
       'hub.lead': 'Repositori dokumen resmi, laporan tahunan, hingga praktik terbaik dari pemerintah, swasta, dan masyarakat.',
@@ -603,7 +718,7 @@
       'hub.cta.title': 'Repositori Praktik Baik',
       'hub.cta.sub': 'Kirim & telusuri inovasi daerah',
 
-      /* ── News & events ── */
+      /* ── News & events (homepage section) ── */
       'news.eyebrow': 'Kabar Terkini',
       'news.title': 'Berita & Agenda',
       'news.lead': 'Ikuti perkembangan terbaru, kegiatan, dan forum diskusi seputar SDGs Indonesia.',
@@ -661,8 +776,6 @@
 
       /* ── Footer ── */
       'footer.desc': 'SDGs Center — Universitas Mahasaraswati (UNMAS) Denpasar.',
-      'footer.address': 'Jl. Kamboja No. 11A,<br/>Denpasar, Bali 80233',
-      'footer.copyright': '© 2026 SDGs Center UNMAS — Universitas Mahasaraswati Denpasar. Hak cipta dilindungi.',
       'footer.explore': 'Jelajahi',
       'footer.resources': 'Sumber Daya',
       'footer.contact': 'Kontak',
@@ -676,13 +789,13 @@
       'footer.link.bestPractices': 'Praktik Baik',
       'footer.link.awards': 'Penghargaan',
       'footer.link.video': 'Video Library',
-      'footer.address': 'Jl. Taman Suropati No. 2,<br/>Jakarta Pusat 10310',
-      'footer.copyright': '© 2026 Sekretariat Nasional SDGs — Kementerian PPN/Bappenas. Hak cipta dilindungi.',
+      'footer.address': 'Jl. Kamboja No. 11A,<br/>Denpasar, Bali 80233',
+      'footer.copyright': '© 2026 SDGs Center UNMAS — Universitas Mahasaraswati Denpasar. Hak cipta dilindungi.',
       'footer.privacy': 'Kebijakan Privasi',
       'footer.terms': 'Syarat & Ketentuan',
       'footer.sitemap': 'Peta Situs',
 
-      /* ── Modal ── */
+      /* ── Modal (homepage goals) ── */
       'modal.close': 'Tutup detail',
       'modal.targets': 'Target Utama',
       'modal.indicators': 'Indikator Kunci',
@@ -692,6 +805,8 @@
       'breadcrumb.home': 'Beranda',
       'breadcrumb.about': 'Tentang SDGs',
       'breadcrumb.goals': 'Tujuan',
+      'breadcrumb.data': 'Data & Analitik',
+      'breadcrumb.knowledge': 'Knowledge Hub',
 
       /* ── About page ── */
       'about.hero.eyebrow': 'Tentang SDGs',
@@ -710,7 +825,6 @@
       'about.what.card2.desc': 'Berbeda dari pendahulunya, SDGs berlaku untuk setiap negara — maju maupun berkembang — dan menyerukan aksi dari semua pemangku kepentingan: pemerintah, dunia usaha, masyarakat sipil, dan individu.',
       'about.what.card3.title': 'Tidak meninggalkan siapa pun',
       'about.what.card3.desc': 'Prinsip utamanya adalah menjangkau yang paling tertinggal lebih dulu — mengakhiri kemiskinan dalam segala bentuknya dan memastikan kemajuan dinikmati oleh setiap orang, di mana pun.',
-      'about.showcase.caption': '17 Tujuan Pembangunan Berkelanjutan — seperangkat prioritas global yang terintegrasi dan tak terpisahkan untuk manusia dan planet.',
       'about.showcase.caption': '17 Tujuan Pembangunan Berkelanjutan — seperangkat prioritas global yang terintegrasi dan tak terpisahkan untuk manusia dan planet.',
       'about.history.eyebrow': 'Perjalanan',
       'about.history.title': 'Dari Rio hingga Agenda 2030',
@@ -798,7 +912,7 @@
       'about.cta.button1': 'Jelajahi 17 Tujuan',
       'about.cta.button2': 'Lihat Dashboard',
 
-      /* ── Halaman katalog Tujuan ── */
+      /* ── Goals catalog page ── */
       'catalog.hero.eyebrow': 'Agenda 2030',
       'catalog.hero.title1': 'Semua',
       'catalog.hero.title2': '17 Tujuan Pembangunan',
@@ -829,7 +943,7 @@
       'catalog.cta.sub': 'Lacak indikator dari waktu ke waktu, bandingkan provinsi, dan telusuri analitik lanjutan di semua tujuan.',
       'catalog.cta.button': 'Buka Dashboard',
 
-            'breadcrumb.data': 'Data & Analitik',
+      /* ── Data page ── */
       'dataPage.hero.eyebrow': 'Bukti untuk Aksi',
       'dataPage.hero.title1': 'Dasbor Data',
       'dataPage.hero.title2': 'SDGs',
@@ -896,6 +1010,120 @@
       'dataPage.download.csv': 'Unduh CSV',
       'dataPage.download.xlsx': 'Unduh XLSX',
       'dataPage.download.api': 'Dokumentasi API',
+
+      /* ── Knowledge page ── */
+      'knowledge.hero.eyebrow': 'Perpustakaan & Sumber Daya',
+      'knowledge.hero.title1': 'Knowledge Hub',
+      'knowledge.hero.title2': 'SDGs UNMAS',
+      'knowledge.hero.lead': 'Publikasi resmi, kerangka hukum, penghargaan, dan praktik baik yang dapat direplikasi — perpustakaan referensi terkurasi untuk peneliti, pembuat kebijakan, dan praktisi.',
+      'knowledge.hero.stat1': 'Dokumen',
+      'knowledge.hero.stat2': 'Kategori',
+      'knowledge.hero.stat3': 'Tahun terarsip',
+      'knowledge.hero.stat4': 'Update terbaru',
+      'knowledge.search.placeholder': 'Cari berdasarkan judul, tahun, atau penerbit…',
+      'knowledge.filter.all': 'Semua',
+      'knowledge.filter.publication': 'Publikasi',
+      'knowledge.filter.regulation': 'Regulasi',
+      'knowledge.filter.award': 'Penghargaan',
+      'knowledge.filter.bestPractice': 'Praktik Baik',
+      'knowledge.count.of': 'dari',
+      'knowledge.count.items': 'item',
+      'knowledge.type.publication': 'Publikasi',
+      'knowledge.type.regulation': 'Regulasi',
+      'knowledge.type.award': 'Penghargaan',
+      'knowledge.type.bestPractice': 'Praktik Baik',
+      'knowledge.empty.title': 'Tidak ada item yang cocok',
+      'knowledge.empty.desc': 'Coba kata kunci lain atau reset filter.',
+      'knowledge.empty.reset': 'Reset filter',
+      'knowledge.modal.close': 'Tutup',
+      'knowledge.modal.download': 'Unduh',
+      'knowledge.modal.year': 'Tahun',
+      'knowledge.modal.publisher': 'Penerbit',
+      'knowledge.modal.format': 'Format',
+      'knowledge.modal.size': 'Ukuran',
+      'knowledge.modal.pages': 'halaman',
+      'knowledge.cta.badge': 'Kontribusi',
+      'knowledge.cta.title': 'Punya praktik baik untuk dibagikan?',
+      'knowledge.cta.sub': 'Kirim inisiatif SDGs Anda — dari proyek komunitas hingga program institusi — dan bantu membangun repositori solusi bersama.',
+      'knowledge.cta.button': 'Kirim praktik baik',
+
+            'meta.title.news': 'Berita & Agenda — SDGs UNMAS',
+      'breadcrumb.news': 'Berita & Agenda',
+      'newsPage.hero.eyebrow': 'Kabar Terkini',
+      'newsPage.hero.title1': 'Berita,',
+      'newsPage.hero.title2': 'Agenda',
+      'newsPage.hero.title3': '& Pengumuman',
+      'newsPage.hero.lead': 'Ikuti perkembangan terbaru, kegiatan mendatang, dan forum diskusi seputar Tujuan Pembangunan Berkelanjutan di UNMAS dan seluruh Indonesia.',
+      'newsPage.hero.stat1': 'Artikel',
+      'newsPage.hero.stat2': 'Agenda',
+      'newsPage.hero.stat3': 'Pengumuman',
+      'newsPage.hero.stat4': 'Tahun terbaru',
+      'newsPage.search.placeholder': 'Cari berdasarkan judul, tanggal, atau kata kunci…',
+      'newsPage.filter.all': 'Semua',
+      'newsPage.filter.article': 'Artikel',
+      'newsPage.filter.event': 'Agenda',
+      'newsPage.filter.announcement': 'Pengumuman',
+      'newsPage.count.of': 'dari',
+      'newsPage.count.items': 'item',
+      'newsPage.type.article': 'Artikel',
+      'newsPage.type.event': 'Agenda',
+      'newsPage.type.announcement': 'Pengumuman',
+      'newsPage.empty.title': 'Tidak ada item yang cocok',
+      'newsPage.empty.desc': 'Coba kata kunci lain atau reset filter.',
+      'newsPage.empty.reset': 'Reset filter',
+      'newsPage.modal.close': 'Tutup',
+      'newsPage.modal.readMore': 'Baca lengkap',
+      'newsPage.modal.date': 'Tanggal',
+      'newsPage.modal.time': 'Waktu',
+      'newsPage.modal.venue': 'Tempat',
+      'newsPage.modal.author': 'Penulis',
+      'newsPage.modal.sdg': 'SDG Terkait',
+      'newsPage.cta.badge': 'Tetap terhubung',
+      'newsPage.cta.title': 'Jangan lewatkan update',
+      'newsPage.cta.sub': 'Berlangganan buletin bulanan kami untuk rangkuman data, undangan acara, dan berita SDGs terbaru dari Bali dan sekitarnya.',
+      'newsPage.cta.button': 'Berlangganan',
+
+            'meta.title.community': 'Komunitas — SDGs UNMAS',
+      'breadcrumb.community': 'Komunitas',
+      'communityPage.hero.eyebrow': 'Jejaring & Komunitas',
+      'communityPage.hero.title1': 'Jejaring',
+      'communityPage.hero.title2': 'Komunitas',
+      'communityPage.hero.title3': 'SDGs',
+      'communityPage.hero.lead': 'Jejaring lintas sektor yang terdiri dari SDGs Center universitas, tim ahli, organisasi mitra, dan kegiatan komunitas rutin — semua bergerak menuju Agenda 2030.',
+      'communityPage.hero.stat1': 'SDGs Center',
+      'communityPage.hero.stat2': 'Pakar',
+      'communityPage.hero.stat3': 'Mitra',
+      'communityPage.hero.stat4': 'Kegiatan rutin',
+      'communityPage.search.placeholder': 'Cari berdasarkan nama, keahlian, atau wilayah…',
+      'communityPage.filter.all': 'Semua',
+      'communityPage.filter.center': 'SDGs Center',
+      'communityPage.filter.expert': 'Pakar',
+      'communityPage.filter.partner': 'Mitra',
+      'communityPage.filter.agenda': 'Agenda',
+      'communityPage.count.of': 'dari',
+      'communityPage.count.items': 'item',
+      'communityPage.type.center': 'SDGs Center',
+      'communityPage.type.expert': 'Pakar',
+      'communityPage.type.partner': 'Mitra',
+      'communityPage.type.agenda': 'Agenda',
+      'communityPage.empty.title': 'Tidak ada item yang cocok',
+      'communityPage.empty.desc': 'Coba kata kunci lain atau reset filter.',
+      'communityPage.empty.reset': 'Reset filter',
+      'communityPage.modal.close': 'Tutup',
+      'communityPage.modal.contact': 'Kontak',
+      'communityPage.modal.region': 'Wilayah',
+      'communityPage.modal.coordinator': 'Koordinator',
+      'communityPage.modal.founded': 'Didirikan',
+      'communityPage.modal.expertise': 'Keahlian',
+      'communityPage.modal.email': 'Email',
+      'communityPage.modal.members': 'Anggota',
+      'communityPage.modal.since': 'Aktif sejak',
+      'communityPage.modal.schedule': 'Jadwal',
+      'communityPage.modal.location': 'Lokasi',
+      'communityPage.cta.badge': 'Bergabung dengan jejaring',
+      'communityPage.cta.title': 'Menjadi mitra',
+      'communityPage.cta.sub': 'Baik Anda universitas, organisasi masyarakat sipil, sektor swasta, atau pakar individu — ada tempat untuk Anda di jejaring SDGs.',
+      'communityPage.cta.button': 'Hubungi kami',
     },
   };
 
@@ -1076,9 +1304,10 @@
 
   function currentPage() {
     const path = window.location.pathname.toLowerCase();
-    if (path.endsWith('about.html')) return 'about';
-    if (path.endsWith('goals.html')) return 'goals';
-    if (path.endsWith('data.html')) return 'data';
+    if (path.endsWith('about.html'))     return 'about';
+    if (path.endsWith('goals.html'))     return 'goals';
+    if (path.endsWith('data.html'))      return 'data';
+    if (path.endsWith('knowledge.html')) return 'knowledge';
     return 'index';
   }
 
@@ -1117,11 +1346,14 @@
     localStorage.setItem(STORAGE_KEY, lang);
 
     applyI18n();
-    renderGoalsGrid();     // homepage featured
-    renderCatalog();       // goals.html catalog
-    refreshDetailPanel();  // goals.html open detail
-    refreshOpenModal();    // homepage open modal
+    renderGoalsGrid();
+    renderCatalog();
+    refreshDetailPanel();
+    refreshOpenModal();
     window.__sdgsUpdateDataPage?.();
+    window.__sdgsRenderKnowledge?.();
+    window.__sdgsRenderNews?.();
+    window.__sdgsRenderCommunity?.();
   }
 
   /* ═══════════════════════════════════════════════════════════════
@@ -1151,13 +1383,7 @@
 
     btn.innerHTML = `
       <div class="goal-feature__head">
-        <img
-          class="goal-feature__icon"
-          src="${goalIcon(goal.id)}"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-        />
+        <img class="goal-feature__icon" src="${goalIcon(goal.id)}" alt="" aria-hidden="true" loading="lazy" />
         <div class="goal-feature__meta">
           <p class="goal-feature__cat">${t('cat.' + goal.cat)}</p>
           <h3 class="goal-feature__name">${copy.name}</h3>
@@ -1289,7 +1515,6 @@
     el.addEventListener('click', closeGoalModal);
   });
 
-  /* Focus trap for modal */
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && goalModal && !goalModal.hidden) {
       closeGoalModal();
@@ -1336,9 +1561,9 @@
   /* ═══════════════════════════════════════════════════════════════
      7. SEARCH OVERLAY
      ═══════════════════════════════════════════════════════════════ */
-  const searchOverlay  = document.getElementById('searchOverlay');
-  const openSearchBtn  = document.getElementById('openSearch');
-  const searchInput    = document.getElementById('searchInput');
+  const searchOverlay = document.getElementById('searchOverlay');
+  const openSearchBtn = document.getElementById('openSearch');
+  const searchInput   = document.getElementById('searchInput');
 
   function openSearch() {
     if (!searchOverlay) return;
@@ -1537,13 +1762,7 @@
 
     btn.innerHTML = `
       <div class="catalog-tile__head">
-        <img
-          class="catalog-tile__icon"
-          src="${goalIcon(goal.id)}"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-        />
+        <img class="catalog-tile__icon" src="${goalIcon(goal.id)}" alt="" aria-hidden="true" loading="lazy" />
         <span class="catalog-tile__cat">${t('cat.' + goal.cat)}</span>
       </div>
       <h3 class="catalog-tile__name">${copy.name}</h3>
@@ -1721,7 +1940,6 @@
 
     detailClose?.addEventListener('click', closeCatalogDetail);
 
-    /* Handle initial hash (#goal-3) */
     const hash = window.location.hash.match(/^#goal-(\d+)$/);
     if (hash) {
       const id = parseInt(hash[1], 10);
@@ -1748,30 +1966,11 @@
   });
 
   /* ═══════════════════════════════════════════════════════════════
-     15. INIT
+     15. DATA & ANALYTICS PAGE (data.html)
      ═══════════════════════════════════════════════════════════════ */
-  function init() {
-    applyI18n();
-    renderGoalsGrid();  // homepage featured
-    renderCatalog();    // goals.html catalog
-    initDataPage();
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
-
-    /* ═══════════════════════════════════════════════════════════════
-     16. DATA & ANALYTICS PAGE (data.html)
-     ═══════════════════════════════════════════════════════════════ */
-
-  /* ── Mock time-series data ── */
   const YEARS = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
 
   const INDICATOR_SERIES = {
-    /* Goal → series values (2015–2024) */
     1:  { name: { en: 'Poverty Rate',        id: 'Tingkat Kemiskinan' },   unit: '%',  values: [11.2, 10.9, 10.6, 9.8, 9.2, 10.2, 9.7, 9.5, 9.4, 8.57], target: 6.5,  higherIsBetter: false, color: '#E5243B' },
     2:  { name: { en: 'Stunting Prevalence', id: 'Prevalensi Stunting' },  unit: '%',  values: [36.4, 35.6, 33.8, 30.8, 27.7, 26.9, 24.4, 21.6, 21.5, 19.8], target: 14.0, higherIsBetter: false, color: '#DDA63A' },
     3:  { name: { en: 'Life Expectancy',     id: 'Angka Harapan Hidup' },  unit: 'yr', values: [69.2, 69.5, 69.7, 70.0, 70.4, 70.2, 71.0, 71.3, 71.5, 71.8], target: 75.0, higherIsBetter: true,  color: '#4C9F38' },
@@ -1806,7 +2005,6 @@
     91: { en: 'Papua', id: 'Papua' },
   };
 
-  /* Province performance (mock, per goal — top and bottom 3) */
   const PROVINCE_DATA = {
     1:  { top: [{ name: { en: 'Bali', id: 'Bali' }, value: 4.2 }, { name: { en: 'DI Yogyakarta', id: 'DI Yogyakarta' }, value: 10.8 }, { name: { en: 'DKI Jakarta', id: 'DKI Jakarta' }, value: 11.0 }],
           bottom: [{ name: { en: 'Papua', id: 'Papua' }, value: 26.8 }, { name: { en: 'Maluku', id: 'Maluku' }, value: 20.1 }, { name: { en: 'East Nusa Tenggara', id: 'Nusa Tenggara Timur' }, value: 19.9 }] },
@@ -1818,13 +2016,11 @@
           bottom: [{ name: { en: 'Papua', id: 'Papua' }, value: 41 }, { name: { en: 'East Kalimantan', id: 'Kalimantan Timur' }, value: 44 }, { name: { en: 'South Sumatra', id: 'Sumatera Selatan' }, value: 48 }] },
   };
 
-  /* Fallback province data if goal isn't in PROVINCE_DATA */
   const DEFAULT_PROVINCE_DATA = {
     top: [{ name: { en: 'DKI Jakarta', id: 'DKI Jakarta' }, value: 92 }, { name: { en: 'DI Yogyakarta', id: 'DI Yogyakarta' }, value: 88 }, { name: { en: 'Bali', id: 'Bali' }, value: 85 }],
     bottom: [{ name: { en: 'Papua', id: 'Papua' }, value: 42 }, { name: { en: 'West Papua', id: 'Papua Barat' }, value: 46 }, { name: { en: 'Maluku', id: 'Maluku' }, value: 51 }],
   };
 
-  /* State for the data page */
   const dataState = {
     goal: 'all',
     region: 'national',
@@ -1834,11 +2030,9 @@
 
   const $ = id => document.getElementById(id);
 
-  /* ── Populate goal dropdown ── */
   function populateGoalFilter() {
     const select = $('filterGoal');
     if (!select) return;
-    // Clear everything except the "all" option
     [...select.options].forEach((opt, i) => { if (i > 0) opt.remove(); });
     GOALS.forEach(g => {
       const opt = document.createElement('option');
@@ -1848,9 +2042,7 @@
     });
   }
 
-  /* ── Render a KPI card ── */
   function createKpiCard(goal, series) {
-    const copy = goal.text[state.lang];
     const indicatorName = series.name[state.lang];
     const latest = series.values[series.values.length - 1];
     const prev = series.values[series.values.length - 2];
@@ -1858,7 +2050,6 @@
     const up = delta >= 0;
     const isGood = series.higherIsBetter ? up : !up;
 
-    // Build a mini sparkline
     const min = Math.min(...series.values);
     const max = Math.max(...series.values);
     const range = max - min || 1;
@@ -1912,7 +2103,6 @@
     grid.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
   }
 
-  /* ── Render the main trend chart ── */
   function renderTrendChart() {
     const svg = $('trendChart');
     const title = $('trendTitle');
@@ -1930,7 +2120,6 @@
     if (title) title.textContent = seriesName;
     if (sub) sub.textContent = `${region[state.lang]} · 2015–${dataState.year} · ${series.unit}`;
 
-    // Filter to years up to selected year
     const cutoff = YEARS.indexOf(dataState.year) + 1;
     const years = YEARS.slice(0, cutoff);
     const values = series.values.slice(0, cutoff);
@@ -1952,13 +2141,9 @@
     const x = i => padX + (i / (values.length - 1 || 1)) * chartW;
     const y = v => padTop + chartH - ((v - yMin) / yRange) * chartH;
 
-    // Build path
     const pathD = values.map((v, i) => `${i === 0 ? 'M' : 'L'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
-
-    // Area path
     const areaD = `${pathD} L${x(values.length - 1).toFixed(1)},${(padTop + chartH).toFixed(1)} L${x(0).toFixed(1)},${(padTop + chartH).toFixed(1)} Z`;
 
-    // Grid lines (5 horizontal)
     const gridLines = Array.from({ length: 5 }, (_, i) => {
       const gy = padTop + (i / 4) * chartH;
       const val = yMax - (i / 4) * yRange;
@@ -1968,12 +2153,10 @@
       `;
     }).join('');
 
-    // Points
     const points = values.map((v, i) => `
       <circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="4" fill="#fff" stroke="${series.color}" stroke-width="2.5"/>
     `).join('');
 
-    // Target line
     const targetY = y(series.target);
     const targetLine = `
       <line x1="${padX}" y1="${targetY}" x2="${W - padX}" y2="${targetY}"
@@ -1995,13 +2178,11 @@
       <g>${points}</g>
     `;
 
-    // X-axis labels
     if (axis) {
       axis.innerHTML = years.map(y => `<span>${y}</span>`).join('');
     }
   }
 
-  /* ── Render province comparison ── */
   function renderProvinceComparison() {
     const top = $('provinceTop');
     const bottom = $('provinceBottom');
@@ -2025,7 +2206,6 @@
     bottom.innerHTML = render(data.bottom, '#E5243B');
   }
 
-  /* ── Render deep-dive goal pills ── */
   function renderDeepDivePills() {
     const wrap = $('deepdiveGoals');
     if (!wrap) return;
@@ -2047,7 +2227,6 @@
     });
   }
 
-  /* ── Render deep-dive panel ── */
   function renderDeepDivePanel() {
     const panel = $('deepdivePanel');
     if (!panel) return;
@@ -2114,10 +2293,8 @@
     `;
   }
 
-  /* ── Handle deep-dive selection ── */
   function selectDeepDive(goalId, scroll) {
     dataState.goal = String(goalId);
-    // Sync with goal filter dropdown
     const select = $('filterGoal');
     if (select) select.value = String(goalId);
     updateDataPage();
@@ -2133,7 +2310,6 @@
     }
   }
 
-  /* ── Update everything on the data page ── */
   function updateDataPage() {
     renderKpiGrid();
     renderTrendChart();
@@ -2142,14 +2318,12 @@
     renderDeepDivePanel();
   }
 
-  /* ── Render availability matrix (static) ── */
   function renderAvailability() {
     const grid = $('availabilityGrid');
     if (!grid) return;
     grid.innerHTML = '';
     const years = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
 
-    // Header row
     const header = document.createElement('div');
     header.className = 'availability-row';
     header.innerHTML = `<span class="availability-row__label"></span>` +
@@ -2162,7 +2336,6 @@
       row.innerHTML = `
         <span class="availability-row__label">SDG ${g.id}</span>
         ${years.map(y => {
-          // Mock: higher coverage in recent years, some goals lag
           const base = 0.4 + (y - 2015) * 0.06;
           const jitter = (g.id * 13 + y) % 7 / 20;
           const cov = Math.min(0.98, base + jitter);
@@ -2174,14 +2347,12 @@
     });
   }
 
-  /* ── Init data page ── */
   function initDataPage() {
-    if (!$('filterGoal')) return; // not on data.html
+    if (!$('filterGoal')) return;
     populateGoalFilter();
     renderAvailability();
     updateDataPage();
 
-    // Wire filter dropdowns
     $('filterGoal')?.addEventListener('change', e => {
       dataState.goal = e.target.value;
       updateDataPage();
@@ -2198,7 +2369,6 @@
       updateDataPage();
     });
 
-    // Reset
     $('filterReset')?.addEventListener('click', () => {
       dataState.goal = 'all';
       dataState.region = 'national';
@@ -2212,7 +2382,6 @@
       }
     });
 
-    // Export (mock)
     const download = (format) => {
       const goalId = dataState.goal === 'all' ? 1 : parseInt(dataState.goal, 10);
       const series = INDICATOR_SERIES[goalId];
@@ -2234,7 +2403,6 @@
     $('filterExport')?.addEventListener('click', () => download('csv'));
     $('downloadXLSX')?.addEventListener('click', () => download('xlsx'));
 
-    // Handle initial hash
     const hash = window.location.hash.match(/^#goal-(\d+)$/);
     if (hash) {
       const id = parseInt(hash[1], 10);
@@ -2248,10 +2416,1134 @@
   window.__sdgsUpdateDataPage = () => {
     if (!$('filterGoal')) return;
     populateGoalFilter();
-    // Re-apply current value after repopulating
     if ($('filterGoal')) $('filterGoal').value = String(dataState.goal);
     updateDataPage();
     renderAvailability();
   };
+
+  /* ═══════════════════════════════════════════════════════════════
+     16. KNOWLEDGE HUB PAGE (knowledge.html)
+     ═══════════════════════════════════════════════════════════════ */
+  const KNOWLEDGE_TYPES = {
+    publication:  { color: '#1F7A48', icon: 'document' },
+    regulation:   { color: '#0C4325', icon: 'scroll' },
+    award:        { color: '#C9A227', icon: 'award' },
+    bestPractice: { color: '#3F9463', icon: 'spark' },
+  };
+
+  const KNOWLEDGE_ITEMS = [
+    { id: 'vnr-2024', type: 'publication', year: 2024, file: { format: 'PDF', size: '12 MB', pages: 148 },
+      text: {
+        en: { title: 'Voluntary National Review (VNR) Indonesia 2024', desc: "Indonesia's third VNR, reviewing progress on all 17 SDGs and highlighting lessons learned in the final stretch toward 2030.", publisher: 'Bappenas' },
+        id: { title: 'Voluntary National Review (VNR) Indonesia 2024', desc: 'VNR ketiga Indonesia, mengulas kemajuan 17 SDGs dan pembelajaran menjelang 2030.', publisher: 'Bappenas' } } },
+    { id: 'vnr-2022', type: 'publication', year: 2022, file: { format: 'PDF', size: '10 MB', pages: 132 },
+      text: {
+        en: { title: 'Voluntary National Review (VNR) Indonesia 2022', desc: 'Post-pandemic recovery report highlighting social protection, green recovery, and digital transformation.', publisher: 'Bappenas' },
+        id: { title: 'Voluntary National Review (VNR) Indonesia 2022', desc: 'Laporan pemulihan pasca-pandemi menekankan perlindungan sosial, pemulihan hijau, dan transformasi digital.', publisher: 'Bappenas' } } },
+    { id: 'capaian-2023', type: 'publication', year: 2023, file: { format: 'PDF', size: '8 MB', pages: 96 },
+      text: {
+        en: { title: 'SDGs Annual Progress Report 2023', desc: "Indicator-level review of Indonesia's SDG progress across all goals with regional disaggregation.", publisher: 'SDGs Secretariat' },
+        id: { title: 'Laporan Capaian Tahunan SDGs 2023', desc: 'Tinjauan tingkat indikator capaian SDGs Indonesia di seluruh tujuan dengan disagregasi daerah.', publisher: 'Sekretariat SDGs' } } },
+    { id: 'metadata-2', type: 'publication', year: 2022, file: { format: 'PDF', size: '6 MB', pages: 320 },
+      text: {
+        en: { title: 'Metadata for SDG Indicators — 2nd Edition', desc: 'Operational definitions and calculation methodology for all 289 SDG indicators.', publisher: 'Bappenas & BPS' },
+        id: { title: 'Metadata Indikator SDGs — Edisi II', desc: 'Definisi operasional dan metodologi perhitungan untuk seluruh 289 indikator SDGs.', publisher: 'Bappenas & BPS' } } },
+    { id: 'roadmap', type: 'publication', year: 2017, file: { format: 'PDF', size: '4 MB', pages: 88 },
+      text: {
+        en: { title: 'SDGs Roadmap Indonesia 2017–2030', desc: 'The national roadmap setting targets, policies, and implementation phases for the SDGs.', publisher: 'Bappenas' },
+        id: { title: 'Peta Jalan SDGs Indonesia 2017–2030', desc: 'Peta jalan nasional yang menetapkan target, kebijakan, dan tahapan pelaksanaan SDGs.', publisher: 'Bappenas' } } },
+    { id: 'financing', type: 'publication', year: 2020, file: { format: 'PDF', size: '5 MB', pages: 72 },
+      text: {
+        en: { title: 'SDG Financing Framework', desc: 'An overview of the four sources of SDG financing: APBN, APBD, philanthropy, and community.', publisher: 'Bappenas & UNDP' },
+        id: { title: 'Kerangka Pembiayaan SDGs', desc: 'Ikhtisar empat sumber pembiayaan SDGs: APBN, APBD, filantropi, dan masyarakat.', publisher: 'Bappenas & UNDP' } } },
+
+    { id: 'perpres-111', type: 'regulation', year: 2022, file: { format: 'PDF', size: '2 MB', pages: 24 },
+      text: {
+        en: { title: 'Presidential Regulation No. 111 of 2022', desc: 'The current legal foundation for SDG implementation in Indonesia, replacing Perpres 59/2017.', publisher: 'Government of Indonesia' },
+        id: { title: 'Peraturan Presiden No. 111 Tahun 2022', desc: 'Dasar hukum terkini pelaksanaan SDGs di Indonesia, menggantikan Perpres 59/2017.', publisher: 'Pemerintah Indonesia' } } },
+    { id: 'perpres-59', type: 'regulation', year: 2017, file: { format: 'PDF', size: '1.8 MB', pages: 20 },
+      text: {
+        en: { title: 'Presidential Regulation No. 59 of 2017', desc: "The original regulation establishing Indonesia's national SDG framework, coordination, and reporting.", publisher: 'Government of Indonesia' },
+        id: { title: 'Peraturan Presiden No. 59 Tahun 2017', desc: 'Regulasi awal yang menetapkan kerangka nasional, koordinasi, dan pelaporan SDGs Indonesia.', publisher: 'Pemerintah Indonesia' } } },
+    { id: 'permen-ppn-7', type: 'regulation', year: 2018, file: { format: 'PDF', size: '1.4 MB', pages: 18 },
+      text: {
+        en: { title: 'Ministerial Regulation (PPN) No. 7 of 2018', desc: 'Technical guidance on SDG regional action plan drafting for provincial and district governments.', publisher: 'Ministry of PPN/Bappenas' },
+        id: { title: 'Peraturan Menteri PPN No. 7 Tahun 2018', desc: 'Petunjuk teknis penyusunan Rencana Aksi Daerah SDGs untuk pemerintah provinsi dan kabupaten/kota.', publisher: 'Kementerian PPN/Bappenas' } } },
+    { id: 'permendagri-22', type: 'regulation', year: 2020, file: { format: 'PDF', size: '1.6 MB', pages: 22 },
+      text: {
+        en: { title: 'Ministerial Regulation (Home Affairs) No. 22 of 2020', desc: 'Guidance for regional SDG coordination and reporting aligned with the national framework.', publisher: 'Ministry of Home Affairs' },
+        id: { title: 'Peraturan Menteri Dalam Negeri No. 22 Tahun 2020', desc: 'Panduan koordinasi dan pelaporan SDGs daerah selaras dengan kerangka nasional.', publisher: 'Kementerian Dalam Negeri' } } },
+
+    { id: 'awards-2024', type: 'award', year: 2024, file: { format: 'PDF', size: '3 MB', pages: 42 },
+      text: {
+        en: { title: 'Indonesia SDGs Action Awards 2024', desc: 'Catalogue of 2024 winners — local governments, universities, and community organizations with transformative SDG initiatives.', publisher: 'SDGs Secretariat' },
+        id: { title: 'Indonesia SDGs Action Awards 2024', desc: 'Katalog pemenang 2024 — pemerintah daerah, universitas, dan organisasi masyarakat dengan inisiatif SDGs transformatif.', publisher: 'Sekretariat SDGs' } } },
+    { id: 'awards-2023', type: 'award', year: 2023, file: { format: 'PDF', size: '2.8 MB', pages: 38 },
+      text: {
+        en: { title: 'Indonesia SDGs Action Awards 2023', desc: 'Showcasing the 2023 cohort of award recipients recognized for measurable impact across multiple SDG goals.', publisher: 'SDGs Secretariat' },
+        id: { title: 'Indonesia SDGs Action Awards 2023', desc: 'Menampilkan penerima penghargaan 2023 yang diakui atas dampak terukur di berbagai tujuan SDGs.', publisher: 'Sekretariat SDGs' } } },
+    { id: 'awards-2022', type: 'award', year: 2022, file: { format: 'PDF', size: '2.5 MB', pages: 34 },
+      text: {
+        en: { title: 'Indonesia SDGs Action Awards 2022', desc: 'Post-pandemic edition celebrating resilience and innovation in SDG implementation.', publisher: 'SDGs Secretariat' },
+        id: { title: 'Indonesia SDGs Action Awards 2022', desc: 'Edisi pasca-pandemi merayakan ketangguhan dan inovasi pelaksanaan SDGs.', publisher: 'Sekretariat SDGs' } } },
+
+    { id: 'waste-bank', type: 'bestPractice', year: 2024, file: { format: 'PDF', size: '1.8 MB', pages: 18 },
+      text: {
+        en: { title: 'Village Waste Bank Network — Bali', desc: 'A community-driven waste bank model that diverts 12 tonnes of waste per month and generates income for 340 households.', publisher: 'SDGs UNMAS' },
+        id: { title: 'Jaringan Bank Sampah Desa — Bali', desc: 'Model bank sampah berbasis masyarakat yang mengalihkan 12 ton sampah per bulan dan menghasilkan pendapatan untuk 340 rumah tangga.', publisher: 'SDGs UNMAS' } } },
+    { id: 'tourism-village', type: 'bestPractice', year: 2023, file: { format: 'PDF', size: '2.2 MB', pages: 24 },
+      text: {
+        en: { title: 'Sustainable Tourism Village Network', desc: 'Ten villages collaborating on cultural tourism, waste management, and economic empowerment in Bali.', publisher: 'SDGs UNMAS & Dinas Pariwisata' },
+        id: { title: 'Jaringan Desa Wisata Berkelanjutan', desc: 'Sepuluh desa berkolaborasi dalam pariwisata budaya, pengelolaan sampah, dan pemberdayaan ekonomi di Bali.', publisher: 'SDGs UNMAS & Dinas Pariwisata' } } },
+    { id: 'coastal-cleanup', type: 'bestPractice', year: 2024, file: { format: 'PDF', size: '1.5 MB', pages: 16 },
+      text: {
+        en: { title: 'Coastal Cleanup Collective — South Bali', desc: 'Monthly coastal cleanup initiative coordinating 22 schools, 8 hotels, and local fisherfolk.', publisher: 'SDGs UNMAS' },
+        id: { title: 'Kolektif Bersih Pantai — Bali Selatan', desc: 'Inisiatif pembersihan pantai bulanan yang mengoordinasikan 22 sekolah, 8 hotel, dan nelayan lokal.', publisher: 'SDGs UNMAS' } } },
+    { id: 'renewable-coop', type: 'bestPractice', year: 2023, file: { format: 'PDF', size: '1.9 MB', pages: 20 },
+      text: {
+        en: { title: 'Community Renewable Energy Cooperative', desc: 'A rooftop solar cooperative serving 180 rural households with affordable clean energy.', publisher: 'SDGs UNMAS' },
+        id: { title: 'Koperasi Energi Terbarukan Komunitas', desc: 'Koperasi solar atap yang melayani 180 rumah tangga pedesaan dengan energi bersih yang terjangkau.', publisher: 'SDGs UNMAS' } } },
+    { id: 'youth-ambassadors', type: 'bestPractice', year: 2024, file: { format: 'PDF', size: '1.2 MB', pages: 14 },
+      text: {
+        en: { title: 'Youth SDGs Ambassadors Program', desc: 'University students trained as SDG advocates, running campus and community campaigns across Bali.', publisher: 'SDGs UNMAS' },
+        id: { title: 'Program Duta SDGs Muda', desc: 'Mahasiswa dilatih sebagai advokat SDGs, menjalankan kampanye kampus dan komunitas di Bali.', publisher: 'SDGs UNMAS' } } },
+  ];
+
+  const KNOWLEDGE_ICONS = {
+    document: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg>',
+    scroll:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg>',
+    award:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5 7 22l5-3 5 3-1.5-7.5"/></svg>',
+    spark:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 15 8l6 .9-4.5 4.3 1 6.3L12 16.5 6.5 19.5l1-6.3L3 8.9 9 8Z"/></svg>',
+  };
+
+  const knowledgeGrid   = document.getElementById('knowledgeGrid');
+  const knowledgeEmpty  = document.getElementById('knowledgeEmpty');
+  const knowledgeCount  = document.getElementById('knowledgeCount');
+  const knowledgeSearch = document.getElementById('knowledgeSearch');
+  const knowledgeReset  = document.getElementById('knowledgeReset');
+
+  const knowledgeModal         = document.getElementById('knowledgeModal');
+  const knowledgeModalPanel    = knowledgeModal?.querySelector('.knowledge-modal__panel');
+  const knowledgeModalHeader   = document.getElementById('knowledgeModalHeader');
+  const knowledgeModalIcon     = document.getElementById('knowledgeModalIcon');
+  const knowledgeModalType     = document.getElementById('knowledgeModalType');
+  const knowledgeModalTitle    = document.getElementById('knowledgeModalTitle');
+  const knowledgeModalDesc     = document.getElementById('knowledgeModalDesc');
+  const knowledgeModalMeta     = document.getElementById('knowledgeModalMeta');
+  const knowledgeModalDownload = document.getElementById('knowledgeModalDownload');
+
+  const knowledgeState = { filter: 'all', query: '' };
+  let knowledgeLastFocused = null;
+
+  function createKnowledgeCard(item) {
+    const type = KNOWLEDGE_TYPES[item.type];
+    const copy = item.text[state.lang];
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'knowledge-card reveal';
+    btn.dataset.type = item.type;
+    btn.dataset.itemId = item.id;
+    btn.style.setProperty('--k-color', type.color);
+    btn.setAttribute('aria-label', `${copy.title} — ${copy.publisher}, ${item.year}`);
+
+    btn.innerHTML = `
+      <div class="knowledge-card__header">
+        <span class="knowledge-card__icon">${KNOWLEDGE_ICONS[type.icon]}</span>
+        <span class="knowledge-card__type">${t('knowledge.type.' + item.type)}</span>
+      </div>
+      <h3 class="knowledge-card__title">${copy.title}</h3>
+      <p class="knowledge-card__desc">${copy.desc}</p>
+      <div class="knowledge-card__meta">
+        <span>${item.year}</span>
+        <span>·</span>
+        <span>${item.file.format} · ${item.file.size}</span>
+        <span class="knowledge-card__meta-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </div>
+    `;
+
+    btn.addEventListener('click', () => openKnowledgeModal(item.id));
+    return btn;
+  }
+
+  function renderKnowledge() {
+    if (!knowledgeGrid) return;
+    knowledgeGrid.innerHTML = '';
+    KNOWLEDGE_ITEMS.forEach(item => knowledgeGrid.appendChild(createKnowledgeCard(item)));
+    knowledgeGrid.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+    applyKnowledgeFilter();
+  }
+
+  function applyKnowledgeFilter() {
+    if (!knowledgeGrid) return;
+
+    const q = knowledgeState.query.trim().toLowerCase();
+    const type = knowledgeState.filter;
+    let visible = 0;
+
+    knowledgeGrid.querySelectorAll('.knowledge-card').forEach(card => {
+      const item = KNOWLEDGE_ITEMS.find(x => x.id === card.dataset.itemId);
+      if (!item) return;
+      const copy = item.text[state.lang];
+      const matchesType = type === 'all' || item.type === type;
+      const haystack = `${copy.title} ${copy.desc} ${copy.publisher} ${item.year}`.toLowerCase();
+      const matchesQuery = !q || haystack.includes(q);
+      const show = matchesType && matchesQuery;
+      card.hidden = !show;
+      if (show) visible++;
+    });
+
+    if (knowledgeCount) knowledgeCount.textContent = visible;
+    if (knowledgeEmpty) knowledgeEmpty.hidden = visible > 0;
+    if (knowledgeGrid) knowledgeGrid.style.display = visible > 0 ? '' : 'none';
+  }
+
+  function openKnowledgeModal(itemId) {
+    const item = KNOWLEDGE_ITEMS.find(x => x.id === itemId);
+    if (!item || !knowledgeModal) return;
+
+    const type = KNOWLEDGE_TYPES[item.type];
+    const copy = item.text[state.lang];
+
+    knowledgeModalHeader.style.setProperty('--k-color', type.color);
+    knowledgeModalPanel.style.setProperty('--k-color', type.color);
+    knowledgeModalIcon.innerHTML = KNOWLEDGE_ICONS[type.icon];
+    knowledgeModalType.textContent = t('knowledge.type.' + item.type);
+    knowledgeModalTitle.textContent = copy.title;
+    knowledgeModalDesc.textContent = copy.desc;
+
+    knowledgeModalMeta.innerHTML = `
+      <div><dt>${t('knowledge.modal.year')}</dt><dd>${item.year}</dd></div>
+      <div><dt>${t('knowledge.modal.publisher')}</dt><dd>${copy.publisher}</dd></div>
+      <div><dt>${t('knowledge.modal.format')}</dt><dd>${item.file.format}</dd></div>
+      <div><dt>${t('knowledge.modal.size')}</dt><dd>${item.file.size} · ${item.file.pages} ${t('knowledge.modal.pages')}</dd></div>
+    `;
+
+    knowledgeModalDownload.href = `#download-${item.id}`;
+
+    knowledgeLastFocused = document.activeElement;
+    knowledgeModal.hidden = false;
+    document.body.classList.add('has-modal');
+    setTimeout(() => knowledgeModalPanel?.focus?.(), 30);
+  }
+
+  function closeKnowledgeModal() {
+    if (!knowledgeModal || knowledgeModal.hidden) return;
+    knowledgeModal.hidden = true;
+    document.body.classList.remove('has-modal');
+    knowledgeLastFocused?.focus?.();
+  }
+
+  knowledgeModal?.querySelectorAll('[data-close-knowledge]').forEach(el => {
+    el.addEventListener('click', closeKnowledgeModal);
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && knowledgeModal && !knowledgeModal.hidden) {
+      closeKnowledgeModal();
+      return;
+    }
+    if (e.key !== 'Tab' || !knowledgeModal || knowledgeModal.hidden) return;
+    const focusables = knowledgeModal.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    if (!focusables.length) return;
+    const first = focusables[0];
+    const last  = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+
+  if (knowledgeGrid) {
+    document.querySelectorAll('.catalog-toolbar .filter-btn').forEach(btn => {
+      const f = btn.dataset.filter;
+      if (!['all', 'publication', 'regulation', 'award', 'bestPractice'].includes(f)) return;
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.catalog-toolbar .filter-btn').forEach(b => {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected', 'true');
+        knowledgeState.filter = f;
+        applyKnowledgeFilter();
+      });
+    });
+
+    knowledgeSearch?.addEventListener('input', e => {
+      knowledgeState.query = e.target.value;
+      applyKnowledgeFilter();
+    });
+
+    knowledgeReset?.addEventListener('click', () => {
+      knowledgeState.filter = 'all';
+      knowledgeState.query = '';
+      if (knowledgeSearch) knowledgeSearch.value = '';
+      document.querySelectorAll('.catalog-toolbar .filter-btn').forEach(b => {
+        const active = b.dataset.filter === 'all';
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-selected', String(active));
+      });
+      applyKnowledgeFilter();
+    });
+  }
+
+  /* Expose for setLanguage() */
+  window.__sdgsRenderKnowledge = renderKnowledge;
+
+    /* ═══════════════════════════════════════════════════════════════
+     16b. NEWS & EVENTS PAGE (news.html)
+     ═══════════════════════════════════════════════════════════════ */
+  const NEWS_TYPES = {
+    article:      { color: '#1F7A48', icon: 'document' },
+    event:        { color: '#C9A227', icon: 'calendar' },
+    announcement: { color: '#0C4325', icon: 'megaphone' },
+  };
+
+  const NEWS_ICONS = {
+    document:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg>',
+    calendar:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>',
+    megaphone: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11v2a3 3 0 0 0 3 3h1l4 5V6L7 11H6a3 3 0 0 0-3 3Z"/><path d="M11 6 21 3v18l-10-3"/></svg>',
+  };
+
+  const NEWS_ITEMS = [
+    /* ── Articles ── */
+    { id: 'article-climate-2060', type: 'article', date: '2026-10-12', goal: 13,
+      text: {
+        en: { title: 'Indonesia Strengthens Climate Action Commitment Toward Net Zero 2060',
+              desc: 'Energy transition and climate adaptation strategies are reinforced through cross-sector partnerships and green financing.',
+              content: 'Indonesia has reaffirmed its commitment to achieving net-zero emissions by 2060, with a renewed focus on renewable energy, forest conservation, and community-driven climate adaptation. At a recent national coordination meeting, key stakeholders agreed on an accelerated roadmap that emphasizes green financing and local resilience.', author: 'SDGs UNMAS Communications' },
+        id: { title: 'Indonesia Perkuat Komitmen Aksi Iklim Menuju Net Zero 2060',
+              desc: 'Strategi transisi energi dan adaptasi iklim diperkuat melalui kemitraan lintas sektor dan pendanaan hijau.',
+              content: 'Indonesia menegaskan kembali komitmennya untuk mencapai emisi nol bersih pada 2060, dengan fokus baru pada energi terbarukan, konservasi hutan, dan adaptasi iklim berbasis masyarakat. Dalam rapat koordinasi nasional terkini, para pemangku kepentingan menyepakati peta jalan yang dipercepat dengan penekanan pada pendanaan hijau dan ketahanan lokal.', author: 'Komunikasi SDGs UNMAS' } } },
+
+    { id: 'article-education-3t', type: 'article', date: '2026-10-08', goal: 4,
+      text: {
+        en: { title: 'Expanding Quality Education Access in Remote Regions',
+              desc: 'Affirmative programs and learning digitalization reach frontier, outermost, and disadvantaged areas.',
+              content: 'A new wave of affirmative education programs is targeting Indonesia\'s 3T regions — frontier, outermost, and disadvantaged — with digital classrooms, teacher training, and curriculum localization. The initiative aims to close the learning gap by 2030.', author: 'SDGs UNMAS Communications' },
+        id: { title: 'Perluasan Akses Pendidikan Berkualitas di Daerah 3T',
+              desc: 'Program afirmasi dan digitalisasi pembelajaran menyasar wilayah terdepan, terluar, dan tertinggal.',
+              content: 'Gelombang baru program afirmasi pendidikan menyasar daerah 3T Indonesia — terdepan, terluar, dan tertinggal — melalui kelas digital, pelatihan guru, dan lokalisasi kurikulum. Inisiatif ini bertujuan menutup kesenjangan pembelajaran pada 2030.', author: 'Komunikasi SDGs UNMAS' } } },
+
+    { id: 'article-msme-digital', type: 'article', date: '2026-10-03', goal: 8,
+      text: {
+        en: { title: 'MSMEs Level Up: Digitalization Drives Decent Work',
+              desc: 'Empowering MSMEs through digital literacy and inclusive financing broadens job opportunities.',
+              content: 'Across Indonesia, micro, small, and medium enterprises are embracing digital tools to reach wider markets and create more stable jobs. The story is especially strong in Bali, where tourism-linked MSMEs are diversifying into e-commerce and digital services.', author: 'SDGs UNMAS Research Team' },
+        id: { title: 'UMKM Naik Kelas: Digitalisasi Dorong Pekerjaan Layak',
+              desc: 'Pemberdayaan UMKM melalui literasi digital dan akses pembiayaan inklusif memperluas lapangan kerja.',
+              content: 'Di seluruh Indonesia, UMKM mulai mengadopsi alat digital untuk menjangkau pasar lebih luas dan menciptakan pekerjaan yang lebih stabil. Cerita ini sangat kuat di Bali, di mana UMKM terkait pariwisata mulai beralih ke e-commerce dan layanan digital.', author: 'Tim Riset SDGs UNMAS' } } },
+
+    { id: 'article-waste-bank', type: 'article', date: '2026-09-28', goal: 12,
+      text: {
+        en: { title: 'Village Waste Banks Divert 12 Tonnes Monthly in Bali',
+              desc: 'Community-driven waste bank model generates income for 340 households while cutting landfill waste.',
+              content: 'Village-level waste banks across Bali are collectively diverting over 12 tonnes of recyclable waste per month. Beyond environmental impact, the model has created supplementary income streams for over 340 households.', author: 'SDGs UNMAS Field Team' },
+        id: { title: 'Bank Sampah Desa Alihkan 12 Ton Sampah per Bulan di Bali',
+              desc: 'Model bank sampah berbasis masyarakat menghasilkan pendapatan untuk 340 rumah tangga dan mengurangi sampah TPA.',
+              content: 'Bank sampah tingkat desa di Bali secara kolektif mengalihkan lebih dari 12 ton sampah daur ulang setiap bulan. Selain dampak lingkungan, model ini menciptakan sumber pendapatan tambahan bagi lebih dari 340 rumah tangga.', author: 'Tim Lapangan SDGs UNMAS' } } },
+
+    { id: 'article-marine-protected', type: 'article', date: '2026-09-20', goal: 14,
+      text: {
+        en: { title: 'Marine Protected Areas Reach 20% of Indonesian Waters',
+              desc: 'Expansion of marine conservation zones protects coral ecosystems and supports sustainable fisheries.',
+              content: 'Indonesia has reached a milestone of 20% marine protected area coverage, with new zones established in Bali, Maluku, and West Papua. The designation balances ecological protection with the livelihoods of coastal communities.', author: 'SDGs UNMAS Communications' },
+        id: { title: 'Kawasan Konservasi Laut Capai 20% Perairan Indonesia',
+              desc: 'Perluasan zona konservasi laut melindungi ekosistem terumbu karang dan mendukung perikanan berkelanjutan.',
+              content: 'Indonesia mencapai tonggak 20% cakupan kawasan konservasi laut, dengan zona baru ditetapkan di Bali, Maluku, dan Papua Barat. Penetapan ini menyeimbangkan perlindungan ekologis dengan mata pencaharian masyarakat pesisir.', author: 'Komunikasi SDGs UNMAS' } } },
+
+    { id: 'article-gender-parliament', type: 'article', date: '2026-09-15', goal: 5,
+      text: {
+        en: { title: 'Women\'s Representation in Regional Parliaments Improves',
+              desc: 'New affirmative policies push female representation past 25% in several provinces.',
+              content: 'Several Indonesian provinces have surpassed 25% female representation in regional parliaments, thanks to affirmative candidate lists and targeted capacity-building programs. Progress remains uneven, but the trend is upward.', author: 'SDGs UNMAS Research Team' },
+        id: { title: 'Representasi Perempuan di Parlemen Daerah Meningkat',
+              desc: 'Kebijakan afirmatif baru mendorong representasi perempuan melewati 25% di beberapa provinsi.',
+              content: 'Beberapa provinsi di Indonesia telah melampaui 25% representasi perempuan di parlemen daerah, berkat daftar calon afirmatif dan program penguatan kapasitas yang tertarget. Kemajuan masih tidak merata, namun trennya meningkat.', author: 'Tim Riset SDGs UNMAS' } } },
+
+    /* ── Events ── */
+    { id: 'event-annual-conf', type: 'event', date: '2026-10-24', time: '09:00', venue: 'Jakarta Convention Center', goal: 17,
+      text: {
+        en: { title: 'SDGs Annual Conference 2026',
+              desc: 'National conference bringing together policymakers, academics, and practitioners to review progress and plan the final stretch toward 2030.',
+              content: 'The SDGs Annual Conference 2026 convenes over 500 participants from government, academia, civil society, and the private sector. Sessions will cover the state of SDG progress, financing gaps, and locally-led solutions.', author: 'SDGs Secretariat' },
+        id: { title: 'SDGs Annual Conference 2026',
+              desc: 'Konferensi nasional yang mempertemukan pembuat kebijakan, akademisi, dan praktisi untuk meninjau kemajuan dan merencanakan tahap akhir menuju 2030.',
+              content: 'SDGs Annual Conference 2026 menghadirkan lebih dari 500 peserta dari pemerintah, akademisi, masyarakat sipil, dan sektor swasta. Sesi akan mencakup status kemajuan SDGs, kesenjangan pembiayaan, dan solusi yang dipimpin secara lokal.', author: 'Sekretariat SDGs' } } },
+
+    { id: 'event-data-workshop', type: 'event', date: '2026-10-18', time: '09:00', venue: 'Online', goal: 17,
+      text: {
+        en: { title: 'Regional SDGs Data Workshop',
+              desc: 'Hands-on workshop on indicator reporting, metadata, and open data platforms for provincial and district SDG teams.',
+              content: 'This workshop covers data collection, indicator calculation, and submission to the national SDG reporting platform. Open to government officers and university researchers.', author: 'SDGs Data Team' },
+        id: { title: 'Lokakarya Data SDGs Daerah',
+              desc: 'Lokakarya praktis tentang pelaporan indikator, metadata, dan platform data terbuka untuk tim SDGs provinsi dan kabupaten.',
+              content: 'Lokakarya ini mencakup pengumpulan data, perhitungan indikator, dan pengiriman ke platform pelaporan SDGs nasional. Terbuka untuk pejabat pemerintah dan peneliti universitas.', author: 'Tim Data SDGs' } } },
+
+    { id: 'event-metadata-training', type: 'event', date: '2026-11-02', time: '10:00', venue: 'Bappenas · Hybrid', goal: 17,
+      text: {
+        en: { title: 'Metadata & Indicator Reporting Training',
+              desc: 'Training session for SDG focal points on updating metadata and reporting against the 289 national indicators.',
+              content: 'This training walks participants through the updated metadata methodology, reporting templates, and quality assurance for SDG indicators.', author: 'SDGs Secretariat' },
+        id: { title: 'Pelatihan Metadata & Pelaporan Indikator',
+              desc: 'Sesi pelatihan untuk focal point SDGs tentang pembaruan metadata dan pelaporan terhadap 289 indikator nasional.',
+              content: 'Pelatihan ini memandu peserta melalui metodologi metadata yang diperbarui, template pelaporan, dan jaminan kualitas untuk indikator SDGs.', author: 'Sekretariat SDGs' } } },
+
+    { id: 'event-youth-forum', type: 'event', date: '2026-11-15', time: '13:00', venue: 'UNMAS Denpasar', goal: 4,
+      text: {
+        en: { title: 'Youth SDGs Forum — Bali Region',
+              desc: 'Gathering of student SDG advocates to share campus initiatives and co-design a regional youth action plan.',
+              content: 'The Youth SDGs Forum brings together student ambassadors from universities across Bali to exchange best practices and design collaborative projects for 2027.', author: 'SDGs UNMAS Youth Network' },
+        id: { title: 'Forum SDGs Pemuda — Wilayah Bali',
+              desc: 'Pertemuan duta SDGs mahasiswa untuk berbagi inisiatif kampus dan merancang rencana aksi pemuda daerah bersama.',
+              content: 'Forum SDGs Pemuda mempertemukan duta mahasiswa dari universitas di seluruh Bali untuk bertukar praktik baik dan merancang proyek kolaboratif untuk 2027.', author: 'Jejaring Pemuda SDGs UNMAS' } } },
+
+    { id: 'event-sustainable-tourism', type: 'event', date: '2026-12-05', time: '08:30', venue: 'Ubud, Gianyar', goal: 12,
+      text: {
+        en: { title: 'Sustainable Tourism Village Summit',
+              desc: 'Two-day summit connecting village leaders, tourism operators, and researchers to scale community-based tourism.',
+              content: 'The summit features case studies from ten villages, working groups on waste management and cultural preservation, and field visits to model sites.', author: 'SDGs UNMAS & Dinas Pariwisata' },
+        id: { title: 'KTT Desa Wisata Berkelanjutan',
+              desc: 'KTT dua hari yang menghubungkan pemimpin desa, operator pariwisata, dan peneliti untuk memperluas pariwisata berbasis masyarakat.',
+              content: 'KTT ini menampilkan studi kasus dari sepuluh desa, kelompok kerja tentang pengelolaan sampah dan pelestarian budaya, serta kunjungan lapangan ke lokasi model.', author: 'SDGs UNMAS & Dinas Pariwisata' } } },
+
+    /* ── Announcements ── */
+    { id: 'announce-awards-2026', type: 'announcement', date: '2026-10-01', goal: 17,
+      text: {
+        en: { title: 'Call for Submissions: Indonesia SDGs Action Awards 2026',
+              desc: 'Now accepting submissions for the 2026 awards cycle. Open to local governments, universities, CSOs, and private sector.',
+              content: 'The Indonesia SDGs Action Awards recognize outstanding contributions to the Sustainable Development Goals. Submissions are due 30 November 2026 and will be judged on impact, innovation, scalability, and inclusivity.', author: 'SDGs Secretariat' },
+        id: { title: 'Panggilan untuk Pengajuan: Indonesia SDGs Action Awards 2026',
+              desc: 'Kini menerima pengajuan untuk siklus penghargaan 2026. Terbuka untuk pemerintah daerah, universitas, OMS, dan sektor swasta.',
+              content: 'Indonesia SDGs Action Awards mengakui kontribusi luar biasa terhadap Tujuan Pembangunan Berkelanjutan. Pengajuan ditutup 30 November 2026 dan akan dinilai berdasarkan dampak, inovasi, skalabilitas, dan inklusivitas.', author: 'Sekretariat SDGs' } } },
+
+    { id: 'announce-vnr-2026', type: 'announcement', date: '2026-09-25', goal: 17,
+      text: {
+        en: { title: 'Indonesia Begins Preparations for VNR 2026',
+              desc: 'National Secretariat opens stakeholder consultations for the next Voluntary National Review.',
+              content: 'Indonesia will submit its fourth Voluntary National Review in 2026. The National Secretariat invites civil society, academia, and the private sector to join consultation sessions over the coming months.', author: 'SDGs Secretariat' },
+        id: { title: 'Indonesia Mulai Persiapan VNR 2026',
+              desc: 'Sekretariat Nasional membuka konsultasi pemangku kepentingan untuk Voluntary National Review berikutnya.',
+              content: 'Indonesia akan menyerahkan Voluntary National Review keempatnya pada 2026. Sekretariat Nasional mengundang masyarakat sipil, akademisi, dan sektor swasta untuk mengikuti sesi konsultasi dalam beberapa bulan mendatang.', author: 'Sekretariat SDGs' } } },
+
+    { id: 'announce-scholarship', type: 'announcement', date: '2026-09-10', goal: 4,
+      text: {
+        en: { title: 'SDGs Research Scholarship — Now Open',
+              desc: 'Fully-funded research scholarship for graduate students working on SDG-aligned topics. Applications close 15 November 2026.',
+              content: 'The SDGs Research Scholarship supports graduate research on poverty, education, climate, marine ecosystems, and sustainable tourism. Scholars receive a monthly stipend and access to the SDGs UNMAS research network.', author: 'SDGs UNMAS Research Team' },
+        id: { title: 'Beasiswa Riset SDGs — Kini Dibuka',
+              desc: 'Beasiswa riset penuh untuk mahasiswa pascasarjana yang meneliti topik terkait SDGs. Pendaftaran ditutup 15 November 2026.',
+              content: 'Beasiswa Riset SDGs mendukung penelitian pascasarjana tentang kemiskinan, pendidikan, iklim, ekosistem laut, dan pariwisata berkelanjutan. Penerima menerima tunjangan bulanan dan akses ke jejaring riset SDGs UNMAS.', author: 'Tim Riset SDGs UNMAS' } } },
+
+    { id: 'announce-call-papers', type: 'announcement', date: '2026-08-28', goal: 17,
+      text: {
+        en: { title: 'Call for Papers: SDGs in the Archipelago',
+              desc: 'Academic journal seeking papers on SDG localization in island and coastal contexts. Submission deadline: 30 December 2026.',
+              content: 'The journal invites empirical and conceptual papers on how island nations and coastal regions adapt the SDGs to local realities. Accepted papers will be published in a special 2027 issue.', author: 'SDGs UNMAS Research Team' },
+        id: { title: 'Call for Papers: SDGs di Nusantara',
+              desc: 'Jurnal akademik mencari makalah tentang lokalisasi SDGs dalam konteks kepulauan dan pesisir. Batas pengiriman: 30 Desember 2026.',
+              content: 'Jurnal mengundang makalah empiris dan konseptual tentang bagaimana negara kepulauan dan wilayah pesisir mengadaptasi SDGs terhadap realitas lokal. Makalah yang diterima akan diterbitkan dalam edisi khusus 2027.', author: 'Tim Riset SDGs UNMAS' } } },
+
+    { id: 'announce-mou-ministry', type: 'announcement', date: '2026-08-15', goal: 17,
+      text: {
+        en: { title: 'New Partnership: SDGs UNMAS & Ministry of Tourism',
+              desc: 'Memorandum of understanding signed to co-develop sustainable tourism indicators and training programs.',
+              content: 'The partnership focuses on three areas: indicator development for sustainable tourism, joint training for village operators, and applied research on cultural tourism.', author: 'SDGs UNMAS' },
+        id: { title: 'Kemitraan Baru: SDGs UNMAS & Kementerian Pariwisata',
+              desc: 'Nota kesepahaman ditandatangani untuk mengembangkan bersama indikator pariwisata berkelanjutan dan program pelatihan.',
+              content: 'Kemitraan ini berfokus pada tiga area: pengembangan indikator pariwisata berkelanjutan, pelatihan bersama untuk operator desa, dan riset terapan tentang pariwisata budaya.', author: 'SDGs UNMAS' } } },
+
+    { id: 'announce-dashboard-launch', type: 'announcement', date: '2026-07-20', goal: 17,
+      text: {
+        en: { title: 'SDGs UNMAS Dashboard v2.0 Now Live',
+              desc: 'A refreshed data platform with provincial comparison, indicator trends, and open API access.',
+              content: 'The updated dashboard features a cleaner interface, faster loading, provincial breakdowns, and downloadable datasets. Feedback is welcome as we iterate.', author: 'SDGs UNMAS Data Team' },
+        id: { title: 'Dashboard SDGs UNMAS v2.0 Kini Aktif',
+              desc: 'Platform data yang diperbarui dengan perbandingan provinsi, tren indikator, dan akses API terbuka.',
+              content: 'Dashboard yang diperbarui menampilkan antarmuka yang lebih bersih, pemuatan lebih cepat, rincian provinsi, dan kumpulan data yang dapat diunduh. Umpan balik sangat diterima seiring kami melakukan iterasi.', author: 'Tim Data SDGs UNMAS' } } },
+  ];
+
+  const newsGrid   = document.getElementById('newsGrid');
+  const newsEmpty  = document.getElementById('newsEmpty');
+  const newsCount  = document.getElementById('newsCount');
+  const newsSearch = document.getElementById('newsSearch');
+  const newsReset  = document.getElementById('newsReset');
+
+  const newsModal         = document.getElementById('newsModal');
+  const newsModalPanel    = newsModal?.querySelector('.news-modal__panel');
+  const newsModalHeader   = document.getElementById('newsModalHeader');
+  const newsModalIcon     = document.getElementById('newsModalIcon');
+  const newsModalType     = document.getElementById('newsModalType');
+  const newsModalTitle    = document.getElementById('newsModalTitle');
+  const newsModalDesc     = document.getElementById('newsModalDesc');
+  const newsModalContent  = document.getElementById('newsModalContent');
+  const newsModalMeta     = document.getElementById('newsModalMeta');
+  const newsModalCTA      = document.getElementById('newsModalCTA');
+
+  const newsState = { filter: 'all', query: '' };
+  let newsLastFocused = null;
+
+  /** Format an ISO date string like "2026-10-12" for the current language. */
+  function formatNewsDate(iso) {
+    const [y, m, d] = iso.split('-').map(Number);
+    const date = new Date(y, m - 1, d);
+    const locale = state.lang === 'id' ? 'id-ID' : 'en-US';
+    return date.toLocaleDateString(locale, { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+
+  function createNewsCard(item) {
+    const type = NEWS_TYPES[item.type];
+    const copy = item.text[state.lang];
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'news-page-card reveal';
+    btn.dataset.type = item.type;
+    btn.dataset.itemId = item.id;
+    btn.style.setProperty('--n-color', type.color);
+    btn.setAttribute('aria-label', `${copy.title} — ${formatNewsDate(item.date)}`);
+
+    // Extra meta line: event has time/venue, article has author, announcement has goal
+    const metaRight = item.type === 'event' && item.venue
+      ? item.venue
+      : copy.author || '';
+
+    btn.innerHTML = `
+      <div class="news-page-card__header">
+        <span class="news-page-card__icon">${NEWS_ICONS[type.icon]}</span>
+        <span class="news-page-card__type">${t('newsPage.type.' + item.type)}</span>
+      </div>
+      <p class="news-page-card__date">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        ${formatNewsDate(item.date)}${item.time ? ' · ' + item.time : ''}
+      </p>
+      <h3 class="news-page-card__title">${copy.title}</h3>
+      <p class="news-page-card__desc">${copy.desc}</p>
+      <div class="news-page-card__meta">
+        <span>${metaRight}</span>
+        <span class="news-page-card__meta-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </div>
+    `;
+
+    btn.addEventListener('click', () => openNewsModal(item.id));
+    return btn;
+  }
+
+  function renderNews() {
+    if (!newsGrid) return;
+    newsGrid.innerHTML = '';
+    // Sort by date, newest first
+    [...NEWS_ITEMS]
+      .sort((a, b) => b.date.localeCompare(a.date))
+      .forEach(item => newsGrid.appendChild(createNewsCard(item)));
+    newsGrid.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+    applyNewsFilter();
+  }
+
+  function applyNewsFilter() {
+    if (!newsGrid) return;
+
+    const q = newsState.query.trim().toLowerCase();
+    const type = newsState.filter;
+    let visible = 0;
+
+    newsGrid.querySelectorAll('.news-page-card').forEach(card => {
+      const item = NEWS_ITEMS.find(x => x.id === card.dataset.itemId);
+      if (!item) return;
+      const copy = item.text[state.lang];
+      const matchesType = type === 'all' || item.type === type;
+      const haystack = `${copy.title} ${copy.desc} ${copy.content} ${copy.author || ''} ${item.date} ${item.venue || ''}`.toLowerCase();
+      const matchesQuery = !q || haystack.includes(q);
+      const show = matchesType && matchesQuery;
+      card.hidden = !show;
+      if (show) visible++;
+    });
+
+    if (newsCount) newsCount.textContent = visible;
+    if (newsEmpty) newsEmpty.hidden = visible > 0;
+    if (newsGrid) newsGrid.style.display = visible > 0 ? '' : 'none';
+  }
+
+  function openNewsModal(itemId) {
+    const item = NEWS_ITEMS.find(x => x.id === itemId);
+    if (!item || !newsModal) return;
+
+    const type = NEWS_TYPES[item.type];
+    const copy = item.text[state.lang];
+
+    newsModalHeader.style.setProperty('--n-color', type.color);
+    newsModalPanel.style.setProperty('--n-color', type.color);
+    newsModalIcon.innerHTML = NEWS_ICONS[type.icon];
+    newsModalType.textContent = t('newsPage.type.' + item.type);
+    newsModalTitle.textContent = copy.title;
+    newsModalDesc.textContent = copy.desc;
+    newsModalContent.textContent = copy.content || '';
+
+    // Meta grid — different fields per type
+    const metaRows = [];
+    metaRows.push(`<div><dt>${t('newsPage.modal.date')}</dt><dd>${formatNewsDate(item.date)}</dd></div>`);
+    if (item.time)    metaRows.push(`<div><dt>${t('newsPage.modal.time')}</dt><dd>${item.time}</dd></div>`);
+    if (item.venue)   metaRows.push(`<div><dt>${t('newsPage.modal.venue')}</dt><dd>${item.venue}</dd></div>`);
+    if (copy.author)  metaRows.push(`<div><dt>${t('newsPage.modal.author')}</dt><dd>${copy.author}</dd></div>`);
+    if (item.goal)    metaRows.push(`<div><dt>${t('newsPage.modal.sdg')}</dt><dd>SDG ${item.goal}</dd></div>`);
+    newsModalMeta.innerHTML = metaRows.join('');
+
+    newsModalCTA.href = `#news-${item.id}`;
+
+    newsLastFocused = document.activeElement;
+    newsModal.hidden = false;
+    document.body.classList.add('has-modal');
+    setTimeout(() => newsModalPanel?.focus?.(), 30);
+  }
+
+  function closeNewsModal() {
+    if (!newsModal || newsModal.hidden) return;
+    newsModal.hidden = true;
+    document.body.classList.remove('has-modal');
+    newsLastFocused?.focus?.();
+  }
+
+  newsModal?.querySelectorAll('[data-close-news]').forEach(el => {
+    el.addEventListener('click', closeNewsModal);
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && newsModal && !newsModal.hidden) {
+      closeNewsModal();
+      return;
+    }
+    if (e.key !== 'Tab' || !newsModal || newsModal.hidden) return;
+    const focusables = newsModal.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    if (!focusables.length) return;
+    const first = focusables[0];
+    const last  = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+
+  if (newsGrid) {
+    document.querySelectorAll('.catalog-toolbar .filter-btn').forEach(btn => {
+      const f = btn.dataset.filter;
+      if (!['all', 'article', 'event', 'announcement'].includes(f)) return;
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.catalog-toolbar .filter-btn').forEach(b => {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected', 'true');
+        newsState.filter = f;
+        applyNewsFilter();
+      });
+    });
+
+    newsSearch?.addEventListener('input', e => {
+      newsState.query = e.target.value;
+      applyNewsFilter();
+    });
+
+    newsReset?.addEventListener('click', () => {
+      newsState.filter = 'all';
+      newsState.query = '';
+      if (newsSearch) newsSearch.value = '';
+      document.querySelectorAll('.catalog-toolbar .filter-btn').forEach(b => {
+        const active = b.dataset.filter === 'all';
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-selected', String(active));
+      });
+      applyNewsFilter();
+    });
+  }
+
+    /* ═══════════════════════════════════════════════════════════════
+     16c. COMMUNITY PAGE (community.html)
+     ═══════════════════════════════════════════════════════════════ */
+  const COMMUNITY_TYPES = {
+    center:  { color: '#1F7A48', icon: 'building' },
+    expert:  { color: '#C9A227', icon: 'user' },
+    partner: { color: '#3F9463', icon: 'handshake' },
+    agenda:  { color: '#0C4325', icon: 'calendar' },
+  };
+
+  const COMMUNITY_ICONS = {
+    building:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M4 21V10l8-6 8 6v11M9 21v-6h6v6"/></svg>',
+    user:      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 20v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 20v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+    handshake: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 20a4 4 0 0 1 0-8h2a4 4 0 0 1 0 8h-2Z"/><path d="M13 4a4 4 0 0 1 0 8h-2a4 4 0 0 1 0-8h2Z"/></svg>',
+    calendar:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>',
+  };
+
+  const COMMUNITY_ITEMS = [
+    /* ── SDGs Centers ── */
+    { id: 'center-unmas', type: 'center', region: 'bali',
+      text: {
+        en: { title: 'SDGs Center — Universitas Mahasaraswati Denpasar',
+              desc: 'Host institution of SDGs UNMAS. Research, community service, and advocacy for the SDGs in Bali.',
+              content: 'UNMAS is the host of this Knowledge Hub. Its SDGs Center coordinates research on sustainable tourism, coastal protection, and inclusive local economies, with active programs across nine regencies in Bali.',
+              coordinator: 'Dr. Ni Luh Made Wijayanti', founded: '2018' },
+        id: { title: 'SDGs Center — Universitas Mahasaraswati Denpasar',
+              desc: 'Institusi penyelenggara SDGs UNMAS. Riset, pengabdian, dan advokasi SDGs di Bali.',
+              content: 'UNMAS adalah penyelenggara Knowledge Hub ini. SDGs Center-nya mengoordinasikan riset tentang pariwisata berkelanjutan, perlindungan pesisir, dan ekonomi lokal inklusif, dengan program aktif di sembilan kabupaten di Bali.',
+              coordinator: 'Dr. Ni Luh Made Wijayanti', founded: '2018' } } },
+
+    { id: 'center-udayana', type: 'center', region: 'bali',
+      text: {
+        en: { title: 'SDGs Center — Universitas Udayana',
+              desc: 'Leading SDG research on coastal ecosystems, public health, and Balinese cultural preservation.',
+              content: 'Udayana\'s SDGs Center focuses on marine conservation, public health, and cultural heritage — with strong programs on SDG 3, 6, 14, and 15.',
+              coordinator: 'Prof. Dr. I Wayan Sukadana', founded: '2017' },
+        id: { title: 'SDGs Center — Universitas Udayana',
+              desc: 'Riset SDG terdepan tentang ekosistem pesisir, kesehatan publik, dan pelestarian budaya Bali.',
+              content: 'SDGs Center Udayana berfokus pada konservasi laut, kesehatan publik, dan warisan budaya — dengan program kuat pada SDG 3, 6, 14, dan 15.',
+              coordinator: 'Prof. Dr. I Wayan Sukadana', founded: '2017' } } },
+
+    { id: 'center-ui', type: 'center', region: 'jakarta',
+      text: {
+        en: { title: 'SDGs Center — Universitas Indonesia',
+              desc: 'National research hub for SDG policy, urban sustainability, and public health.',
+              content: 'UI\'s SDGs Center is one of Indonesia\'s largest academic SDG centers, known for policy analysis, urban climate research, and large-scale health studies.',
+              coordinator: 'Prof. Dr. Ir. Budi Santoso', founded: '2016' },
+        id: { title: 'SDGs Center — Universitas Indonesia',
+              desc: 'Pusat riset nasional untuk kebijakan SDGs, keberlanjutan perkotaan, dan kesehatan publik.',
+              content: 'SDGs Center UI adalah salah satu pusat SDGs akademik terbesar di Indonesia, dikenal karena analisis kebijakan, riset iklim perkotaan, dan studi kesehatan skala besar.',
+              coordinator: 'Prof. Dr. Ir. Budi Santoso', founded: '2016' } } },
+
+    { id: 'center-ugm', type: 'center', region: 'yogyakarta',
+      text: {
+        en: { title: 'SDGs Center — Universitas Gadjah Mada',
+              desc: 'Pioneering research on poverty, food security, and rural development across Indonesia.',
+              content: 'UGM\'s SDGs Center bridges research and policy on poverty reduction, food systems, and rural transformation — with field programs across Java and Eastern Indonesia.',
+              coordinator: 'Prof. Dr. Sri Rahayu', founded: '2016' },
+        id: { title: 'SDGs Center — Universitas Gadjah Mada',
+              desc: 'Riset perintis tentang kemiskinan, ketahanan pangan, dan pembangunan pedesaan di Indonesia.',
+              content: 'SDGs Center UGM menjembatani riset dan kebijakan tentang pengurangan kemiskinan, sistem pangan, dan transformasi pedesaan — dengan program lapangan di Jawa dan Indonesia Timur.',
+              coordinator: 'Prof. Dr. Sri Rahayu', founded: '2016' } } },
+
+    { id: 'center-itb', type: 'center', region: 'bandung',
+      text: {
+        en: { title: 'SDGs Center — Institut Teknologi Bandung',
+              desc: 'Technology, infrastructure, and clean energy research aligned with SDG 7, 9, and 11.',
+              content: 'ITB\'s SDGs Center drives research on renewable energy systems, smart cities, and sustainable infrastructure — bridging engineering and policy.',
+              coordinator: 'Dr. Eng. Andi Wirawan', founded: '2018' },
+        id: { title: 'SDGs Center — Institut Teknologi Bandung',
+              desc: 'Riset teknologi, infrastruktur, dan energi bersih selaras SDG 7, 9, dan 11.',
+              content: 'SDGs Center ITB mendorong riset tentang sistem energi terbarukan, kota pintar, dan infrastruktur berkelanjutan — menjembatani teknik dan kebijakan.',
+              coordinator: 'Dr. Eng. Andi Wirawan', founded: '2018' } } },
+
+    { id: 'center-unair', type: 'center', region: 'surabaya',
+      text: {
+        en: { title: 'SDGs Center — Universitas Airlangga',
+              desc: 'Health systems, nutrition, and community medicine research driving SDG 3 and SDG 2.',
+              content: 'Airlangga\'s SDGs Center specializes in public health, nutrition, and maternal-child health — contributing evidence to national stunting-reduction efforts.',
+              coordinator: 'Prof. Dr. Nila Kusuma', founded: '2017' },
+        id: { title: 'SDGs Center — Universitas Airlangga',
+              desc: 'Riset sistem kesehatan, gizi, dan kedokteran komunitas untuk SDG 3 dan SDG 2.',
+              content: 'SDGs Center Airlangga berspesialisasi pada kesehatan publik, gizi, dan kesehatan ibu-anak — menyumbang bukti untuk upaya nasional penurunan stunting.',
+              coordinator: 'Prof. Dr. Nila Kusuma', founded: '2017' } } },
+
+    /* ── Experts ── */
+    { id: 'expert-wayan-tourism', type: 'expert', region: 'bali',
+      text: {
+        en: { title: 'Dr. I Wayan Sutrisna, M.Si.',
+              desc: 'Sustainable tourism &amp; local economic development. SDG 8, 11, 12.',
+              content: 'Dr. Sutrisna leads UNMAS research on sustainable tourism villages and MSME digitalization. He advises the Bali provincial government on tourism-linked SDG strategy.',
+              expertise: 'Sustainable Tourism, Local Economy', email: 'wayan.sutrisna@unmas.ac.id' },
+        id: { title: 'Dr. I Wayan Sutrisna, M.Si.',
+              desc: 'Pariwisata berkelanjutan &amp; pengembangan ekonomi lokal. SDG 8, 11, 12.',
+              content: 'Dr. Sutrisna memimpin riset UNMAS tentang desa wisata berkelanjutan dan digitalisasi UMKM. Ia menjadi penasihat pemerintah Provinsi Bali tentang strategi SDGs terkait pariwisata.',
+              expertise: 'Pariwisata Berkelanjutan, Ekonomi Lokal', email: 'wayan.sutrisna@unmas.ac.id' } } },
+
+    { id: 'expert-marine', type: 'expert', region: 'bali',
+      text: {
+        en: { title: 'Prof. Dr. Ni Made Ayu Lestari',
+              desc: 'Marine ecology, coral reef restoration, and coastal community resilience. SDG 14.',
+              content: 'Prof. Lestari is a marine ecologist with two decades of research on coral restoration and marine protected areas in Bali and Nusa Tenggara.',
+              expertise: 'Marine Ecology, Coastal Conservation', email: 'ayu.lestari@unmas.ac.id' },
+        id: { title: 'Prof. Dr. Ni Made Ayu Lestari',
+              desc: 'Ekologi laut, restorasi terumbu karang, dan ketahanan komunitas pesisir. SDG 14.',
+              content: 'Prof. Lestari adalah ahli ekologi laut dengan dua dekade riset tentang restorasi karang dan kawasan konservasi laut di Bali dan Nusa Tenggara.',
+              expertise: 'Ekologi Laut, Konservasi Pesisir', email: 'ayu.lestari@unmas.ac.id' } } },
+
+    { id: 'expert-gender', type: 'expert', region: 'bali',
+      text: {
+        en: { title: 'Dr. Made Sri Utami, M.A.',
+              desc: 'Gender studies, women\'s economic empowerment, and inclusive governance. SDG 5, 10.',
+              content: 'Dr. Utami researches gender equality in Bali\'s traditional institutions and rural economies, with published work on women-led MSMEs.',
+              expertise: 'Gender Equality, Inclusive Development', email: 'sri.utami@unmas.ac.id' },
+        id: { title: 'Dr. Made Sri Utami, M.A.',
+              desc: 'Studi gender, pemberdayaan ekonomi perempuan, dan tata kelola inklusif. SDG 5, 10.',
+              content: 'Dr. Utami meneliti kesetaraan gender di institusi tradisional dan ekonomi pedesaan Bali, dengan karya terbit tentang UMKM yang dipimpin perempuan.',
+              expertise: 'Kesetaraan Gender, Pembangunan Inklusif', email: 'sri.utami@unmas.ac.id' } } },
+
+    { id: 'expert-climate', type: 'expert', region: 'bali',
+      text: {
+        en: { title: 'Ir. Ketut Gede Wirawan, M.T.',
+              desc: 'Climate adaptation, disaster risk reduction, and green infrastructure. SDG 13.',
+              content: 'Ir. Wirawan focuses on climate resilience for island economies, working with local governments on adaptation planning and disaster preparedness.',
+              expertise: 'Climate Adaptation, Disaster Resilience', email: 'ketut.wirawan@unmas.ac.id' },
+        id: { title: 'Ir. Ketut Gede Wirawan, M.T.',
+              desc: 'Adaptasi iklim, pengurangan risiko bencana, dan infrastruktur hijau. SDG 13.',
+              content: 'Ir. Wirawan berfokus pada ketahanan iklim untuk ekonomi pulau, bekerja sama dengan pemerintah daerah dalam perencanaan adaptasi dan kesiapsiagaan bencana.',
+              expertise: 'Adaptasi Iklim, Ketahanan Bencana', email: 'ketut.wirawan@unmas.ac.id' } } },
+
+    { id: 'expert-education', type: 'expert', region: 'bali',
+      text: {
+        en: { title: 'Dr. Ni Kadek Ratna Dewi, M.Pd.',
+              desc: 'Quality education, teacher training, and learning innovation. SDG 4.',
+              content: 'Dr. Dewi leads UNMAS\'s education research, with programs on teacher upskilling, curriculum localization, and digital learning in rural Bali.',
+              expertise: 'Education Policy, Teacher Development', email: 'ratna.dewi@unmas.ac.id' },
+        id: { title: 'Dr. Ni Kadek Ratna Dewi, M.Pd.',
+              desc: 'Pendidikan berkualitas, pelatihan guru, dan inovasi pembelajaran. SDG 4.',
+              content: 'Dr. Dewi memimpin riset pendidikan UNMAS, dengan program peningkatan keterampilan guru, lokalisasi kurikulum, dan pembelajaran digital di Bali pedesaan.',
+              expertise: 'Kebijakan Pendidikan, Pengembangan Guru', email: 'ratna.dewi@unmas.ac.id' } } },
+
+    { id: 'expert-waste', type: 'expert', region: 'bali',
+      text: {
+        en: { title: 'I Made Adi Purnama, S.T., M.Sc.',
+              desc: 'Waste management, circular economy, and community-based recycling. SDG 11, 12.',
+              content: 'I Made Adi Purnama specializes in community-driven waste systems and circular economy models, having designed Bali\'s largest village waste bank network.',
+              expertise: 'Circular Economy, Waste Systems', email: 'adi.purnama@unmas.ac.id' },
+        id: { title: 'I Made Adi Purnama, S.T., M.Sc.',
+              desc: 'Pengelolaan sampah, ekonomi sirkular, dan daur ulang berbasis komunitas. SDG 11, 12.',
+              content: 'I Made Adi Purnama berspesialisasi dalam sistem sampah berbasis masyarakat dan model ekonomi sirkular, setelah merancang jaringan bank sampah desa terbesar di Bali.',
+              expertise: 'Ekonomi Sirkular, Sistem Sampah', email: 'adi.purnama@unmas.ac.id' } } },
+
+    /* ── Partners ── */
+    { id: 'partner-waste-bank', type: 'partner', region: 'bali',
+      text: {
+        en: { title: 'Bali Village Waste Bank Network',
+              desc: 'Community network of 42 village-level waste banks across Bali.',
+              content: 'The network coordinates collection, recycling, and upcycling across 42 villages, generating income for over 340 households and diverting 12 tonnes of waste monthly.',
+              members: '340+ households', year: '2020' },
+        id: { title: 'Jaringan Bank Sampah Desa Bali',
+              desc: 'Jejaring komunitas 42 bank sampah tingkat desa di Bali.',
+              content: 'Jejaring ini mengoordinasikan pengumpulan, daur ulang, dan upcycle di 42 desa, menghasilkan pendapatan untuk lebih dari 340 rumah tangga dan mengalihkan 12 ton sampah setiap bulan.',
+              members: '340+ rumah tangga', year: '2020' } } },
+
+    { id: 'partner-cleanup', type: 'partner', region: 'bali',
+      text: {
+        en: { title: 'Coastal Cleanup Collective — South Bali',
+              desc: 'Monthly coastal cleanups coordinating 22 schools, 8 hotels, and local fisherfolk.',
+              content: 'The collective runs monthly coastal cleanups in South Bali, coordinating schools, hotels, fisherfolk, and volunteers to remove plastic waste and monitor coral health.',
+              members: '32 organizations', year: '2019' },
+        id: { title: 'Kolektif Bersih Pantai — Bali Selatan',
+              desc: 'Pembersihan pantai bulanan dengan koordinasi 22 sekolah, 8 hotel, dan nelayan lokal.',
+              content: 'Kolektif ini menyelenggarakan pembersihan pantai bulanan di Bali Selatan, mengoordinasikan sekolah, hotel, nelayan, dan relawan untuk menghilangkan sampah plastik dan memantau kesehatan karang.',
+              members: '32 organisasi', year: '2019' } } },
+
+    { id: 'partner-youth', type: 'partner', region: 'bali',
+      text: {
+        en: { title: 'Youth SDGs Ambassadors — UNMAS',
+              desc: '120+ university students trained as SDG advocates across Bali.',
+              content: 'The ambassadors program trains students on SDG literacy, community organizing, and project design. Members run campus campaigns and community workshops throughout Bali.',
+              members: '120+ students', year: '2018' },
+        id: { title: 'Duta SDGs Muda — UNMAS',
+              desc: '120+ mahasiswa dilatih sebagai advokat SDGs di seluruh Bali.',
+              content: 'Program duta melatih mahasiswa tentang literasi SDGs, pengorganisasian komunitas, dan desain proyek. Anggota menjalankan kampanye kampus dan lokakarya komunitas di seluruh Bali.',
+              members: '120+ mahasiswa', year: '2018' } } },
+
+    { id: 'partner-tourism', type: 'partner', region: 'bali',
+      text: {
+        en: { title: 'Sustainable Tourism Village Network',
+              desc: 'Ten villages collaborating on cultural tourism and economic empowerment.',
+              content: 'The network connects ten villages across Bali to share best practices in cultural tourism, waste management, and local enterprise development.',
+              members: '10 villages', year: '2021' },
+        id: { title: 'Jaringan Desa Wisata Berkelanjutan',
+              desc: 'Sepuluh desa berkolaborasi dalam pariwisata budaya dan pemberdayaan ekonomi.',
+              content: 'Jejaring ini menghubungkan sepuluh desa di seluruh Bali untuk berbagi praktik baik dalam pariwisata budaya, pengelolaan sampah, dan pengembangan usaha lokal.',
+              members: '10 desa', year: '2021' } } },
+
+    { id: 'partner-renewable', type: 'partner', region: 'bali',
+      text: {
+        en: { title: 'Community Renewable Energy Cooperative',
+              desc: 'Rooftop solar cooperative serving 180 rural households with clean energy.',
+              content: 'The cooperative installs and maintains rooftop solar systems for rural households, enabling affordable clean energy access aligned with SDG 7.',
+              members: '180 households', year: '2022' },
+        id: { title: 'Koperasi Energi Terbarukan Komunitas',
+              desc: 'Koperasi solar atap yang melayani 180 rumah tangga pedesaan dengan energi bersih.',
+              content: 'Koperasi memasang dan memelihara sistem solar atap untuk rumah tangga pedesaan, memungkinkan akses energi bersih yang terjangkau selaras dengan SDG 7.',
+              members: '180 rumah tangga', year: '2022' } } },
+
+    /* ── Agenda (recurring community activities) ── */
+    { id: 'agenda-monthly-meeting', type: 'agenda', region: 'bali', date: 'Monthly · 3rd Tuesday', time: '14:00–16:00',
+      text: {
+        en: { title: 'SDGs Center Monthly Coordination Meeting',
+              desc: 'Open meeting for partners and researchers to review ongoing projects and plan upcoming activities.',
+              content: 'Every third Tuesday, SDGs Center UNMAS hosts an open coordination meeting. Partners, researchers, and student ambassadors share progress updates, flag challenges, and align on upcoming workstreams.',
+              location: 'UNMAS Denpasar' },
+        id: { title: 'Rapat Koordinasi Bulanan SDGs Center',
+              desc: 'Rapat terbuka untuk mitra dan peneliti guna meninjau proyek berjalan dan merencanakan kegiatan mendatang.',
+              content: 'Setiap Selasa ketiga, SDGs Center UNMAS menyelenggarakan rapat koordinasi terbuka. Mitra, peneliti, dan duta mahasiswa berbagi pembaruan progres, mengangkat tantangan, dan menyelaraskan alur kerja mendatang.',
+              location: 'UNMAS Denpasar' } } },
+
+    { id: 'agenda-research-seminar', type: 'agenda', region: 'bali', date: 'Bi-weekly · Fridays', time: '15:00–16:30',
+      text: {
+        en: { title: 'SDGs Research Seminar Series',
+              desc: 'Bi-weekly research seminar featuring UNMAS faculty, visiting scholars, and partner institutions.',
+              content: 'Alternating Fridays feature a research seminar on topics ranging from marine ecology to education policy. Open to all; recordings archived on the Video Library.',
+              location: 'UNMAS Denpasar · Hybrid' },
+        id: { title: 'Seri Seminar Riset SDGs',
+              desc: 'Seminar riset dua mingguan menampilkan fakultas UNMAS, sarjana tamu, dan institusi mitra.',
+              content: 'Setiap Jumat bergantian menampilkan seminar riset tentang topik mulai dari ekologi laut hingga kebijakan pendidikan. Terbuka untuk umum; rekaman diarsipkan di Video Library.',
+              location: 'UNMAS Denpasar · Hybrid' } } },
+
+    { id: 'agenda-community-workshop', type: 'agenda', region: 'bali', date: 'Monthly · Last Saturday', time: '08:00–12:00',
+      text: {
+        en: { title: 'Community SDG Literacy Workshop',
+              desc: 'Half-day workshop for village leaders, teachers, and local organizers on SDG concepts and local action.',
+              content: 'Held on the last Saturday of each month, this workshop introduces the SDGs to community leaders and helps them design local action plans. Conducted in Bahasa Indonesia.',
+              location: 'Rotating villages across Bali' },
+        id: { title: 'Lokakarya Literasi SDGs Komunitas',
+              desc: 'Lokakarya setengah hari untuk pemimpin desa, guru, dan penggerak lokal tentang konsep SDGs dan aksi lokal.',
+              content: 'Diadakan pada Sabtu terakhir setiap bulan, lokakarya ini memperkenalkan SDGs kepada pemimpin komunitas dan membantu mereka merancang rencana aksi lokal. Dilaksanakan dalam Bahasa Indonesia.',
+              location: 'Desa bergilir di seluruh Bali' } } },
+
+    { id: 'agenda-youth-circle', type: 'agenda', region: 'bali', date: 'Weekly · Wednesdays', time: '17:00–18:30',
+      text: {
+        en: { title: 'Youth SDG Circle',
+              desc: 'Weekly meetup for student SDG ambassadors to share project updates and co-create campaigns.',
+              content: 'The Youth SDG Circle meets every Wednesday for informal project updates, skill-sharing, and campaign planning. Open to any enrolled student in Bali.',
+              location: 'UNMAS Denpasar · Café Area' },
+        id: { title: 'Lingkar Pemuda SDGs',
+              desc: 'Pertemuan mingguan untuk duta SDGs mahasiswa guna berbagi pembaruan proyek dan bersama menciptakan kampanye.',
+              content: 'Lingkar Pemuda SDGs bertemu setiap Rabu untuk pembaruan proyek informal, berbagi keterampilan, dan perencanaan kampanye. Terbuka untuk mahasiswa aktif di Bali.',
+              location: 'UNMAS Denpasar · Area Kafe' } } },
+  ];
+
+  const communityGrid   = document.getElementById('communityGrid');
+  const communityEmpty  = document.getElementById('communityEmpty');
+  const communityCount  = document.getElementById('communityCount');
+  const communitySearch = document.getElementById('communitySearch');
+  const communityReset  = document.getElementById('communityReset');
+
+  const communityModal         = document.getElementById('communityModal');
+  const communityModalPanel    = communityModal?.querySelector('.community-modal__panel');
+  const communityModalHeader   = document.getElementById('communityModalHeader');
+  const communityModalIcon     = document.getElementById('communityModalIcon');
+  const communityModalType     = document.getElementById('communityModalType');
+  const communityModalTitle    = document.getElementById('communityModalTitle');
+  const communityModalDesc     = document.getElementById('communityModalDesc');
+  const communityModalContent  = document.getElementById('communityModalContent');
+  const communityModalMeta     = document.getElementById('communityModalMeta');
+  const communityModalCTA      = document.getElementById('communityModalCTA');
+
+  const communityState = { filter: 'all', query: '' };
+  let communityLastFocused = null;
+
+  const REGION_LABELS = {
+    bali:       { en: 'Bali', id: 'Bali' },
+    jakarta:    { en: 'DKI Jakarta', id: 'DKI Jakarta' },
+    yogyakarta: { en: 'DI Yogyakarta', id: 'DI Yogyakarta' },
+    bandung:    { en: 'Bandung', id: 'Bandung' },
+    surabaya:   { en: 'Surabaya', id: 'Surabaya' },
+  };
+
+  function createCommunityCard(item) {
+    const type = COMMUNITY_TYPES[item.type];
+    const copy = item.text[state.lang];
+    const region = REGION_LABELS[item.region] || { en: item.region, id: item.region };
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'community-page-card reveal';
+    btn.dataset.type = item.type;
+    btn.dataset.itemId = item.id;
+    btn.style.setProperty('--c-color', type.color);
+    btn.setAttribute('aria-label', `${copy.title} — ${region[state.lang]}`);
+
+    // Right-side meta line
+    let metaRight = '';
+    if (item.type === 'center' && copy.coordinator) metaRight = copy.coordinator;
+    else if (item.type === 'expert' && copy.expertise) metaRight = copy.expertise;
+    else if (item.type === 'partner' && copy.members) metaRight = copy.members;
+    else if (item.type === 'agenda' && item.date) metaRight = item.date;
+
+    // Region/date line
+    const subLine = item.type === 'agenda' && item.date
+      ? `<p class="community-page-card__region"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>${item.date}${item.time ? ' · ' + item.time : ''}</p>`
+      : `<p class="community-page-card__region"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>${region[state.lang]}</p>`;
+
+    btn.innerHTML = `
+      <div class="community-page-card__header">
+        <span class="community-page-card__icon">${COMMUNITY_ICONS[type.icon]}</span>
+        <span class="community-page-card__type">${t('communityPage.type.' + item.type)}</span>
+      </div>
+      ${subLine}
+      <h3 class="community-page-card__title">${copy.title}</h3>
+      <p class="community-page-card__desc">${copy.desc}</p>
+      <div class="community-page-card__meta">
+        <span>${metaRight}</span>
+        <span class="community-page-card__meta-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </div>
+    `;
+
+    btn.addEventListener('click', () => openCommunityModal(item.id));
+    return btn;
+  }
+
+  function renderCommunity() {
+    if (!communityGrid) return;
+    communityGrid.innerHTML = '';
+    COMMUNITY_ITEMS.forEach(item => communityGrid.appendChild(createCommunityCard(item)));
+    communityGrid.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+    applyCommunityFilter();
+  }
+
+  function applyCommunityFilter() {
+    if (!communityGrid) return;
+
+    const q = communityState.query.trim().toLowerCase();
+    const type = communityState.filter;
+    let visible = 0;
+
+    communityGrid.querySelectorAll('.community-page-card').forEach(card => {
+      const item = COMMUNITY_ITEMS.find(x => x.id === card.dataset.itemId);
+      if (!item) return;
+      const copy = item.text[state.lang];
+      const matchesType = type === 'all' || item.type === type;
+      const haystack = `${copy.title} ${copy.desc} ${copy.content || ''} ${copy.coordinator || ''} ${copy.expertise || ''} ${copy.members || ''} ${item.date || ''} ${item.region || ''}`.toLowerCase();
+      const matchesQuery = !q || haystack.includes(q);
+      const show = matchesType && matchesQuery;
+      card.hidden = !show;
+      if (show) visible++;
+    });
+
+    if (communityCount) communityCount.textContent = visible;
+    if (communityEmpty) communityEmpty.hidden = visible > 0;
+    if (communityGrid) communityGrid.style.display = visible > 0 ? '' : 'none';
+  }
+
+  function openCommunityModal(itemId) {
+    const item = COMMUNITY_ITEMS.find(x => x.id === itemId);
+    if (!item || !communityModal) return;
+
+    const type = COMMUNITY_TYPES[item.type];
+    const copy = item.text[state.lang];
+    const region = REGION_LABELS[item.region] || { en: item.region, id: item.region };
+
+    communityModalHeader.style.setProperty('--c-color', type.color);
+    communityModalPanel.style.setProperty('--c-color', type.color);
+    communityModalIcon.innerHTML = COMMUNITY_ICONS[type.icon];
+    communityModalType.textContent = t('communityPage.type.' + item.type);
+    communityModalTitle.textContent = copy.title;
+    communityModalDesc.textContent = copy.desc;
+    communityModalContent.textContent = copy.content || '';
+
+    const metaRows = [];
+    metaRows.push(`<div><dt>${t('communityPage.modal.region')}</dt><dd>${region[state.lang]}</dd></div>`);
+    if (copy.coordinator) metaRows.push(`<div><dt>${t('communityPage.modal.coordinator')}</dt><dd>${copy.coordinator}</dd></div>`);
+    if (copy.founded)     metaRows.push(`<div><dt>${t('communityPage.modal.founded')}</dt><dd>${copy.founded}</dd></div>`);
+    if (copy.expertise)   metaRows.push(`<div><dt>${t('communityPage.modal.expertise')}</dt><dd>${copy.expertise}</dd></div>`);
+    if (copy.email)       metaRows.push(`<div><dt>${t('communityPage.modal.email')}</dt><dd>${copy.email}</dd></div>`);
+    if (copy.members)     metaRows.push(`<div><dt>${t('communityPage.modal.members')}</dt><dd>${copy.members}</dd></div>`);
+    if (copy.year)        metaRows.push(`<div><dt>${t('communityPage.modal.since')}</dt><dd>${copy.year}</dd></div>`);
+    if (item.date)        metaRows.push(`<div><dt>${t('communityPage.modal.schedule')}</dt><dd>${item.date}${item.time ? ' · ' + item.time : ''}</dd></div>`);
+    if (copy.location)    metaRows.push(`<div><dt>${t('communityPage.modal.location')}</dt><dd>${copy.location}</dd></div>`);
+    communityModalMeta.innerHTML = metaRows.join('');
+
+    // CTA: mailto for experts/partners, contact for others
+    if (copy.email) {
+      communityModalCTA.href = `mailto:${copy.email}`;
+    } else {
+      communityModalCTA.href = `mailto:sdgs@unmas.ac.id?subject=Inquiry about ${encodeURIComponent(copy.title)}`;
+    }
+
+    communityLastFocused = document.activeElement;
+    communityModal.hidden = false;
+    document.body.classList.add('has-modal');
+    setTimeout(() => communityModalPanel?.focus?.(), 30);
+  }
+
+  function closeCommunityModal() {
+    if (!communityModal || communityModal.hidden) return;
+    communityModal.hidden = true;
+    document.body.classList.remove('has-modal');
+    communityLastFocused?.focus?.();
+  }
+
+  communityModal?.querySelectorAll('[data-close-community]').forEach(el => {
+    el.addEventListener('click', closeCommunityModal);
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && communityModal && !communityModal.hidden) {
+      closeCommunityModal();
+      return;
+    }
+    if (e.key !== 'Tab' || !communityModal || communityModal.hidden) return;
+    const focusables = communityModal.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    if (!focusables.length) return;
+    const first = focusables[0];
+    const last  = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+
+  if (communityGrid) {
+    document.querySelectorAll('.catalog-toolbar .filter-btn').forEach(btn => {
+      const f = btn.dataset.filter;
+      if (!['all', 'center', 'expert', 'partner', 'agenda'].includes(f)) return;
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.catalog-toolbar .filter-btn').forEach(b => {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected', 'true');
+        communityState.filter = f;
+        applyCommunityFilter();
+      });
+    });
+
+    communitySearch?.addEventListener('input', e => {
+      communityState.query = e.target.value;
+      applyCommunityFilter();
+    });
+
+    communityReset?.addEventListener('click', () => {
+      communityState.filter = 'all';
+      communityState.query = '';
+      if (communitySearch) communitySearch.value = '';
+      document.querySelectorAll('.catalog-toolbar .filter-btn').forEach(b => {
+        const active = b.dataset.filter === 'all';
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-selected', String(active));
+      });
+      applyCommunityFilter();
+    });
+  }
+
+  /* Expose for setLanguage() */
+  window.__sdgsRenderCommunity = renderCommunity;
+
+  /* Expose for setLanguage() */
+  window.__sdgsRenderNews = renderNews;
+
+  /* ═══════════════════════════════════════════════════════════════
+     17. INIT  (must run LAST — after everything is defined)
+     ═══════════════════════════════════════════════════════════════ */
+  function init() {
+    applyI18n();
+    renderGoalsGrid();      // index.html
+    renderCatalog();        // goals.html
+    initDataPage();         // data.html
+    renderKnowledge();      // knowledge.html
+    renderNews();           // news.html
+    renderCommunity();      // community.html
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 
 })();
