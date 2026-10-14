@@ -3,24 +3,31 @@
    ═══════════════════════════════════════════════════════════════ */
 
 /* ───────────── 1. Tokens ───────────── */
+/* ───────────── 1. Tokens ───────────── */
 :root {
-  /* Colors — Navy */
-  --navy-50:  #EEF3FA;
-  --navy-100: #D6E2F2;
-  --navy-200: #AEC4E4;
-  --navy-300: #7E9CD0;
-  --navy-400: #4C6FA8;
-  --navy-500: #2A4C82;
-  --navy-600: #1B3763;
-  --navy-700: #122A4E;
-  --navy-800: #0B1F3A;
-  --navy-900: #071527;
+  /* ═══ UNMAS Brand Palette ═══
+     Green · Gold · White · Black
+     (Variable names kept as --navy-* for backward-compat with existing CSS,
+      but the values are now UNMAS green + gold + black.)
+  */
 
-  /* Accent */
-  --accent:       #F4A024;
-  --accent-light: #FFC259;
+  /* Greens — replaces the old navy scale */
+  --navy-50:  #EDF7F1;   /* very light — subtle bg tints, table rows */
+  --navy-100: #D2EADD;   /* light — borders, dividers */
+  --navy-200: #A8D3BA;   /* soft green — muted icons, disabled states */
+  --navy-300: #74B58F;   /* mid green — secondary text on dark bg */
+  --navy-400: #3F9463;   /* green — accents, low-emphasis borders */
+  --navy-500: #1F7A48;   /* ⭐ UNMAS PRIMARY — buttons, links, mid brand */
+  --navy-600: #135C34;   /* darker green — hover states */
+  --navy-700: #0C4325;   /* deep green — dark panels, gradient ends */
+  --navy-800: #082E19;   /* very deep green — hero bg, dark sections */
+  --navy-900: #041A0F;   /* near-black green — reads as BLACK for text */
 
-  /* SDG palette */
+  /* ⭐ UNMAS Gold (accent) — replaces the orange */
+  --accent:       #C9A227;
+  --accent-light: #E5C558;
+
+  /* SDG palette — unchanged (official UN SDG colors) */
   --sdg-1:  #E5243B;
   --sdg-3:  #4C9F38;
   --sdg-4:  #C5192D;
@@ -31,14 +38,14 @@
   --sdg-17: #19486A;
 
   /* Surfaces */
-  --bg:        #F7F9FC;
-  --surface:   #FFFFFF;
+  --bg:        #F7FAF8;         /* green-tinted off-white */
+  --surface:   #FFFFFF;         /* pure white */
   --border:    var(--navy-100);
 
-  /* Text */
-  --text:      var(--navy-800);
-  --text-muted: var(--navy-500);
-  --text-soft:  var(--navy-400);
+  /* Text — reads as black, slight green undertone */
+  --text:       #0A0A0A;         /* near-black for body text */
+  --text-muted: #3A3A3A;         /* dark grey for secondary */
+  --text-soft:  #6B6B6B;         /* mid grey for labels */
 
   /* Fonts */
   --font-sans:  'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -52,10 +59,10 @@
   --radius-2xl: 32px;
   --radius-full: 999px;
 
-  /* Shadows */
-  --shadow-sm:   0 1px 2px rgba(11,31,58,.06);
-  --shadow-soft: 0 8px 30px -12px rgba(11,31,58,.18);
-  --shadow-lift: 0 20px 50px -20px rgba(11,31,58,.35);
+  /* Shadows — green-tinted instead of navy-tinted */
+  --shadow-sm:   0 1px 2px rgba(4,26,15,.06);
+  --shadow-soft: 0 8px 30px -12px rgba(4,26,15,.18);
+  --shadow-lift: 0 20px 50px -20px rgba(4,26,15,.35);
 
   /* Layout */
   --container:  1280px;
@@ -234,7 +241,7 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: -.02em; }
 }
 .progress--dim { background: var(--navy-50); margin-top: 16px; }
 .progress__bar { height: 100%; border-radius: var(--radius-full); transition: width 1.2s var(--ease-out); }
-.progress__bar--gradient { background: linear-gradient(90deg, #56C02B, var(--accent)); }
+.progress__bar--gradient { background: linear-gradient(90deg, var(--navy-500), var(--accent)); }
 
 /* ───────────── 7. Top bar ───────────── */
 .topbar {
@@ -449,10 +456,10 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: -.02em; }
   overflow: hidden;
   color: #fff;
   background:
-    radial-gradient(60% 55% at 12% 8%,  rgba(38,189,226,.20) 0%, transparent 60%),
-    radial-gradient(45% 45% at 92% 12%, rgba(244,160,36,.18) 0%, transparent 60%),
-    radial-gradient(55% 55% at 78% 88%, rgba(76,159,56,.16) 0%, transparent 65%),
-    radial-gradient(45% 45% at 22% 92%, rgba(221,19,103,.14) 0%, transparent 60%),
+    radial-gradient(60% 55% at 12% 8%,  rgba(201,162,39,.18) 0%, transparent 60%),
+    radial-gradient(45% 45% at 92% 12%, rgba(31,122,72,.30) 0%, transparent 60%),
+    radial-gradient(55% 55% at 78% 88%, rgba(201,162,39,.12) 0%, transparent 65%),
+    radial-gradient(45% 45% at 22% 92%, rgba(116,181,143,.18) 0%, transparent 60%),
     linear-gradient(180deg, var(--navy-800) 0%, var(--navy-900) 100%);
 }
 .hero__grid-overlay {
@@ -490,7 +497,7 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: -.02em; }
 }
 .hero__title-gradient {
   display: block;
-  background: linear-gradient(90deg, var(--accent), #56C02B, #26BDE2);
+  background: linear-gradient(90deg, var(--accent-light), var(--accent), var(--navy-500));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -1750,9 +1757,9 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: -.02em; }
   overflow: hidden;
   color: #fff;
   background:
-    radial-gradient(55% 60% at 15% 20%, rgba(38,189,226,.18) 0%, transparent 60%),
-    radial-gradient(50% 50% at 90% 10%, rgba(244,160,36,.16) 0%, transparent 60%),
-    radial-gradient(50% 50% at 50% 100%, rgba(86,192,43,.14) 0%, transparent 65%),
+    radial-gradient(55% 60% at 15% 20%, rgba(201,162,39,.18) 0%, transparent 60%),
+    radial-gradient(50% 50% at 90% 10%, rgba(31,122,72,.28) 0%, transparent 60%),
+    radial-gradient(50% 50% at 50% 100%, rgba(116,181,143,.14) 0%, transparent 65%),
     linear-gradient(180deg, var(--navy-800) 0%, var(--navy-900) 100%);
 }
 .page-hero__grid-overlay {
@@ -1805,7 +1812,7 @@ h1, h2, h3, h4 { line-height: 1.15; letter-spacing: -.02em; }
 }
 .page-hero__title-gradient {
   display: block;
-  background: linear-gradient(90deg, var(--accent), #56C02B, #26BDE2);
+  background: linear-gradient(90deg, var(--accent-light), var(--accent), var(--navy-500));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
