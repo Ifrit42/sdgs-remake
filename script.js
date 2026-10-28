@@ -1438,6 +1438,7 @@
     window.__sdgsRenderNews?.();
     window.__sdgsRenderCommunity?.();
     window.__sdgsRenderVideos?.();
+    window.__sdgsRenderGoalDetail?.();
   }
 
   /* ═══════════════════════════════════════════════════════════════
@@ -1447,12 +1448,15 @@
 
   function createGoalFeature(goal, meta) {
     const copy = goal.text[state.lang];
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'goal-feature reveal';
-    btn.dataset.goalId = goal.id;
-    btn.style.setProperty('--goal-color', goal.color);
-    btn.setAttribute('aria-label',
+    
+    // Changed from <button> to <div> to allow a nested <a> link
+    const card = document.createElement('div');
+    card.className = 'goal-feature reveal';
+    card.dataset.goalId = goal.id;
+    card.style.setProperty('--goal-color', goal.color);
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0'); // Makes it keyboard accessible
+    card.setAttribute('aria-label',
       state.lang === 'id'
         ? `Lihat detail SDG ${goal.id}: ${copy.name}`
         : `View details for SDG ${goal.id}: ${copy.name}`
@@ -1465,7 +1469,7 @@
          </span>`
       : '';
 
-    btn.innerHTML = `
+    card.innerHTML = `
       <div class="goal-feature__head">
         <img class="goal-feature__icon" src="${goalIcon(goal.id)}" alt="" aria-hidden="true" loading="lazy" />
         <div class="goal-feature__meta">
@@ -1489,15 +1493,30 @@
 
       <div class="goal-feature__foot">
         <span>SDG ${goal.id} · ${copy.targets.length} ${t('goals.card.targets')}</span>
-        <span class="goal-feature__link">
+        
+        <!-- ✅ This is now a real link to goals.html -->
+        <a href="goals.html#goal-${goal.id}" class="goal-feature__link" style="text-decoration: none;">
           ${t('goals.card.detail')}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </span>
+        </a>
       </div>
     `;
 
-    btn.addEventListener('click', () => openGoalModal(goal.id));
-    return btn;
+    // Open modal when clicking anywhere on the card, EXCEPT the "View Details" link
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a')) return; // Let the link do its job
+      openGoalModal(goal.id);
+    });
+
+    // Support keyboard access (Enter or Space opens the modal)
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openGoalModal(goal.id);
+      }
+    });
+
+    return card;
   }
 
   function renderGoalsGrid() {
@@ -1565,7 +1584,7 @@
       </li>
     `).join('');
 
-    goalModalCTA.href = `goals.html#goal-${goal.id}`;
+        goalModalCTA.href = `goal-detail.html?goal=${goal.id}`;
   }
 
   function openGoalModal(goalId) {
@@ -3753,6 +3772,8 @@
               speaker: 'Tim Lapangan SDGs UNMAS' } } },
   ];
 
+  
+
   const videosGrid   = document.getElementById('videosGrid');
   const videosEmpty  = document.getElementById('videosEmpty');
   const videosCount  = document.getElementById('videosCount');
@@ -3939,6 +3960,85 @@
     });
   }
 
+    /* ═══════════════════════════════════════════════════════════════
+     16e. GOAL DETAIL PAGE (goal-detail.html)
+     ═══════════════════════════════════════════════════════════════ */
+  function initGoalDetailPage() {
+    const hero = document.getElementById('goalHero');
+    if (!hero) return; // Not on goal-detail.html
+
+    // 1. Get goal ID from URL (e.g., goal-detail.html?goal=13)
+    const params = new URLSearchParams(window.location.search);
+    const goalId = parseInt(params.get('goal'), 10);
+
+    // If missing or invalid, kick back to the catalog
+    if (isNaN(goalId)) { window.location.replace('goals.html'); return; }
+
+    const goal = GOALS.find(g => g.id === goalId);
+    if (!goal) { window.location.replace('goals.html'); return; }
+
+    // 2. Define render function so it can update on language switch
+    function render() {
+      const copy = goal.text[state.lang];
+
+      // Hero Section
+      hero.style.setProperty('--goal-color', goal.color);
+      document.getElementById('goalHeroIcon').src = goalIcon(goal.id);
+      document.getElementById('goalHeroBreadcrumb').textContent = `Goal ${goal.id}`;
+      
+      document.getElementById('goalHeroEyebrow').textContent = state.lang === 'id'
+        ? `Tujuan ${goal.id} · ${t('cat.' + goal.cat)}`
+        : `Goal ${goal.id} · ${t('cat.' + goal.cat)}`;
+        
+      document.getElementById('goalHeroTitle').textContent = copy.name;
+      document.getElementById('goalHeroDesc').textContent = copy.desc;
+
+      // Targets & Indicators
+      document.getElementById('goalPageDotA').style.background = goal.color;
+      document.getElementById('goalPageDotB').style.background = goal.color;
+
+      document.getElementById('goalPageTargets').innerHTML = copy.targets.map(x => {
+        const [num, ...rest] = x.split(' ');
+        return `<li><strong>${num}</strong><span>${rest.join(' ')}</span></li>`;
+      }).join('');
+
+      document.getElementById('goalPageIndicators').innerHTML = copy.indicators.map(i => `
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12l5 5L20 7"/>
+          </svg>
+          <span>${i}</span>
+        </li>
+      `).join('');
+
+      // Sidebar Progress
+      document.getElementById('goalPageProgress').textContent = goal.progress;
+      const bar = document.getElementById('goalPageProgressBar');
+      bar.style.width = '0%'; // Reset for animation
+      bar.style.background = goal.color;
+      requestAnimationFrame(() => { bar.style.width = goal.progress + '%'; });
+
+      // Sidebar Trend
+      if (goal.trend != null) {
+        const up = goal.trend >= 0;
+        const sign = up ? '+' : '';
+        const label = up ? t('catalog.trend.up') : t('catalog.trend.down');
+        const color = up ? '#56C02B' : '#E5243B';
+        document.getElementById('goalPageTrend').innerHTML = 
+          `<strong style="color:${color}">${sign}${goal.trend.toFixed(1)}%</strong> ${label}`;
+      }
+
+      // CTA Link
+      document.getElementById('goalPageDataCTA').href = `data.html#goal-${goal.id}`;
+      
+      // Page Title
+      document.title = `${copy.name} — SDGs UNMAS`;
+    }
+
+    render();
+    window.__sdgsRenderGoalDetail = render; // Save for language toggle
+  }
+
   /* Expose for setLanguage() */
   window.__sdgsRenderVideos = renderVideos;
 
@@ -3954,6 +4054,7 @@
     renderNews();           // news.html
     renderCommunity();      // community.html
     renderVideos();         // videos.html
+    initGoalDetailPage();   // goal-detail.html
   }
 
   if (document.readyState === 'loading') {
