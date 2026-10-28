@@ -879,58 +879,6 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
   </button>
 
-  <!-- ══════════════ GOAL DETAIL MODAL ══════════════ -->
-  <div class="goal-modal" id="goalModal" hidden>
-    <div class="goal-modal__backdrop" data-close-goal></div>
-
-    <div class="goal-modal__panel" role="dialog" aria-modal="true" aria-labelledby="goalModalTitle" tabindex="-1">
-      <button class="goal-modal__close" data-close-goal data-i18n-aria="modal.close" aria-label="Close detail">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
-      </button>
-
-      <header class="goal-modal__header" id="goalModalHeader">
-        <img
-            class="goal-modal__icon"
-            id="goalModalIcon"
-            src="assets/TPB-SDGs-Goal-01-Indonesia-Standar.svg"
-            alt=""
-            aria-hidden="true"
-        />
-        <div class="goal-modal__heading">
-            <p class="goal-modal__eyebrow" id="goalModalEyebrow">Goal 1 · Social</p>
-            <h2 class="goal-modal__title" id="goalModalTitle">No Poverty</h2>
-        </div>
-        </header>
-
-      <div class="goal-modal__body">
-        <p class="goal-modal__desc" id="goalModalDesc"></p>
-
-        <div class="goal-modal__section">
-          <h3 class="goal-modal__section-title">
-            <span class="goal-modal__section-dot" id="goalModalDotA"></span>
-            <span data-i18n="modal.targets">Key Targets</span>
-          </h3>
-          <ul class="goal-modal__list" id="goalModalTargets"></ul>
-        </div>
-
-        <div class="goal-modal__section">
-          <h3 class="goal-modal__section-title">
-            <span class="goal-modal__section-dot" id="goalModalDotB"></span>
-            <span data-i18n="modal.indicators">Key Indicators</span>
-          </h3>
-          <ul class="goal-modal__list goal-modal__list--indicators" id="goalModalIndicators"></ul>
-        </div>
-      </div>
-
-      <footer class="goal-modal__footer">
-        <a href="#" class="btn btn--primary btn--full" id="goalModalCTA">
-          <span data-i18n="modal.cta">View full SDG page</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </footer>
-    </div>
-  </div>
-
   <script src="script.js" defer></script>
 </body>
 </html>
